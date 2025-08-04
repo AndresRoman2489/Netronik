@@ -1,0 +1,119 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+}
+
+.slogan {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+  margin-right: 1rem;
+}
+
+.social-icons a {
+  color: black;
+  margin: 0 5px;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #00bcd4;
+}
+
+.header-right {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.header-right a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s;
+}
+
+.header-right a:hover {
+  color: #d40000;
+}
+
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.small-icon {
+  font-size: 0.6rem;
+  margin-left: 4px;
+}
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+  }
+
+  .header-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+  }
+
+  .header-right.open {
+    display: flex;
+  }
+
+  .header-right a,
+  .language {
+    padding-left: 1rem;
+  }
+}
