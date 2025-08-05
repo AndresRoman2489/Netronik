@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
 
         <div className="footer-brand">
-          <h2>Netronik</h2>
+          <h2><a className='Net'>Net</a>ronik</h2>
           <p>Innovación que transforma.</p>
         </div>
 

@@ -23,7 +23,7 @@
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.39);
 }
 
 .demo-video-container video {

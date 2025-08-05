@@ -1,6 +1,6 @@
 .footer {
-  background-color: #0a0a0a;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   padding: 3rem 2rem 1rem;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -16,7 +16,7 @@
 }
 
 .footer-brand h2 {
-  color: #0ff;
+  color: rgb(0, 0, 0);
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
@@ -29,33 +29,36 @@
 .footer-links a {
   display: block;
   margin-bottom: 0.5rem;
-  color: #aaa;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #0ff;
+  color: rgb(255, 0, 0);
 }
 
 .footer-social a {
   font-size: 1.5rem;
   margin-right: 1rem;
-  color: #aaa;
+  color: #000000;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .footer-social a:hover {
   transform: scale(1.1);
-  color: #0ff;
+  color: rgb(255, 0, 0);
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #000000;
   border-top: 1px solid #222;
+}
+.Net{
+  color: red;
 }
 
 /* Responsivo */

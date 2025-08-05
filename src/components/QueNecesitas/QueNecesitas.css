@@ -1,0 +1,71 @@
+.que-necesitas {
+  background: linear-gradient(to right, #111, #333);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.que-necesitas h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.servicios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.servicio-card {
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 280px;
+  box-shadow: 0 10px 20px rgba(82, 1, 1, 0.699);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(175, 2, 2, 0.288);
+}
+
+.servicio-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff0000;
+}
+
+.servicio-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.servicio-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.servicio-card button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.servicio-card button:hover {
+  background: #ff0000;
+  color: #000;
+}

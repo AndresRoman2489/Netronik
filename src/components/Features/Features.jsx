@@ -8,13 +8,13 @@ import powerImg from '../../assets/img/Power.jpg'
 const features = [
   { title: 'Petróleo y gas', image: oilGasImg },
   { title: 'Ventilación y Aire Acondicionado(HVAC)', image: HVACImg },
-  { title: 'Escalabilidad Garantizada', image:powerImg },
+  { title: 'Generación de energía', image:powerImg },
 ];
 
 const Features = () => {
   return (
     <section className="features-section">
-      <h2>Industrias en la que trabaja</h2>
+      <h2 className='tittle'>Industrias en la que trabaja</h2>
       <div className="features-container">
         {features.map((item, i) => (
           <div

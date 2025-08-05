@@ -9,8 +9,8 @@
   margin-top: 1.5rem;
   display: inline-block;
   padding: 0.75rem 2rem;
-  background-color: #00f0ff;
-  color: #000;
+  background-color: #ff0000;
+  color: #ffffff;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -18,5 +18,5 @@
 }
 
 .cta-btn:hover {
-  background-color: #00c2cc;
+  background-color: #000000;
 }

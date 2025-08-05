@@ -42,17 +42,18 @@
 }
 
 .hero button {
-  background: #0ef;
+  background: rgb(255, 0, 0);
   border: none;
   padding: 0.8rem 2rem;
   font-size: 1rem;
   border-radius: 50px;
+  color: white;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .hero button:hover {
-  background: #00bcd4;
+  background: #970404;
 }
 .hero-overlay {
   position: absolute;

@@ -7,6 +7,7 @@ import Features from './components/Features/Features';
 import CTA from './components/CTA/CTA';
 import DemoSection from './components/DemoSection/DemoSection';
 import Footer from './components/Footer/Footer';
+import QueNecesitas from './components/QueNecesitas/QueNecesitas';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <About />
       <Features />
+      <QueNecesitas />
       <DemoSection />
       <CTA />
       <Footer />
