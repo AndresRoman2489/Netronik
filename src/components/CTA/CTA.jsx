@@ -5,7 +5,7 @@ import './CTA.css';
 const CTA = () => {
   return (
     <section className="cta-section">
-      <h2>¿Listo para transformar tu futuro digital?</h2>
+      <h2>¿Quieres encargar un trabajo robótico en tus tuberías?</h2>
       <a href="#contacto" className="cta-btn">Contáctanos</a>
     </section>
   );

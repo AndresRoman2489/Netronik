@@ -1,22 +1,30 @@
-// src/components/Features/Features.jsx
 import React from 'react';
 import './Feature.css';
 
+import oilGasImg from '../../assets/img/oil-and-gas.jpg';
+import HVACImg from '../../assets/img/HVAC.jpg';
+import powerImg from '../../assets/img/Power.jpg'
+
 const features = [
-  { title: 'Automatización Inteligente', description: 'Integramos tecnologías que simplifican procesos.' },
-  { title: 'Diseño Futurista', description: 'Experiencia visual de vanguardia para tu marca.' },
-  { title: 'Escalabilidad Garantizada', description: 'Pensado para crecer contigo y tu negocio.' },
+  { title: 'Petróleo y gas', image: oilGasImg },
+  { title: 'Ventilación y Aire Acondicionado(HVAC)', image: HVACImg },
+  { title: 'Escalabilidad Garantizada', image:powerImg },
 ];
 
 const Features = () => {
   return (
     <section className="features-section">
-      <h2>Nuestras Ventajas</h2>
+      <h2>Industrias en la que trabaja</h2>
       <div className="features-container">
         {features.map((item, i) => (
-          <div key={i} className="feature-card">
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
+          <div
+            key={i}
+            className="feature-card"
+            style={{ backgroundImage: `url(${item.image})` }}
+          >
+            <div className="feature-overlay">
+              <h3>{item.title}</h3>
+            </div>
           </div>
         ))}
       </div>

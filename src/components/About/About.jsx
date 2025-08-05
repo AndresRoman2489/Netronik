@@ -6,8 +6,8 @@ const About = () => {
   return (
     <section className="about-section">
       <div className="container">
-        <h2>Innovación tecnológica para un mundo conectado</h2>
-        <p>En Netronik desarrollamos soluciones tecnológicas enfocadas en eficiencia, conectividad y el futuro digital.</p>
+        <h2>Trabajo robótico en tuberías de todo el mundo</h2>
+        <p>En Netronik desarrollamos soluciones robóticas para inspección y limpieza de ductos, optimizando eficiencia, seguridad y transformación industrial.</p>
       </div>
     </section>
   );

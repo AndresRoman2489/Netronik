@@ -13,9 +13,9 @@ function Hero() {
 
 
       <div className="hero-content">
-        <h1>Conectando el Futuro</h1>
-        <p>Explora tecnología avanzada con soluciones autónomas para industrias modernas.</p>
-        <button>Explorar catálogo</button>
+        <h1>Robótica que transforma</h1>
+        <p>Explora tecnología avanzada con robots autónomos para inspección y limpieza industrial.</p>
+        <button>Nuestros Robots</button>
       </div>
     </section>
   );
