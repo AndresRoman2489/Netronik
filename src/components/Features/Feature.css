@@ -1,12 +1,12 @@
-.tittle{
-  padding-bottom: 3rem ;
-
+.tittle {
+  padding-bottom: 3rem;
+  color: #111;
 }
+
 .features-section {
   text-align: center;
   padding: 4rem 2rem;
   background-color: #ffffff;
-  color: #000000;
 }
 
 .features-container {
@@ -17,51 +17,60 @@
 }
 
 .feature-card {
-  position: relative;
   width: 280px;
   height: 160px;
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
+}
+
+.feature-inner {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.5s ease, box-shadow 0.4s ease;
-  cursor: pointer;
+  position: relative;
+  border-radius: 20px;
 }
 
-.feature-card::before {
+.feature-card:hover .feature-inner {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 77, 77, 0.4);
+}
+
+.feature-inner::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.35); /* oscuridad inicial */
-  backdrop-filter: blur(2px);      /* desenfoque leve */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
   z-index: 1;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
+  border-radius: 20px;
 }
 
-.feature-card:hover::before {
-  background: rgba(0, 0, 0, 0.15); /* menos oscuridad */
-  backdrop-filter: blur(0px);     /* sin blur al hacer hover */
-}
-
-.feature-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(255, 77, 77, 0.4); /* rojo neón */
+.feature-card:hover .feature-inner::before {
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(0px);
 }
 
 .feature-overlay {
   position: relative;
   z-index: 2;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .feature-overlay h3 {
   font-size: 1.2rem;
+  color: white;
   font-weight: bold;
-  color: #ffffff;
-  letter-spacing: 1px;
+  margin: 0;
 }

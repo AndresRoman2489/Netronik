@@ -1,13 +1,27 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: white;
   flex-wrap: wrap;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
+  background-color: rgba(255, 255, 255, 0.25); /* blanco translúcido */
+  backdrop-filter: blur(4px); /* efecto glass leve desde el inicio */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  box-shadow: none;
 }
+
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.7); /* blanco más sólido */
+  backdrop-filter: blur(8px); /* glass más fuerte */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 .header-left {
   display: flex;
@@ -23,12 +37,12 @@
 .slogan {
   font-style: italic;
   font-size: 0.9rem;
-  color: #555;
+  color: #2c2b2b;
   margin-right: 1rem;
 }
 
 .social-icons a {
-  color: black;
+  color: rgb(0, 0, 0);
   margin: 0 5px;
   font-size: 1.1rem;
   transition: color 0.2s;
@@ -48,7 +62,7 @@
 
 .header-right a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
   transition: color 0.2s;
 }
 
@@ -67,6 +81,8 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-right: 3.5rem;
+   /* ← Añadir esto */
 }
 
 .small-icon {
@@ -77,18 +93,15 @@
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333;
+  color: #000000;
+   z-index: 1001;
 }
 
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .header-left {
-    width: 100%;
-    justify-content: space-between;
+    padding-top: 3.5rem; /* espacio para el hamburger */
   }
 
   .hamburger {
@@ -96,6 +109,11 @@
     position: absolute;
     top: 1.2rem;
     right: 2rem;
+  }
+
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .header-right {
@@ -106,6 +124,7 @@
     margin-top: 1rem;
     border-top: 1px solid #ddd;
     padding-top: 1rem;
+    background-color: white; /* importante para que el menú sea visible */
   }
 
   .header-right.open {

@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import logo from '../../assets/img/netronik.png';
 
-
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Se activa después de 50px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="header">
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-left">
         <img src={logo} alt="Logo Netronik" className="logo" />
         <p className="slogan">Innovación que transforma la limpieza industrial</p>
@@ -27,10 +36,10 @@ function Header() {
         <a href="#">Industria</a>
         <a href="#">Servicios</a>
         <a href="#">Nuestros Robots</a>
-        <a href="#">Acerca de notros <i className="fas fa-chevron-down small-icon"></i></a>
+        <a href="#">Acerca de nosotros <i className="fas fa-chevron-down small-icon"></i></a>
         <a href="#">Contactar</a>
         <div className="language">
-          <img src="https://flagcdn.com/mx.svg" alt="EN" className="flag-icon" />
+          <img src="https://flagcdn.com/mx.svg" alt="ES" className="flag-icon" />
           <i className="fas fa-chevron-down small-icon"></i>
         </div>
       </nav>

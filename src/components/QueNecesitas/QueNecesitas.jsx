@@ -27,15 +27,23 @@ const servicios = [
 
 const QueNecesitas = () => {
   return (
-    <section className="que-necesitas">
-      <h2>¿Qué necesitas hacer?</h2>
+    <section className="que-necesitas" id="que-necesitas">
+      <h2 data-aos="fade-up">¿Qué necesitas hacer?</h2>
       <div className="servicios-container">
         {servicios.map((item, index) => (
-          <div key={index} className="servicio-card">
-            <div className="icon">{item.icon}</div>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <button>Más información</button>
+          <div
+            key={index}
+            className="servicio-card"
+            data-aos="zoom-in-up"
+            data-aos-delay={index * 150}
+            data-aos-duration="1000"
+          >
+            <div className="servicio-inner">
+              <div className="icon">{item.icon}</div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <button>Más información</button>
+            </div>
           </div>
         ))}
       </div>

@@ -1,33 +1,68 @@
 .demo-section {
-  background-color: #0e0e0e;
+  background-color: #000;
   color: white;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.demo-content {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .demo-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-weight: 600;
 }
 
 .demo-content p {
   font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
-  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .demo-video-container {
+  position: relative;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.39);
+   box-shadow: 0 0 25px 5px rgba(255, 0, 0, 0.5);
+  transition: transform 0.5s ease;
 }
 
-.demo-video-container video {
+.demo-video-container:hover {
+  transform: scale(1.01);
+}
+
+.demo-video {
   width: 100%;
   height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.demo-video.hidden {
+  display: none;
+}
+
+.demo-video.visible {
   display: block;
+}
+
+.demo-fallback-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.video-fallback {
+  background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+  padding: 3rem;
+  border-radius: 12px;
+  color: #ccc;
+  font-style: italic;
 }
