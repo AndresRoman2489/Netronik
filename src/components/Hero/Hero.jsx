@@ -11,7 +11,7 @@ function Hero() {
     <section className="hero">
       {!videoLoaded && !videoError && (
         <div className="video-fallback">
-          <p>Cargando video...</p>
+          <img src={fallbackImg} alt="Fondo estático" className="hero-fallback-img" />
         </div>
       )}
 
