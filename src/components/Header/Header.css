@@ -1,3 +1,4 @@
+/* Estado base del header */
 .header {
   position: fixed;
   top: 0;
@@ -10,18 +11,30 @@
   padding: 1rem 2rem;
   flex-wrap: wrap;
   font-family: 'Segoe UI', sans-serif;
-  background-color: rgba(255, 255, 255, 0.25); /* blanco translúcido */
-  backdrop-filter: blur(4px); /* efecto glass leve desde el inicio */
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-  box-shadow: none;
+  box-sizing: border-box;
+
+  background-color: rgba(0, 0, 0, 0); /* translúcido */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.2); /* líneas finas alrededor */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* línea inferior activa */
+  transition: background-color 0.3s, border-bottom 0.3s;
 }
 
+/* Al hacer scroll, más visible y sin línea inferior */
 .header.scrolled {
-  background-color: rgba(255, 255, 255, 0.7); /* blanco más sólido */
-  backdrop-filter: blur(8px); /* glass más fuerte */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.75); /* más opaco */
+  border-bottom: 1px solid transparent;
 }
 
+/* Si quieres bordes laterales marcados como Colossal */
+.header > *:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding-right: 1.5rem;
+  margin-right: 1.5rem;
+}
 
 .header-left {
   display: flex;
@@ -37,13 +50,18 @@
 .slogan {
   font-style: italic;
   font-size: 0.9rem;
-  color: #2c2b2b;
+  color: white;
   margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .social-icons a {
-  color: rgb(0, 0, 0);
-  margin: 0 5px;
+  color: white;
   font-size: 1.1rem;
   transition: color 0.2s;
 }
@@ -56,18 +74,18 @@
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  flex-wrap: wrap;
   font-weight: 600;
+  flex-wrap: wrap;
 }
 
 .header-right a {
+  color: white;
   text-decoration: none;
-  color: rgb(0, 0, 0);
   transition: color 0.2s;
 }
 
 .header-right a:hover {
-  color: #d40000;
+  color: #00bcd4;
 }
 
 .flag-icon {
@@ -81,27 +99,29 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-right: 3.5rem;
-   /* ← Añadir esto */
 }
 
 .small-icon {
   font-size: 0.6rem;
   margin-left: 4px;
 }
+
 .hamburger {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #000000;
-   z-index: 1001;
+  color: white;
 }
 
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 3.5rem; /* espacio para el hamburger */
+  }
+
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .hamburger {
@@ -111,20 +131,14 @@
     right: 2rem;
   }
 
-  .header-left {
-    width: 100%;
-    justify-content: space-between;
-  }
-
   .header-right {
     display: none;
     flex-direction: column;
     width: 100%;
     gap: 1rem;
     margin-top: 1rem;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 1rem;
-    background-color: white; /* importante para que el menú sea visible */
   }
 
   .header-right.open {
@@ -133,6 +147,17 @@
 
   .header-right a,
   .language {
+    padding-left: 1rem;
+  }
+
+  .slogan {
+    font-size: 0.8rem;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .social-icons {
+    margin-top: 0.5rem;
     padding-left: 1rem;
   }
 }
