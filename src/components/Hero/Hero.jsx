@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Hero.css';
-import heroVideo from '../../assets/video/hero-bg.mp4';
+import heroVideo from '../../assets/video/hero-bg.mkv';
 import fallbackImg from '../../assets/img/alt.jpeg'; // imagen de respaldo opcional
 
 function Hero() {
