@@ -1,0 +1,105 @@
+{
+  "header": {
+    "slogan": "Innovación que transforma la limpieza industrial",
+    "nav": {
+      "industry": "Industria",
+      "services": "Servicios",
+      "robots": "Nuestros Robots",
+      "about": "Acerca de nosotros",
+      "contact": "Contactar"
+    }
+  },
+  "hero": {
+    "subtitle": "Tecnología avanzada con robots autónomos para inspección y limpieza industrial.",
+    "cta": "Nuestros Robots"
+  },
+   "about": {
+    "title": "Trabajo robótico en tuberías de todo el mundo",
+    "text": "En Netronik con jettyrobot desarrollamos soluciones robóticas para inspección y limpieza de ductos, optimizando eficiencia, seguridad y transformación industrial."
+  },
+  "features": {
+    "title": "Industrias en las que trabajamos",
+    "showMore": "Ver más",
+    "showLess": "Ver menos",
+    "items": {
+      "industry": "Producción industrial",
+      "food": "Industria de alimentos y bebidas",
+      "waste": "Tratamiento de residuos",
+      "oilGas": "Petróleo y gas",
+      "mining": "Industria minera",
+      "power": "Generación de energía",
+      "water": "Tratamiento de agua",
+      "chemical": "Industria química",
+      "pneumatic": "Transporte neumático",
+      "hvac": "Ventilación y Aire Acondicionado (HVAC)",
+      "others": "Otras industrias"
+    }
+},
+    "apps": {
+  "title": "Aplicaciones y Métodos",
+  "subtitle": "Selecciona la tarea que necesitas resolver",
+  "showMore": "Ver más",
+  "showLess": "Ver menos",
+  "items": {
+    "pipeInspection": "Inspección de tuberías",
+    "pipeCleaning": "Limpieza de tuberías",
+    "industrialExtraction": "Extracción industrial",
+    "rustRemoval": "Remoción de óxido y recubrimientos",
+    "nonAbrasiveCleaning": "Métodos de limpieza no abrasivos",
+    "dryIceBlasting": "Chorro de hielo seco",
+    "highPressureWater": "Chorro de agua a alta presión",
+    "shotBlasting": "Abrasión con granalla",
+    "protectiveCoating": "Recubrimiento protector",
+    "visualInspection": "Inspección visual",
+    "hvac": "Ventilación y aire acondicionado",
+    "compressedAirCleaning": "Limpieza con aire comprimido",
+    "brushCleaning": "Limpieza con cepillo",
+    "vacuuming": "Aspirado",
+    "disinfection": "Desinfección",
+    "ovalityMeasurement": "Medición de ovalidad",
+    "wallThicknessMeasurement": "Medición de espesor de pared"
+  }
+
+  },
+  "need": {
+    "title": "¿Qué necesitas hacer?",
+    "items": {
+      "inspect": { "title": "Inspección", "desc": "Descubre el estado de tus tuberías." },
+      "clean": { "title": "Limpieza", "desc": "Vuelve a la máxima potencia." },
+      "restore": { "title": "Restauración de revestimiento", "desc": "Ahorra dinero en reemplazos de tuberías." },
+      "turnkey": { "title": "Servicios llave en mano", "desc": "Déjanos las preocupaciones a nosotros." }
+    },
+    "more": "Más información"
+},
+  "demo": {
+    "title": "Trabajo robot en Movimiento",
+    "text": "Descubre cómo nuestra tecnología redefine los estándares de eficiencia e innovación industrial.",
+    "loading": "Cargando video...",
+    "alt": "Trabajo robótico"
+
+  },
+    "cta": {
+    "headline": "¿Quieres encargar un trabajo robótico en tus tuberías?",
+    "button": "Contáctanos"
+  },
+"clients": {
+    "title": "Cooperamos con éxito con empresas de todo el mundo",
+    "alt": "Cliente {{n}}"
+  },
+"footer": {
+    "tagline": "Innovación que transforma.",
+    "links": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "rights": "Todos los derechos reservados"
+  }
+}

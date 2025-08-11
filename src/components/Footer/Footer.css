@@ -35,7 +35,7 @@
 }
 
 .footer-links a:hover {
-  color: rgb(255, 0, 0);
+  color: rgb(0, 255, 255);
 }
 
 .footer-social a {
@@ -47,7 +47,7 @@
 
 .footer-social a:hover {
   transform: scale(1.1);
-  color: rgb(255, 0, 0);
+  color: rgb(0, 247, 255);
 }
 
 .footer-bottom {

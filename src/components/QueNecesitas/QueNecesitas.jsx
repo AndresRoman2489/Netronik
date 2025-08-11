@@ -1,38 +1,48 @@
 import React from 'react';
 import './QueNecesitas.css';
 import { FaSearch, FaBroom, FaTools, FaProjectDiagram } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const servicios = [
   {
+    id: 'inspect',
     icon: <FaSearch />,
-    title: 'Inspección',
-    description: 'Descubre el estado de tus tuberías.',
+    defaultTitle: 'Inspección',
+    defaultDesc: 'Descubre el estado de tus tuberías.',
   },
   {
+    id: 'clean',
     icon: <FaBroom />,
-    title: 'Limpieza',
-    description: 'Vuelve a la máxima potencia.',
+    defaultTitle: 'Limpieza',
+    defaultDesc: 'Vuelve a la máxima potencia.',
   },
   {
+    id: 'restore',
     icon: <FaTools />,
-    title: 'Restauración de revestimiento',
-    description: 'Ahorra dinero en reemplazos de tuberías.',
+    defaultTitle: 'Restauración de revestimiento',
+    defaultDesc: 'Ahorra dinero en reemplazos de tuberías.',
   },
   {
+    id: 'turnkey',
     icon: <FaProjectDiagram />,
-    title: 'Servicios llave en mano',
-    description: 'Déjanos las preocupaciones a nosotros.',
+    defaultTitle: 'Servicios llave en mano',
+    defaultDesc: 'Déjanos las preocupaciones a nosotros.',
   },
 ];
 
 const QueNecesitas = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="que-necesitas" id="que-necesitas">
-      <h2 data-aos="fade-up">¿Qué necesitas hacer?</h2>
+      <h2 data-aos="fade-up">
+        {t('need.title', '¿Qué necesitas hacer?')}
+      </h2>
+
       <div className="servicios-container">
         {servicios.map((item, index) => (
           <div
-            key={index}
+            key={item.id}
             className="servicio-card"
             data-aos="zoom-in-up"
             data-aos-delay={index * 150}
@@ -40,9 +50,9 @@ const QueNecesitas = () => {
           >
             <div className="servicio-inner">
               <div className="icon">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <button>Más información</button>
+              <h3>{t(`need.items.${item.id}.title`, item.defaultTitle)}</h3>
+              <p>{t(`need.items.${item.id}.desc`, item.defaultDesc)}</p>
+              <button>{t('need.more', 'Más información')}</button>
             </div>
           </div>
         ))}

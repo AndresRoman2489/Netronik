@@ -1,53 +1,16 @@
-import './App.css';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Features from './components/Features/Features';
-import CTA from './components/CTA/CTA';
-import DemoSection from './components/DemoSection/DemoSection';
-import Footer from './components/Footer/Footer';
-import QueNecesitas from './components/QueNecesitas/QueNecesitas';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import React, { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-function App() {
-  useEffect(() => {
-    // Primero forzar scroll al top con espera ligera
-    window.scrollTo({ top: 0, behavior: 'auto' });
+// Páginas
+import Home from './pages/home';
 
-    // AOS se inicializa un poco después
-    setTimeout(() => {
-      AOS.init({
-        duration: 1000,
-        once: true,
-        easing: 'ease-in-out',
-      });
 
-      AOS.refresh(); // refrescar manualmente
-    }, 50);
-
-    // Listener opcional para volver a refrescar si el usuario hace scroll muy rápido
-    const handleScroll = () => {
-      AOS.refresh();
-    };
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+export default function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <About />
-      <Features />
-      <QueNecesitas />
-      <DemoSection />
-      <CTA />
-      <Footer />
-    </div>
+    <Suspense fallback={null}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Suspense>
   );
 }
-
-export default App;

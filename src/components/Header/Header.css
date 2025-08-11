@@ -93,11 +93,82 @@
   vertical-align: middle;
 }
 
-.language {
+/* === Dropdown de idioma (ADITIVO, no rompe nada) === */
+.language { position: relative; }            /* para posicionar el menú */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.lang-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  display: none;               /* oculto por defecto */
+  min-width: 160px;
+  padding: .4rem;
+  background: rgba(0,0,0,.80);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  z-index: 1000;
+}
+
+.language.open .lang-menu { display: block; }
+
+.lang-item {
+  width: 100%;
   display: flex;
   align-items: center;
+  gap: .5rem;
+  padding: .5rem .6rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-align: left;
+  border-radius: 8px;
   cursor: pointer;
 }
+.jetty-wrap{
+  position: relative;
+  display: inline-block;
+}
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;            /* separación entre logos */
+}
+.logo-jetty{
+  height: 42px;                 /* ajusta 36–48 si lo necesitas */
+  object-fit: contain;
+  display: block;
+}
+.logo-jetty.text-white{
+  position: absolute;
+  inset: 0;
+  /* Volvemos “blanco puro” lo que quede visible */
+  filter: brightness(0) invert(1);
+
+  /* --- MÁSCARA: oculta el icono de la izquierda, deja ver solo el texto --- */
+  /* Ajusta este corte si ves que “muerde” el icono o deja restos. */
+  --jetty-text-cut: 24%;
+  -webkit-mask-image: linear-gradient(to right, transparent var(--jetty-text-cut), #000 calc(var(--jetty-text-cut) + 1px));
+  mask-image: linear-gradient(to right, transparent var(--jetty-text-cut), #000 calc(var(--jetty-text-cut) + 1px));
+}
+
+/* base en color (abajo) */
+.logo-jetty.base{ position: relative; z-index: 0; }
+
+.lang-item:hover { background: rgba(255,255,255,.08); }
+
 
 .small-icon {
   font-size: 0.6rem;
@@ -115,12 +186,15 @@
   .header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0rem 1rem !important;
   }
 
   .header-left {
     width: 100%;
     justify-content: space-between;
+    gap: 0rem !important;
   }
+.lang-menu { right: 1rem; }
 
   .hamburger {
     display: block;
@@ -133,7 +207,6 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    gap: 1rem;
     margin-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 1rem;
@@ -153,6 +226,7 @@
     max-width: 100%;
     white-space: normal;
   }
+   .logo-jetty{ height: 30px; }
 
   .social-icons {
     margin-top: 0.5rem;

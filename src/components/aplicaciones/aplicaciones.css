@@ -1,0 +1,62 @@
+.aplicaciones-section {
+  background: linear-gradient(to right, #111, #222);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.aplicaciones-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aplicaciones-content h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.aplicaciones-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.aplicaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.aplicacion-tag {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 1.1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #eee;
+  transition: all 0.3s ease;
+}
+
+.aplicacion-tag:hover {
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+}
+.aplicaciones-section .aplicaciones-ver-mas-btn {
+  margin-top: 2rem;
+  background: transparent;
+  border: 1px solid white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.aplicaciones-section .aplicaciones-ver-mas-btn:hover {
+  background: #00bcd4;
+  border-color: #04adc4;
+  color: white;
+}

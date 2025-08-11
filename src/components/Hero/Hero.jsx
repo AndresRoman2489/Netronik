@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import './Hero.css';
-import heroVideo from '../../assets/video/hero-bg.mkv';
-import fallbackImg from '../../assets/img/alt.jpeg'; // imagen de respaldo opcional
+import heroMp4 from '../../assets/video/hero-bg.mp4';
+import fallbackImg from '../../assets/img/alt.jpeg';
+import { useTranslation } from 'react-i18next';
 
 function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(false);
+  
 
+ const { t } = useTranslation();
+const subtitle = t('hero.subtitle')
   return (
     <section className="hero">
       {!videoLoaded && !videoError && (
@@ -22,39 +26,37 @@ function Hero() {
           loop
           muted
           playsInline
+          preload="auto"
           onCanPlay={() => setVideoLoaded(true)}
           onError={() => setVideoError(true)}
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={heroMp4} type="video/mp4" />
           Tu navegador no soporta el video.
         </video>
       ) : (
         <img src={fallbackImg} alt="Fondo estático" className="hero-fallback-img" />
       )}
 
-      <div className="hero-overlay"></div>
+      {/* TEXTO VISUAL para el efecto (mezcla con el video) */}
+      <p className="hero-invert" data-text={subtitle} aria-hidden="true">
+        {subtitle}
+      </p>
 
+      {/* Overlay (oscurece la escena). Si quieres que NO afecte al texto,
+          deja el overlay por debajo de .hero-invert (z-index menor) */}
+      <div className="hero-overlay" />
+
+      {/* Contenido “real” (accesible) por encima del overlay */}
       <div className="hero-content">
-        <h1
-          data-aos="fade-down"
-          data-aos-duration="1200"
-          data-aos-delay="100"
-        >
-          Robótica que transforma
-        </h1>
-        <p
-          data-aos="fade-up"
-          data-aos-duration="1200"
-          data-aos-delay="300"
-        >
-          Explora tecnología avanzada con robots autónomos para inspección y limpieza industrial.
-        </p>
+        <p className="sr-only">{subtitle}</p>
+
         <button
+          className="hero-cta"
           data-aos="zoom-in"
           data-aos-delay="600"
           data-aos-duration="1000"
         >
-          Nuestros Robots
+         {t('hero.cta')}
         </button>
       </div>
     </section>
@@ -62,5 +64,3 @@ function Hero() {
 }
 
 export default Hero;
-
-

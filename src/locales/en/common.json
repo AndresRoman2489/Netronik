@@ -1,0 +1,102 @@
+{
+  "header": {
+    "slogan": "Innovation that transforms industrial cleaning",
+    "nav": {
+      "industry": "Industry",
+      "services": "Services",
+      "robots": "Our Robots",
+      "about": "About us",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "subtitle": "Advanced technology with autonomous robots for industrial inspection and cleaning.",
+    "cta": "Our Robots"
+  },
+ "about": {
+    "title": "Robotic work in pipelines around the world",
+    "text": "At Netronik with jettyrobot develop robotic solutions for pipeline inspection and cleaning, optimizing efficiency, safety, and industrial transformation."
+  },
+  "features": {
+    "title": "Industries we work in",
+    "items": {
+      "industry": "Industrial production",
+      "food": "Food & Beverage",
+      "waste": "Waste treatment",
+      "oilGas": "Oil & Gas",
+      "mining": "Mining industry",
+      "power": "Power generation",
+      "water": "Water treatment",
+      "chemical": "Chemical industry",
+      "pneumatic": "Pneumatic conveying",
+      "hvac": "HVAC",
+      "others": "Other industries"
+    }
+},
+    "apps": {
+  "title": "Applications & Methods",
+  "subtitle": "Select the task you need to solve",
+  "showMore": "Show more",
+  "showLess": "Show less",
+  "items": {
+    "pipeInspection": "Pipe inspection",
+    "pipeCleaning": "Pipe cleaning",
+    "industrialExtraction": "Industrial extraction",
+    "rustRemoval": "Rust and coating removal",
+    "nonAbrasiveCleaning": "Non-abrasive cleaning methods",
+    "dryIceBlasting": "Dry ice blasting",
+    "highPressureWater": "High-pressure water jetting",
+    "shotBlasting": "Shot blasting",
+    "protectiveCoating": "Protective coating",
+    "visualInspection": "Visual inspection",
+    "hvac": "Ventilation and air conditioning",
+    "compressedAirCleaning": "Compressed-air cleaning",
+    "brushCleaning": "Brush cleaning",
+    "vacuuming": "Vacuuming",
+    "disinfection": "Disinfection",
+    "ovalityMeasurement": "Ovality measurement",
+    "wallThicknessMeasurement": "Wall thickness measurement"
+  }
+
+  },
+  "need": {
+    "title": "What do you need to do?",
+    "items": {
+      "inspect": { "title": "Inspection", "desc": "Discover the condition of your pipes." },
+      "clean": { "title": "Cleaning", "desc": "Get back to peak performance." },
+      "restore": { "title": "Lining restoration", "desc": "Save money on pipe replacements." },
+      "turnkey": { "title": "Turnkey services", "desc": "Leave the worries to us." }
+    },
+    "more": "Learn more"
+},
+  "demo": {
+    "title": "Robotic work in motion",
+    "text": "Discover how our technology redefines the standards of efficiency and industrial innovation.",
+    "loading": "Loading video...",
+    "alt": "Robotic work"
+  },
+  "cta": {
+    "headline": "Want to schedule robotic work for your pipelines?",
+    "button": "Contact us"
+  },
+  "clients": {
+    "title": "We successfully cooperate with companies worldwide",
+    "alt": "Client {{n}}"
+  },
+"footer": {
+    "tagline": "Innovation that transforms.",
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "rights": "All rights reserved"
+  }
+}

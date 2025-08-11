@@ -17,15 +17,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch; /* ✅ */
   gap: 2rem;
 }
 
+
 .servicio-card {
-  width: 280px;
-  height: auto;
-  perspective: 1000px;
-  transition: all 0.3s ease;
-  border-radius: 16px;
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  margin-bottom: 2rem;
 }
 
 .servicio-inner {
@@ -43,7 +46,7 @@
 
 .servicio-card:hover .servicio-inner {
   transform: scale(1.05);
-  box-shadow: 0 16px 32px rgba(255, 0, 0, 0.5); /* GLOW NEÓN */
+  box-shadow: 0 16px 32px rgba(0, 255, 255, 0.5); /* GLOW NEÓN */
 }
 
 .servicio-inner::before {
@@ -62,7 +65,7 @@
 .icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ff0000;
+  color: #00bcd4;
   z-index: 2;
   position: relative;
 }
@@ -97,6 +100,22 @@
 }
 
 .servicio-inner button:hover {
-  background: #ff0000;
+  background: #00bcd4;
   color: white;
+}
+@media screen and (max-width: 768px) {
+  .servicios-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .servicio-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .servicio-inner {
+    padding: 1.5rem;
+  }
 }

@@ -1,110 +1,117 @@
-.hero {
+/* ===== Base ===== */
+.hero{
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  background-color: #000;
+  display: grid;
+  place-items: center;
+  background: #000;
+  isolation: isolate;
 }
 
-.hero-video {
+.hero-video{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-   image-rendering: auto;
-  transform: translateZ(0); /* fuerza a usar aceleración GPU */
-  will-change: transform;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.hero-video.hidden {
-  display: none;
-}
-
-.hero-video.visible {
-  display: block;
-}
-
-.hero-fallback-img {
-  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  transform: translateZ(0);
+  filter: contrast(1.06) saturate(1.18);
+}
+.hero-video.hidden{ display:none; }
+.hero-video.visible{ display:block; }
+
+.video-fallback,
+.hero-fallback-img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover; z-index:0;
 }
 
-.video-fallback {
+/* ===== Texto VISUAL que se mezcla con el video ===== */
+.hero-invert{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ccc;
-  font-size: 1.2rem;
-  z-index: 0;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
   z-index: 2;
-  max-width: 800px;
-  padding: 1rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -62%); /* antes: -55% */
+  width: min(1100px, 92vw);
+  margin: 0;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1.1;
+  font-size: clamp(1.8rem, 4.6vw, 3.6rem);
+  letter-spacing: .01em;
+  color: #fff;
+  mix-blend-mode: difference;
+  filter: sepia(.9) hue-rotate(-28deg) saturate(11.50) contrast(10.02);
+  pointer-events: none;
+}
+/* ===== Overlay =====
+   Si quieres que el overlay NO afecte al texto invertido:
+   - Pon z-index:1 aquí (debajo del .hero-invert) y baja su opacidad.
+   Si quieres que sí lo oscurezca un poco, déjalo por encima: z-index:3 */
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 3; /* cambia a 1 si NO quieres oscurecer el texto visual */
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background: radial-gradient(ellipse at center,
+    rgba(0,0,0,.06) 0%,
+    rgba(0,0,0,.48) 70%
+  );
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
+/* ===== Contenido real por encima del overlay ===== */
+.hero-content{
+  position: relative;
+  z-index: 4;
+  max-width: 1200px;
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  text-align: center;
+
+  /* elige UNA de estas dos líneas, la que prefieras */
+  transform: translateY(12vh);           /* desplaza con transform */
+  /* margin-top: clamp(24px, 7vh, 80px); */ /* o simplemente margen */
+  margin-top: clamp(24px, 7vh, 80px);
 }
 
-.hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+
+/* Accesibilidad: texto “real” oculto visualmente */
+.sr-only{
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
 }
 
-.hero-content h1,
-.hero-content p,
-.hero-content button {
-  transition: all 0.6s ease-in-out;
-  opacity: 0; /* AOS lo manipula automáticamente */
-}
-
-.hero-content button {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #e53935;
-  border-radius: 50px;
-  padding: 0.75rem 2rem;
-  font-weight: bold;
+/* ===== CTA ===== */
+.hero-cta{
+  background: transparent;
+  color: #fff;
+  border: 2px solid #00bcd4;
+  border-radius: 999px;
+  padding: .9rem 2.1rem;
+  font-weight: 700;
+  letter-spacing: .02em;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform .2s ease, background .3s ease, box-shadow .3s ease;
 }
-
-.hero-content button:hover {
-  background-color: #e53935;
-  color: white;
+.hero-cta:hover{
+  background: #00bcd4;
+  box-shadow: 0 10px 30px rgba(26, 224, 255, 0.35), 0 0 40px rgba(26, 255, 255, 0.25);
+  transform: translateY(-2px);
 }
-
-
+@media (max-width: 768px){
+  .hero-invert{ transform: translate(-50%, -56%); }
+  .hero-content{ transform: translateY(6vh);
+          margin-top: clamp(100px, 240vh, 150px); }
+}

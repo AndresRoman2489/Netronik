@@ -1,45 +1,85 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Feature.css';
+import { useTranslation } from 'react-i18next';
 
 import oilGasImg from '../../assets/img/oil-and-gas.jpg';
 import HVACImg from '../../assets/img/HVAC.jpg';
 import powerImg from '../../assets/img/Power.jpg';
 import waterImg from '../../assets/img/Water.png';
+import IndustryImg from '../../assets/img/Industry.jpg';
+import FoodImg from '../../assets/img/Food.png';
+import WasteImg from '../../assets/img/waste.png';
+import MineryImg from '../../assets/img/mina.jpg';
+import QuimicImg from '../../assets/img/Quimica.jpg';
+import NeumaticImg from '../../assets/img/neumatico.jpg';
+import OthersImg from '../../assets/img/Otras.jpg';
 
 const features = [
-  { title: 'Petróleo y gas', image: oilGasImg, link: '#' },
-  { title: 'Ventilación y Aire Acondicionado (HVAC)', image: HVACImg, link: '#' },
-  { title: 'Generación de energía', image: powerImg, link: '#' },
-  { title: 'Tratamiento de agua', image: waterImg, link: '#' },
+  { id: 'industry',        image: IndustryImg, defaultTitle: 'Producción industrial' },
+  { id: 'food',            image: FoodImg,     defaultTitle: 'Industria de alimentos y bebidas' },
+  { id: 'waste',           image: WasteImg,    defaultTitle: 'Tratamiento de residuos' },
+  { id: 'oilGas',          image: oilGasImg,   defaultTitle: 'Petróleo y gas' },
+  { id: 'mining',          image: MineryImg,   defaultTitle: 'Industria minera' },
+  { id: 'power',           image: powerImg,    defaultTitle: 'Generación de energía' },
+  { id: 'water',           image: waterImg,    defaultTitle: 'Tratamiento de agua' },
+  { id: 'chemical',        image: QuimicImg,   defaultTitle: 'Industria química' },
+  { id: 'pneumatic',       image: NeumaticImg, defaultTitle: 'Transporte neumático' },
+  { id: 'hvac',            image: HVACImg,     defaultTitle: 'Ventilación y Aire Acondicionado (HVAC)' },
+  { id: 'others',          image: OthersImg,   defaultTitle: 'Otras industrias' }
 ];
 
 const Features = () => {
+  const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+  const [verMas, setVerMas] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const mostrarFeatures = isMobile && !verMas ? features.slice(0, 2) : features;
+
   return (
     <section className="features-section">
-      <h2 className="tittle" data-aos="fade-up">Industrias en las que trabajamos</h2> 
+      <h2 className="tittle" data-aos="fade-up">
+        {t('features.title', 'Industrias en las que trabajamos')}
+      </h2>
+
       <div className="features-container">
-        {features.map((item, i) => (
+        {mostrarFeatures.map((item, i) => (
           <div
-  key={i}
-  className="feature-card"
-  data-aos="zoom-in"
-  data-aos-delay={i * 150}
-  data-aos-duration="1000"
->
-  <div
-    className="feature-inner"
-    style={{ backgroundImage: `url(${item.image})` }}
-  >
-    <div className="feature-overlay">
-      <h3>{item.title}</h3>
-    </div>
-  </div>
-</div>
+            key={item.id}
+            className="feature-card"
+            data-aos="zoom-in"
+            data-aos-delay={i * 100}
+            data-aos-duration="800"
+          >
+            <div
+              className="feature-inner"
+              style={{ backgroundImage: `url(${item.image})` }}
+            >
+              <div className="feature-overlay">
+                <h3>{t(`features.items.${item.id}`, item.defaultTitle)}</h3>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
+
+      {/* Mostrar botón solo en móvil */}
+      {isMobile && (
+        <button
+          className="features-ver-mas-btn"
+          onClick={() => setVerMas(!verMas)}
+        >
+          {verMas ? t('features.showLess', 'Ver menos') : t('features.showMore', 'Ver más')}
+        </button>
+      )}
     </section>
   );
 };
 
 export default Features;
-
