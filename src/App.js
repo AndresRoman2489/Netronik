@@ -1,16 +1,37 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./routing/ScrollToTop";
+import { useRouteEffects } from "./hooks/useRouteEffects";
+import { useLanguageRefresh } from "./hooks/useLanguageRefresh";
 
-// Páginas
-import Home from './pages/home';
 
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/home";
+import Industries from "./pages/industries/Industries";
+import SiteLayout from "./layouts/SiteLayout";
+
+// Ejemplos:
+
+function AppShell() {
+  useRouteEffects();                 // refresca AOS/cierra overlays en cambios de ruta
+  useLanguageRefresh({ hardReload: true }); // recarga al cambiar idioma
+
+  return (
+    <Routes>
+      <Route element={<SiteLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/industries" element={<Industries />} />
+        {/* ...otras rutas */}
+      </Route>
+    </Routes>
+  );
+}
 
 export default function App() {
   return (
-    <Suspense fallback={null}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Suspense>
+    <ScrollToTop>
+      <AppShell />
+    </ScrollToTop>
   );
 }

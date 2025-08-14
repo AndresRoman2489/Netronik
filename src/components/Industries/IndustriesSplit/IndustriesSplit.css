@@ -1,0 +1,159 @@
+/* ===== sección ===== */
+.ind-split{
+  background:#0b0f14;
+  padding:16px 0 44px;
+}
+.ind-container{
+  max-width:1600px;
+  margin:0 auto;
+  padding:0 32px;
+  box-sizing:border-box;
+}
+.ind-panels{
+  display:grid;
+  gap:24px;
+  grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+}
+
+/* ===== panel ===== */
+.ind-panel{
+  background:#0e1319;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;
+  box-shadow:0 16px 48px rgba(0,0,0,.35);
+  padding:18px;
+  min-width:0;
+  overflow:visible;            /* deja respirar a los hijos con scale */
+}
+.ind-panel--apps{ background:#0b1016; }
+
+.panel-title{
+  color:#fff; font-weight:900;
+  font-size:clamp(20px,2.6vw,26px);
+  margin:0 0 .25rem;
+}
+.panel-hint{ color:#aab2bb; margin:0 0 12px; }
+
+/* ===== grids ===== */
+.ind-grid{
+  display:grid;
+  gap:16px;
+  min-width:0;
+  overflow:visible;            /* el scale no se corta */
+}
+.ind-grid.sectors{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+.ind-grid.apps   { grid-template-columns:repeat(3,minmax(0,1fr)); }
+
+/* ===== cards ===== */
+.as-link{
+  display:block;               /* el enlace ocupa todo el ancho */
+  text-decoration:none;
+  color:inherit;
+  outline:none;
+  min-width:0;
+}
+
+.pill{
+  position:relative;
+  display:grid;
+  align-items:center;
+  gap:12px;
+  padding:16px 18px;
+  border-radius:14px;
+  min-height:96px;
+  width:100%;
+  box-sizing:border-box;        /* 👈 evita desbordes por padding */
+  transform:translateZ(0);
+  transform-origin:center;
+  will-change:transform;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease, filter .22s ease;
+}
+
+/* Sectores con miniatura */
+.pill--light{
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
+  grid-template-columns:56px minmax(0,1fr);
+  cursor:pointer;
+}
+/* Apps sin miniatura */
+.pill--dark{
+  background:linear-gradient(180deg,#151a21 0%,#0f1318 100%);
+  border:1px solid rgba(255,255,255,.10);
+  color:#e7eaee;
+  grid-template-columns:minmax(0,1fr);
+  cursor:pointer;
+}
+
+/* Hover (solo donde hay hover) */
+@media (hover:hover){
+  .pill--light:hover{
+    transform:translateY(-2px) scale(1.02);
+    border-color:rgba(0,0,0,.16);
+    box-shadow:0 14px 30px rgba(0,0,0,.10);
+    filter:brightness(.985);
+    z-index:2;
+  }
+  .pill--dark:hover{
+    transform:translateY(-2px) scale(1.02);
+    border-color:rgba(255,255,255,.18);
+    box-shadow:0 14px 34px rgba(0,0,0,.45);
+    background:linear-gradient(180deg,#18202a 0%,#121922 100%);
+    z-index:2;
+  }
+  .as-link:focus-visible{
+    transform:translateY(-2px) scale(1.02);
+    box-shadow:0 0 0 3px rgba(68,132,255,.45), 0 14px 30px rgba(0,0,0,.25);
+    z-index:2;
+  }
+}
+
+/* Miniatura */
+.pill-thumb{ width:56px; height:56px; border-radius:999px; overflow:hidden; }
+.pill-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Título */
+.pill-title{
+  margin:0;
+  font-size:16px; font-weight:800; line-height:1.3;
+  color:#0b0f14;
+  overflow-wrap:anywhere;      /* los largos no rompen layout */
+  word-break:break-word;
+}
+.pill--dark .pill-title{ color:#e7eaee; }
+
+/* Botón Ver más/Menos (solo móvil) */
+.toggle-btn{
+  display:none;
+  margin-top:12px;
+  padding:12px 16px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.14);
+  background:#0e1319; color:#e7eaee;
+  font-weight:800; cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+}
+.toggle-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+  border-color:rgba(255,255,255,.2);
+  background:#111823;
+}
+.toggle-btn:active{ transform:translateY(0); box-shadow:none; }
+
+/* ===== responsive ===== */
+@media (max-width: 768px){
+  .ind-container{ padding:0 16px; }
+  .ind-panels{ grid-template-columns:1fr; }
+
+  /* Sectores 1 col, apps 2 cols */
+  .ind-grid.sectors{ grid-template-columns:1fr; }
+  .ind-grid.apps{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+
+  /* Colapsar desde la 7ª tarjeta en móvil */
+  .ind-grid.sectors.is-collapsed > .as-link:nth-child(n + 7){ display:none; }
+  .ind-grid.apps.is-collapsed    > .as-link:nth-child(n + 7){ display:none; }
+
+  .toggle-btn{ display:inline-flex; }
+}

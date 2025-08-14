@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "title": "Elige tu industria y encontramos la solución",
+    "subtitle": "Nuestras tecnologías robóticas aplican donde se usan ductos: desde suministro de aire y extractores industriales, hasta transporte de materias primas líquidas y gaseosas, y tratamiento de residuos."
+  },
+
+  "split": {
+    "sectorsTitle": "Sectores industriales",
+    "sectorsHint": "¿Dónde funciona nuestra tecnología?",
+    "appsTitle": "Aplicaciones y métodos",
+    "appsHint": "Selecciona la tarea que necesitas resolver",
+
+    "buttons": {
+      "open": "Abrir",
+      "showMore": "Ver más",
+      "showLess": "Ver menos"
+    },
+
+    "sectors": {
+      "industrialProduction": { "label": "Producción industrial" },
+      "foodAndBeverage":     { "label": "Alimentos y bebidas" },
+      "wasteTreatment":      { "label": "Tratamiento de residuos" },
+      "oilAndGas":           { "label": "Petróleo y gas" },
+      "mining":              { "label": "Industria minera" },
+      "powerGeneration":     { "label": "Generación de energía" },
+      "waterTreatment":      { "label": "Tratamiento de agua" },
+      "chemical":            { "label": "Industria química" },
+      "pneumaticTransport":  { "label": "Transporte neumático" },
+      "hvac":                { "label": "Ventilación y A/A (HVAC)" },
+      "other":               { "label": "Otras industrias" }
+    },
+
+    "apps": [
+      "Inspección de tuberías",
+      "Limpieza de tuberías",
+      "Extracción industrial",
+      "Remoción de óxido y recubrimientos",
+      "Métodos de limpieza no abrasivos",
+      "Chorro de hielo seco",
+      "Chorro de agua a alta presión",
+      "Abrasión con granalla",
+      "Recubrimiento protector",
+      "Inspección visual",
+      "Ventilación y aire acondicionado",
+      "Limpieza con aire comprimido",
+      "Limpieza con cepillo",
+      "Aspirado",
+      "Desinfección",
+      "Medición de ovalidad",
+      "Medición de espesor de pared"
+    ]
+  },
+
+  "partners": {
+    "title": "Cooperamos con éxito con empresas de todo el mundo"
+  },
+
+  "contact": {
+    "titleLine1": "¿No estás seguro de lo que necesitas?",
+    "titleAccent": "Contáctanos.",
+    "lead": "Nuestros especialistas se pondrán en contacto contigo a la brevedad.",
+
+    "form": {
+      "first": "Nombre",
+      "last": "Apellidos",
+      "company": "Empresa",
+      "site": "Sitio web",
+      "phone": "Teléfono",
+      "email": "E-mail",
+      "message": "Mensaje",
+
+      "ph": {
+        "first": "Tu nombre",
+        "last": "Tus apellidos",
+        "company": "Ej. ACME S.A.",
+        "site": "https://tu-dominio.com",
+        "phone": "Ej. +52 55 1234 5678",
+        "email": "tucorreo@dominio.com",
+        "message": "Cuéntanos qué necesitas..."
+      },
+
+      "submit": "Enviar",
+      "privacy": "Tus datos están seguros con nosotros. Respetamos tu privacidad."
+    }
+  }
+}

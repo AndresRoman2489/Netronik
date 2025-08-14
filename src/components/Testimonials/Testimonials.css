@@ -1,0 +1,123 @@
+.testimonials {
+  position: relative;
+  padding: clamp(48px, 8vw, 96px) 0;
+  background: linear-gradient(180deg, #0b0f14 0%, #11161d 100%);
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* viñetas muy sutiles y neutrales */
+  background:
+    radial-gradient(1200px 360px at 50% -10%, rgba(255,255,255,0.06), transparent 60%),
+    radial-gradient(900px 240px at 20% 110%, rgba(255,255,255,0.04), transparent 60%),
+    radial-gradient(900px 240px at 80% 110%, rgba(255,255,255,0.04), transparent 60%);
+  opacity: .9; /* ajusta 0.7–1 según gusto */
+}
+
+.testimonials-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.testimonials-title {
+  font-size: clamp(24px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin: 0 0 32px;
+color: #fff;
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+ box-shadow: 0 8px 30px rgba(0,0,0,.18)
+}
+
+.testimonial-quote {
+  margin: 0;
+  color: #0b0f14;
+  line-height: 1.6;
+}
+
+.quote-mark {
+  display: inline-block;
+  font-size: 28px;
+  line-height: 1;
+  margin-right: 8px;
+  transform: translateY(2px);
+  /* acento turquesa (en línea con tu CTA) */
+  color: #00bcd4;
+  font-weight: 900;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.testimonial-author {
+  color: #0b0f14;
+}
+
+.testimonial-role {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.testimonial-link {
+  font-size: 14px;
+  color: #0ea5b7; /* turquesa más oscuro */
+  text-decoration: none;
+}
+.testimonial-link:hover { text-decoration: underline; }
+
+.testimonials-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.testimonials-button {
+  display: inline-block;
+  background: #0b0f14;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .02em;
+  transition: transform .2s ease;
+   background-color: #000000;
+    border: 1px solid white;
+}
+.testimonials-button:hover{
+background: #00bcd4;
+  border-color: #04adc4;
+  color: white;
+}
+
+.testimonials-button:hover { transform: translateY(-1px); }

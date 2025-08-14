@@ -78,6 +78,35 @@
     "alt": "Trabajo robótico"
 
   },
+ "testimonials": {
+    "title": "¿Qué dicen nuestros clientes?",
+    "link": "Ver referencia",
+    "all": "Todas las referencias",
+    "items": [
+      {
+        "quote": "JettyRobot es nuestro proveedor habitual para la limpieza e inspección robótica. Valoramos su precisión y seguridad, el cumplimiento de los tiempos de parada y la entrega de la solución llave en mano. La limpieza robótica con chorro en seco es un método seguro y eficaz que además protege la superficie del ducto.",
+        "author": "Bohumil Kratochvil",
+        "role": "EHS Manager",
+        "company": "Ball Beverage Packaging, República Checa",
+        "link": "#"
+      },
+      {
+        "quote": "El equipo de JettyRobot trabajó de forma sobresaliente en la limpieza de cuatro tuberías como parte del proyecto South Stream – WP 5.1 Landfall Facility Russia. Lideraron con eficiencia el desarrollo de la tecnología requerida para el proyecto. Esperamos seguir colaborando en el futuro.",
+        "author": "Giuseppe Minnetti",
+        "role": "Senior Technical Manager",
+        "company": "Saipem",
+        "link": "#"
+      },
+      {
+        "quote": "El proyecto se realizó a un alto nivel y se completó antes del plazo. Lo que más aprecio es el enfoque profesional del equipo de implementación en combinación con la tecnología robótica. El uso de robots es el futuro para trabajos en ductos.",
+        "author": "Toni Rudolph",
+        "role": "Senior Engineer",
+        "company": "Alemania",
+        "link": "#"
+      }
+    ]
+  
+  },
     "cta": {
     "headline": "¿Quieres encargar un trabajo robótico en tus tuberías?",
     "button": "Contáctanos"

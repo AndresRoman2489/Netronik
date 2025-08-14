@@ -1,0 +1,77 @@
+/* === Igual que Clientes, con nombres propios de clase === */
+.partners-section {
+  padding: 4rem 2rem;
+  background-color: #fff; /* mismo fondo blanco */
+  text-align: center;
+}
+
+.partners-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-bottom: 2.5rem;
+}
+
+/* Grid 4 columnas desktop, 2 en tablet/móvil */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 1rem 1rem;  /* puedes ajustar el gap */
+  margin-left: 150px;
+  margin-right:150px ;
+}
+/* Solo imagen, apariencia plana (no card) */
+.partner-logo {
+  max-width: 160px;
+  max-height: 80px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hover: igual que Clientes */
+.partner-logo:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* === Responsive igual que Clientes === */
+@media (max-width: 1024px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
+     margin-left: 0px;
+  margin-right:0px ;
+  }
+   .partners-title {
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+  }
+  .partner-logo { max-width: 140px; }
+}
+
+
+@media (max-width: 480px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1rem;
+  }
+  .partner-logo { max-width: 100px; }
+  .partners-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }}

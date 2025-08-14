@@ -82,6 +82,35 @@
   "clients": {
     "title": "We successfully cooperate with companies worldwide",
     "alt": "Client {{n}}"
+
+  },
+    "testimonials": {
+    "title": "What do our customers say?",
+    "link": "View reference",
+    "all": "All references",
+    "items": [
+      {
+        "quote": "JettyRobot is our regular supplier for robotic cleaning and inspection. We value their precision and safety, adherence to planned downtime, and the ability to deliver a turnkey solution. Robotic dry blasting is a safe and effective method that also protects the pipe surface.",
+        "author": "Bohumil Kratochvil",
+        "role": "EHS Manager",
+        "company": "Ball Beverage Packaging, Czech Republic",
+        "link": "#"
+      },
+      {
+        "quote": "The JettyRobot team performed outstandingly in cleaning four pipelines as part of the South Stream – WP 5.1 Landfall Facility Russia project. They efficiently led the development of the technology required for the project. We look forward to further cooperation.",
+        "author": "Giuseppe Minnetti",
+        "role": "Senior Technical Manager",
+        "company": "Saipem",
+        "link": "#"
+      },
+      {
+        "quote": "The project was executed at a high level and completed ahead of schedule. I especially appreciate the professional approach of their implementation team combined with robotic technology. Using robots is the future for work in pipelines.",
+        "author": "Toni Rudolph",
+        "role": "Senior Engineer",
+        "company": "Germany",
+        "link": "#"
+      }
+    ]
   },
 "footer": {
     "tagline": "Innovation that transforms.",

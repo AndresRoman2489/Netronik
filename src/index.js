@@ -5,12 +5,18 @@ import './index.css';
 import App from './App';
 import './i18n';
 import reportWebVitals from './reportWebVitals';
+import AOSProvider from "./providers/AOSProvider";
+import HtmlLangSync from "./providers/HtmlLangSync";
+
 
 const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+     <AOSProvider>
+      <HtmlLangSync />
       <App />
+    </AOSProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -14,7 +14,6 @@
   box-sizing: border-box;
 
   background-color: rgba(0, 0, 0, 0); /* translúcido */
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* línea inferior activa */
@@ -175,11 +174,20 @@
   margin-left: 4px;
 }
 
+
 .hamburger {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  color: #fff;
+  font-size: 1.6rem;       /* tu tamaño de icono */
   display: none;
-  font-size: 1.5rem;
   cursor: pointer;
-  color: white;
 }
 
 @media (max-width: 768px) {
@@ -187,7 +195,14 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0rem 1rem !important;
+     
   }
+.header > *:not(:last-child) {
+  border-right: 0px solid rgba(255, 255, 255, 0.1);
+  padding-right: 0rem;
+  margin-right: 0rem;
+}
+
 
   .header-left {
     width: 100%;
@@ -208,12 +223,22 @@
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 1rem;
+    padding-top: 1rem;  
   }
 
-  .header-right.open {
+.header-right.open {
     display: flex;
+     
+  }
+    .header.menu-open{
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: background-color .3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+   .header:has(.header-right.open){
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: background-color .3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .header-right a,
@@ -231,5 +256,6 @@
   .social-icons {
     margin-top: 0.5rem;
     padding-left: 1rem;
+    padding-bottom: 1rem;
   }
 }

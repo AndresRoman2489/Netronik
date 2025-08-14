@@ -18,3 +18,12 @@ h1, h2, h3 {
   padding: 0 1.5rem;
 }
 
+/* 1) Por defecto, NO ocultes nada antes de que AOS esté listo */
+[data-aos] { opacity: 1; transform: none; }
+
+/* 2) Cuando AOS ya está listo (body.aos-ready), aplica el estado inicial oculto */
+body.aos-ready [data-aos]:not(.aos-animate) {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .5s ease, transform .5s ease;
+}

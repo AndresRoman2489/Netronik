@@ -1,0 +1,80 @@
+/* Hero compacto, alineado a la izquierda, con fondo oscurecido */
+
+:root { --header-h: clamp(64px, 10vw + 24px, 108px); }
+
+
+.ind-hero {
+  padding-top: var(--header-h);
+  min-height: clamp(260px, 58vh, 560px);
+
+}
+
+.ind-hero{
+  --_minH: 550px;               /* altura compacta (desktop ~240-280 en la práctica) */
+  position: relative;
+  color: #fff;
+  background: linear-gradient(180deg,#0b0f14 0%,#11161d 100%);
+  padding: 28px 0 18px;         /* poco alto como en el mock */
+  min-height: var(--_minH);
+  overflow: hidden;
+}
+
+.ind-hero__overlay{
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.46) saturate(.95);
+  transform: scale(1.035);
+  z-index: 0;
+}
+.ind-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 42%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ind-hero__inner{
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;            /* ancho de contenido */
+  margin: 0 auto;
+  padding: 0 24px;              /* respiración lateral */
+  display: flex;
+  align-items: center;
+  min-height: var(--_minH);
+}
+
+.ind-hero__content{
+  max-width: 680px;             /* caja de texto parecida al mock */
+  text-align: left;
+}
+
+.ind-hero h1{
+  margin: 0 0 .5rem;
+  font-weight: 900;
+  letter-spacing: .01em;
+  font-size: clamp(28px, 4.2vw, 40px);
+}
+.ind-hero .lead{
+  color: #cbd3dd;
+  line-height: 1.6;
+  margin: 0;
+  font-size: clamp(14px, 1.8vw, 16px);
+}
+
+/* Ajuste suave en móviles */
+@media (max-width: 768px){
+.ind-hero {
+  padding-top: var(--header-h);
+  min-height: clamp(260px, 58vh, 560px);
+  /* 260px en móviles chicos, ~58% del alto de la ventana normalmente,
+     y como máximo ~560px en desktop */
+}
+
+  .ind-hero__content{ max-width: 100%; }
+}

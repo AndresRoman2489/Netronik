@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "title": "Choose your industry and we’ll find the solution",
+    "subtitle": "Our robotic technologies apply wherever ducts are used: from air supply and industrial extractors, to conveying liquid and gaseous raw materials, and waste treatment."
+  },
+
+  "split": {
+    "sectorsTitle": "Industry sectors",
+    "sectorsHint": "Where does our technology work?",
+    "appsTitle": "Applications & methods",
+    "appsHint": "Pick the task you need to solve",
+
+    "buttons": {
+      "open": "Open",
+      "showMore": "Show more",
+      "showLess": "Show less"
+    },
+
+    "sectors": {
+      "industrialProduction": { "label": "Industrial production" },
+      "foodAndBeverage":     { "label": "Food & beverage" },
+      "wasteTreatment":      { "label": "Waste treatment" },
+      "oilAndGas":           { "label": "Oil & gas" },
+      "mining":              { "label": "Mining" },
+      "powerGeneration":     { "label": "Power generation" },
+      "waterTreatment":      { "label": "Water treatment" },
+      "chemical":            { "label": "Chemical industry" },
+      "pneumaticTransport":  { "label": "Pneumatic transport" },
+      "hvac":                { "label": "Ventilation & A/C (HVAC)" },
+      "other":               { "label": "Other industries" }
+    },
+
+    "apps": [
+      "Pipe inspection",
+      "Pipe cleaning",
+      "Industrial extraction",
+      "Rust & coating removal",
+      "Non-abrasive cleaning methods",
+      "Dry ice blasting",
+      "High-pressure water jetting",
+      "Abrasive blasting",
+      "Protective coating",
+      "Visual inspection",
+      "Ventilation & air conditioning",
+      "Compressed-air cleaning",
+      "Brush cleaning",
+      "Vacuuming",
+      "Disinfection",
+      "Ovality measurement",
+      "Wall thickness measurement"
+    ]
+  },
+
+  "partners": {
+    "title": "We successfully cooperate with companies all over the world"
+  },
+
+  "contact": {
+    "titleLine1": "Not sure what you need?",
+    "titleAccent": "Contact us.",
+    "lead": "Our specialists will get back to you promptly.",
+
+    "form": {
+      "first": "First name",
+      "last": "Last name",
+      "company": "Company",
+      "site": "Website",
+      "phone": "Phone",
+      "email": "E-mail",
+      "message": "Message",
+
+      "ph": {
+        "first": "Your name",
+        "last": "Your last name",
+        "company": "e.g. ACME Inc.",
+        "site": "https://your-domain.com",
+        "phone": "e.g. +1 999-999-9999",
+        "email": "you@domain.com",
+        "message": "Tell us what you need..."
+      },
+
+      "submit": "Send",
+      "privacy": "Your data is safe with us. We respect your privacy."
+    }
+  }
+}

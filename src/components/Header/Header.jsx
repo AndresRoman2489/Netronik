@@ -1,51 +1,96 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Header.css';
 import logo from '../../assets/img/netronik.png';
-import jettyLogo from '../../assets/img/jettyrobot-logo.png'; // ← nuevo import
+import jettyLogo from '../../assets/img/jettyrobot-logo.png';
 import { useTranslation } from 'react-i18next';
+import { Link } from "react-router-dom";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+
+  const headerRef = useRef(null);
   const langRef = useRef(null);
 
   const { t, i18n } = useTranslation();
   const currentLng = (i18n.resolvedLanguage || i18n.language || 'es').toLowerCase();
   const isES = currentLng.startsWith('es');
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // 1) Scroll: SOLO marca "scrolled" (no cierres el menú aquí)
+useEffect(() => {
+  const onScroll = () => setScrolled(window.scrollY > 32);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  return () => window.removeEventListener('scroll', onScroll);
+}, []);
 
-  useEffect(() => {
-    const onClickOutside = (e) => {
-      if (langRef.current && !langRef.current.contains(e.target)) {
-        setLangOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', onClickOutside);
-    return () => document.removeEventListener('mousedown', onClickOutside);
-  }, []);
+// 2) Cerrar menú tras el PRIMER scroll REAL luego de abrirse
+useEffect(() => {
+  if (!menuOpen) return;
 
-  const changeLang = (lng) => {
-    i18n.changeLanguage(lng);
+  let armed = false;                  // se “arma” después del pequeño delay
+  const startY = window.scrollY;
+  const armTimer = setTimeout(() => { armed = true; }, 120);
+
+  const onScrollToClose = () => {
+    if (!armed) return;
+    const delta = Math.abs(window.scrollY - startY);
+    if (delta > 10) {                 // umbral para ignorar micro-movimientos
+      setMenuOpen(false);
+    }
+  };
+
+  window.addEventListener('scroll', onScrollToClose, { passive: true });
+  return () => {
+    clearTimeout(armTimer);
+    window.removeEventListener('scroll', onScrollToClose);
+  };
+}, [menuOpen]);
+
+ 
+
+  // 3) Click/touch FUERA del header: cierra menú (igual que ya tenías)
+useEffect(() => {
+  const onPointerDown = (e) => {
+    if (!menuOpen) return;
+    const headerEl = headerRef.current;
+    if (headerEl && !headerEl.contains(e.target)) {
+      setMenuOpen(false);
+    }
+  };
+  document.addEventListener('pointerdown', onPointerDown);
+  return () => document.removeEventListener('pointerdown', onPointerDown);
+}, [menuOpen]);
+
+  const changeLang = async (lng) => {
+    await i18n.changeLanguage(lng);
     setLangOpen(false);
+    document.documentElement.lang = lng;
+    window.location.reload();
   };
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+    <header
+      ref={headerRef}
+      className={`header ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}
+    >
       <div className="header-left">
-        {/* logos agrupados */}
         <div className="brand">
-          <img src={logo} alt="Netronik" className="logo" />
+          <Link
+            to="/"
+            className="brand-link"
+            aria-label="Ir al inicio"
+            onClick={() => setMenuOpen(false)}
+          >
+            <img src={logo} alt="Netronik" className="logo" />
+          </Link>
+
           <span className="jetty-wrap">
-          <a href="https://www.jettyrobot.com" target="_blank" rel="noopener noreferrer">
-          <img src={jettyLogo} alt="JettyRobot" className="logo-jetty" />
-          <img src={jettyLogo} alt="" aria-hidden="true" className="logo-jetty text-white" />
-          </a>
+            <a href="https://www.jettyrobot.com" target="_blank" rel="noopener noreferrer">
+              <img src={jettyLogo} alt="JettyRobot" className="logo-jetty" />
+              <img src={jettyLogo} alt="" aria-hidden="true" className="logo-jetty text-white" />
+            </a>
           </span>
         </div>
 
@@ -61,12 +106,26 @@ function Header() {
         </div>
       </div>
 
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menú">
+      <button
+        className="hamburger"
+        aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={menuOpen}
+        onClick={() => setMenuOpen(o => !o)}
+      >
         <i className="fas fa-bars"></i>
-      </div>
+      </button>
 
-      <nav className={`header-right ${menuOpen ? 'open' : ''}`}>
-        <a href="#">{t('nav.industry', 'Industria')}</a>
+      {/* Al hacer click en cualquier link/botón del menú, lo cerramos (menos el selector de idioma) */}
+      <nav
+        className={`header-right ${menuOpen ? 'open' : ''}`}
+        onClick={(e) => {
+          if (e.target.closest('.language')) return;
+          if (e.target.closest('a, button')) setMenuOpen(false);
+        }}
+      >
+        <Link to="/industries" onClick={() => setMenuOpen(false)}>
+  {t('nav.industry', 'Industria')}
+</Link>
         <a href="#">{t('nav.services', 'Servicios')}</a>
         <a href="#">{t('nav.robots', 'Nuestros Robots')}</a>
         <a href="#">
@@ -80,7 +139,7 @@ function Header() {
           <button
             className="lang-toggle"
             type="button"
-            onClick={() => setLangOpen((v) => !v)}
+            onClick={() => setLangOpen(v => !v)}
             aria-haspopup="menu"
             aria-expanded={langOpen}
             aria-label="Cambiar idioma"
