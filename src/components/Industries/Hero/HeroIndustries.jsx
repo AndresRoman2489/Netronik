@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroIndustries.css";
 import { useTranslation } from 'react-i18next';
-import heroBg from "../../../assets/img/Industry.jpg"; // usa tu imagen de tuberías
+import heroBg from "../../../assets/img/heroindserv.webp"; // usa tu imagen de tuberías
 
 export default function HeroIndustries() {
   const { t } = useTranslation('industries');
@@ -15,7 +15,7 @@ export default function HeroIndustries() {
       <div className="ind-hero__overlay" aria-hidden="true" />
       <div className="ind-hero__inner">
         <div className="ind-hero__content">
-          <h1 data-aos="fade-up" data-aos-delay="100">
+          <h1 className="hero-tittle" data-aos="fade-up" data-aos-delay="100">
             {t('hero.title')}
           </h1>
           <p className="lead" data-aos="fade-up" data-aos-delay="200">

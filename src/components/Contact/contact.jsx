@@ -1,7 +1,10 @@
 import React from "react";
 import "./contact.css";
+import { useTranslation } from 'react-i18next';
 
 export default function ContactSection() {
+  const { t } = useTranslation("industries");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(
@@ -16,71 +19,74 @@ export default function ContactSection() {
       <div className="contactx-bg" aria-hidden="true" />
 
       <div className="contactx-wrap">
-        {/* Columna izquierda */}
+        {/* Lado izquierdo: título y lead */}
         <div className="contactx-left" data-aos="fade-right">
           <div className="contactx-icon" aria-hidden="true">✉️</div>
           <h2 className="contactx-title" id="contactx-title">
-            ¿No estás seguro de lo que necesitas?
+            {t("contact.titleLine1")}
             <br />
-            <span className="accent">Contáctanos.</span>
+            <span className="accent">{t("contact.titleAccent")}</span>
           </h2>
           <p className="contactx-lead">
-            Nuestros especialistas se pondrán en contacto contigo a la brevedad.
+            {t("contact.lead")}
           </p>
         </div>
 
-        {/* Columna derecha (form) */}
-        <div className="contactx-right" data-aos="fade-left" data-aos-delay="120">
-          <form className="contactx-form" onSubmit={handleSubmit} noValidate>
+        {/* Lado derecho: formulario */}
+        <div className="contactx-right" data-aos="fade-left">
+          <form className="contactx-form" onSubmit={handleSubmit}>
             <div className="row">
               <div className="field">
-                <label htmlFor="first">Nombre</label>
-                <input id="first" name="first" type="text" placeholder="Tu nombre" />
+                <label htmlFor="first">{t("contact.form.first")}</label>
+                <input id="first" name="first" type="text" placeholder={t("contact.form.ph.first")} />
               </div>
+
               <div className="field">
-                <label htmlFor="last">Apellidos</label>
-                <input id="last" name="last" type="text" placeholder="Tus apellidos" />
+                <label htmlFor="last">{t("contact.form.last")}</label>
+                <input id="last" name="last" type="text" placeholder={t("contact.form.ph.last")} />
               </div>
             </div>
 
             <div className="row">
               <div className="field">
-                <label htmlFor="company">Empresa</label>
-                <input id="company" name="company" type="text" placeholder="Ej. ACME S.A." />
+                <label htmlFor="company">{t("contact.form.company")}</label>
+                <input id="company" name="company" type="text" placeholder={t("contact.form.ph.company")} />
               </div>
+
               <div className="field">
-                <label htmlFor="site">Sitio web</label>
-                <input id="site" name="site" type="url" placeholder="https://tu-dominio.com" />
+                <label htmlFor="site">{t("contact.form.site")}</label>
+                <input id="site" name="site" type="url" placeholder={t("contact.form.ph.site")} />
               </div>
             </div>
 
             <div className="row">
               <div className="field">
-                <label htmlFor="phone">Teléfono</label>
-                <input id="phone" name="phone" type="tel" placeholder="Ej. +52 55 1234 5678" />
+                <label htmlFor="phone">{t("contact.form.phone")}</label>
+                <input id="phone" name="phone" type="tel" placeholder={t("contact.form.ph.phone")} />
               </div>
+
               <div className="field">
-                <label htmlFor="email">E-mail</label>
-                <input id="email" name="email" type="email" placeholder="tucorreo@dominio.com" />
+                <label htmlFor="email">{t("contact.form.email")}</label>
+                <input id="email" name="email" type="email" placeholder={t("contact.form.ph.email")} />
               </div>
             </div>
 
             <div className="row">
               <div className="field field--full field--textarea">
-                <label htmlFor="message">Mensaje</label>
+                <label htmlFor="message">{t("contact.form.message")}</label>
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Cuéntanos qué necesitas..."
+                  placeholder={t("contact.form.ph.message")}
                   rows={8}
                 />
               </div>
             </div>
 
             <div className="contactx-actions">
-              <button className="btn-accent" type="submit">Enviar</button>
+              <button className="btn-accent" type="submit">{t("contact.form.submit")}</button>
               <p className="contactx-privacy">
-                Tus datos están seguros con nosotros. Respetamos tu privacidad.
+                {t("contact.form.privacy")}
               </p>
             </div>
           </form>

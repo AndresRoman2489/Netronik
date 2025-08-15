@@ -30,38 +30,20 @@ export default function IndustriesSplit() {
   const [moreApps, setMoreApps] = useState(false);
 
   const sectors = [
-    { title: "Producción industrial", img: imgIndustry, to: "#" },
-    { title: "Alimentos y bebidas", img: imgFood, to: "#" },
-    { title: "Tratamiento de residuos", img: imgWaste, to: "#" },
-    { title: "Petróleo y gas", img: imgOilGas, to: "#" },
-    { title: "Industria minera", img: imgMina, to: "#" },
-    { title: "Generación de energía", img: imgPower, to: "#" },
-    { title: "Tratamiento de agua", img: imgPower, to: "#" }, // cambia si tienes otra img
-    { title: "Industria química", img: imgQuimica, to: "#" },
-    { title: "Transporte neumático", img: imgNeumatico, to: "#" },
-    { title: "Ventilación y A/A (HVAC)", img: imgPower, to: "#" }, // cambia si hay HVAC.jpg
-    { title: "Otras industrias", img: imgOtras, to: "#" },
+    { title: t("split.sectors.industrialProduction.label"), img: imgIndustry, to: "#" },
+    { title: t("split.sectors.foodAndBeverage.label"),      img: imgFood,     to: "#" },
+    { title: t("split.sectors.wasteTreatment.label"),       img: imgWaste,    to: "#" },
+    { title: t("split.sectors.oilAndGas.label"),            img: imgOilGas,   to: "#" },
+    { title: t("split.sectors.mining.label"),               img: imgMina,     to: "#" },
+    { title: t("split.sectors.powerGeneration.label"),      img: imgPower,    to: "#" },
+    { title: t("split.sectors.waterTreatment.label"),       img: imgPower,    to: "#" }, // cambia si tienes otra img
+    { title: t("split.sectors.chemical.label"),             img: imgQuimica,  to: "#" },
+    { title: t("split.sectors.pneumaticTransport.label"),   img: imgNeumatico,to: "#" },
+    { title: t("split.sectors.hvac.label"),                 img: imgPower,    to: "#" }, // cambia si hay HVAC.jpg
+    { title: t("split.sectors.other.label"),                img: imgOtras,    to: "#" },
   ];
 
-  const apps = [
-    "Inspección de tuberías",
-    "Limpieza de tuberías",
-    "Extracción industrial",
-    "Remoción de óxido y recubrimientos",
-    "Métodos de limpieza no abrasivos",
-    "Chorro de hielo seco",
-    "Chorro de agua a alta presión",
-    "Abrasión con granalla",
-    "Recubrimiento protector",
-    "Inspección visual",
-    "Ventilación y aire acondicionado",
-    "Limpieza con aire comprimido",
-    "Limpieza con cepillo",
-    "Aspirado",
-    "Desinfección",
-    "Medición de ovalidad",
-    "Medición de espesor de pared",
-  ];
+  const apps = t("split.apps", { returnObjects: true });
 
   return (
     <section className="ind-split">
@@ -69,8 +51,8 @@ export default function IndustriesSplit() {
         <div className="ind-panels">
           {/* Sectores */}
           <section className="ind-panel" data-aos="fade-up">
-            <h2 className="panel-title">Sectores industriales</h2>
-            <p className="panel-hint">¿Dónde funciona nuestra tecnología?</p>
+            <h2 className="panel-title">{t("split.sectorsTitle")}</h2>
+            <p className="panel-hint">{t("split.sectorsHint")}</p>
 
             <div
               className={`ind-grid sectors ${moreSectors ? "" : "is-collapsed"}`}
@@ -97,14 +79,14 @@ export default function IndustriesSplit() {
               onClick={() => setMoreSectors((v) => !v)}
               aria-expanded={moreSectors}
             >
-              {moreSectors ? "Ver menos" : "Ver más"}
+              {moreSectors ? t("split.buttons.showLess") : t("split.buttons.showMore")}
             </button>
           </section>
 
           {/* Aplicaciones */}
           <section className="ind-panel ind-panel--apps" data-aos="fade-up">
-            <h2 className="panel-title">Aplicaciones y métodos</h2>
-            <p className="panel-hint">Selecciona la tarea que necesitas resolver</p>
+            <h2 className="panel-title">{t("split.appsTitle")}</h2>
+            <p className="panel-hint">{t("split.appsHint")}</p>
 
             <div className={`ind-grid apps ${moreApps ? "" : "is-collapsed"}`}>
               {apps.map((t, i) => (
@@ -128,7 +110,7 @@ export default function IndustriesSplit() {
               onClick={() => setMoreApps((v) => !v)}
               aria-expanded={moreApps}
             >
-              {moreApps ? "Ver menos" : "Ver más"}
+              {moreApps ? t("split.buttons.showLess") : t("split.buttons.showMore")}
             </button>
           </section>
         </div>

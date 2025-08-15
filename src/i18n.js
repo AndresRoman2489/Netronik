@@ -8,6 +8,8 @@ import en from "./locales/en/common.json";
 // puedes agregar de.json si lo necesitas
 import esIndustries from './locales/es/industries.json';
 import enIndustries from './locales/en/industries.json';
+import servicesEN from "./locales/en/services.json";
+import servicesES from "./locales/es/services.json";
 
 i18n
   .use(LanguageDetector)
@@ -18,12 +20,16 @@ i18n
     resources: {
       es: { common: es,
        industries: esIndustries,
+       services: servicesEN,
+        services: servicesES,
       },
       en: { common: en,
          industries: enIndustries,
+         services: servicesEN
+
        },
     },
-    ns: ["common",'industries'],
+    ns: ["common",'industries','services'],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: { order: ["querystring", "localStorage", "navigator"], caches: ["localStorage"] },

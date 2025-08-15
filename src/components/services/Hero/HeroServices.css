@@ -1,0 +1,113 @@
+/* Igualamos el look de Industries (ind-hero): gradiente base + overlay imagen + degradado superior */
+
+:root { --header-h: clamp(64px, 10vw + 24px, 108px); }
+
+.srv-hero {
+  /* mismos valores base que .ind-hero */
+  --_minH: 550px;
+  position: relative;
+  color: #fff;
+  background: linear-gradient(180deg,#0b0f14 0%,#11161d 100%);
+  padding: 28px 0 18px;
+  min-height: var(--_minH);
+  overflow: hidden;
+}
+
+/* Capa con la imagen (como .ind-hero__overlay) */
+.srv-hero__overlay{
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.46) saturate(.95); /* misma intensidad que Industries */
+  transform: scale(1.035);
+  z-index: 0;
+  
+}
+
+/* Degradado superior (como .ind-hero::after) */
+.srv-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 42%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Contenedor interno (calcado de .ind-hero__inner) */
+.srv-hero__inner{
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  min-height: var(--_minH);
+}
+
+/* Tipos igual que en Industries */
+.srv-hero h1{
+  margin: 0 0 .5rem;
+  font-weight: 900;
+  letter-spacing: .01em;
+  font-size: clamp(36px, 6vw, 50px);
+}
+.srv-hero .lead{
+  color: #cbd3dd;
+  line-height: 1.6;
+  margin: 0;
+   font-size: clamp(16px, 2vw, 20px);
+}
+.srv-hero,
+.srv-hero__inner,
+.srv-hero__content {
+  text-align: left !important;
+}
+.srv-hero__inner { justify-content: flex-start; }
+.srv-hero__content {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+.srv-hero h1,
+.srv-hero .lead {
+  margin-left: 0 !important;
+}
+.srv-hero__inner{
+  max-width: 1200px;           /* igual que Industries */
+  margin: 0 auto;
+  /* mismo gutter lateral que se usa en Industries */
+  padding-left: clamp(24px, 6vw, 72px);
+  padding-right: clamp(24px, 6vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.srv-hero__content{
+  /* mismo ancho de bloque de texto que suele usar Industries */
+  max-width: 780px;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* aseguremos títulos/párrafos pegados a la izquierda */
+.srv-hero h1,
+.srv-hero .lead{
+  text-align: left;
+  margin-left: 0;
+}
+/* Ajuste móvil (igual patrón) */
+@media (max-width: 768px){
+  .srv-hero {
+    padding-top: var(--header-h);
+    min-height: clamp(260px, 58vh, 560px);
+  }
+  .srv-hero__content{ 
+    max-width: 100%;
+
+ }
+}

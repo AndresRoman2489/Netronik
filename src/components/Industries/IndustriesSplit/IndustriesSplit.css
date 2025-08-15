@@ -120,6 +120,7 @@
   color:#0b0f14;
   overflow-wrap:anywhere;      /* los largos no rompen layout */
   word-break:break-word;
+  text-decoration: none;
 }
 .pill--dark .pill-title{ color:#e7eaee; }
 

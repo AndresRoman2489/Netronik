@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/home";
 import Industries from "./pages/industries/Industries";
 import SiteLayout from "./layouts/SiteLayout";
+import Services from "./pages/services/Services";
 
 // Ejemplos:
 
@@ -22,6 +23,7 @@ function AppShell() {
       <Route element={<SiteLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/industries" element={<Industries />} />
+        <Route path="/services" element={<Services />} />
         {/* ...otras rutas */}
       </Route>
     </Routes>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./IndustriesPartners.css";
-
+import { useTranslation } from "react-i18next";
 // Mismos logos que usas en Home/Clientes
 import logo1 from "../../../assets/clientes/skupina.png";
 import logo2 from "../../../assets/clientes/coldjet.png";
@@ -53,13 +53,16 @@ const defaultLogos = [
 ];
 
 export default function IndustriesPartners({
-  title = "Cooperamos con éxito con empresas de todo el mundo",
+  title,
   logos = defaultLogos,
 }) {
+  const { t } = useTranslation("industries");
+  const finalTitle = title ?? t("partners.title");
+
   return (
     <section className="partners-section">
       <h2 className="partners-title" data-aos="fade-up">
-        {title}
+        {finalTitle}
       </h2>
 
       <div className="partners-grid">

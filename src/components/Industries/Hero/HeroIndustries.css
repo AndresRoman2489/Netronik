@@ -28,7 +28,9 @@
   filter: brightness(.46) saturate(.95);
   transform: scale(1.035);
   z-index: 0;
+  
 }
+
 .ind-hero::after{
   content:"";
   position:absolute;
@@ -47,24 +49,26 @@
   display: flex;
   align-items: center;
   min-height: var(--_minH);
+  
 }
 
 .ind-hero__content{
   max-width: 680px;             /* caja de texto parecida al mock */
   text-align: left;
+    
 }
 
 .ind-hero h1{
   margin: 0 0 .5rem;
   font-weight: 900;
   letter-spacing: .01em;
-  font-size: clamp(28px, 4.2vw, 40px);
+  font-size: clamp(36px, 6vw, 50px);
 }
 .ind-hero .lead{
   color: #cbd3dd;
   line-height: 1.6;
   margin: 0;
-  font-size: clamp(14px, 1.8vw, 16px);
+  font-size: clamp(16px, 2vw, 20px); 
 }
 
 /* Ajuste suave en móviles */

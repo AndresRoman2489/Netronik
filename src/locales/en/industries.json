@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Choose your industry and we’ll find the solution",
-    "subtitle": "Our robotic technologies apply wherever ducts are used: from air supply and industrial extractors, to conveying liquid and gaseous raw materials, and waste treatment."
+    "subtitle": "JettyRobot technologies are applied in a wide range of industries. We work wherever pipelines are used for a variety of purposes, from air supply or industrial exhausts, to conveying liquid and gaseous raw materials, to waste processing."
   },
 
   "split": {
@@ -17,37 +17,57 @@
     },
 
     "sectors": {
-      "industrialProduction": { "label": "Industrial production" },
-      "foodAndBeverage":     { "label": "Food & beverage" },
-      "wasteTreatment":      { "label": "Waste treatment" },
-      "oilAndGas":           { "label": "Oil & gas" },
-      "mining":              { "label": "Mining" },
-      "powerGeneration":     { "label": "Power generation" },
-      "waterTreatment":      { "label": "Water treatment" },
-      "chemical":            { "label": "Chemical industry" },
-      "pneumaticTransport":  { "label": "Pneumatic transport" },
-      "hvac":                { "label": "Ventilation & A/C (HVAC)" },
-      "other":               { "label": "Other industries" }
+      "industrialProduction": {
+        "label": "Industrial production"
+      },
+      "foodAndBeverage": {
+        "label": "Food & beverage"
+      },
+      "wasteTreatment": {
+        "label": "Waste treatment"
+      },
+      "oilAndGas": {
+        "label": "Oil & gas"
+      },
+      "mining": {
+        "label": "Mining"
+      },
+      "powerGeneration": {
+        "label": "Power generation"
+      },
+      "waterTreatment": {
+        "label": "Water treatment"
+      },
+      "chemical": {
+        "label": "Chemical industry"
+      },
+      "pneumaticTransport": {
+        "label": "Pneumatic transport"
+      },
+      "hvac": {
+        "label": "Ventilation & A/C (HVAC)"
+      },
+      "other": {
+        "label": "Other industries"
+      }
     },
 
     "apps": [
-      "Pipe inspection",
-      "Pipe cleaning",
-      "Industrial extraction",
-      "Rust & coating removal",
-      "Non-abrasive cleaning methods",
-      "Dry ice blasting",
-      "High-pressure water jetting",
+      "Pipe and duct cleaning",
+      "Disinfection and decontamination",
       "Abrasive blasting",
-      "Protective coating",
-      "Visual inspection",
-      "Ventilation & air conditioning",
-      "Compressed-air cleaning",
-      "Brush cleaning",
-      "Vacuuming",
-      "Disinfection",
-      "Ovality measurement",
-      "Wall thickness measurement"
+      "Pickling & surface preparation",
+      "Inspection and maintenance",
+      "Unclogging and blockage removal",
+      "Industrial vacuuming",
+      "Pneumatic conveying",
+      "Cryogenic applications",
+      "High-pressure water cleaning",
+      "Dry ice cleaning",
+      "Paint and rust removal",
+      "Waste treatment",
+      "Filtration and ventilation",
+      "Custom services"
     ]
   },
 
@@ -66,7 +86,7 @@
       "company": "Company",
       "site": "Website",
       "phone": "Phone",
-      "email": "E-mail",
+      "email": "Email",
       "message": "Message",
 
       "ph": {

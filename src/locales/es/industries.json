@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Elige tu industria y encontramos la solución",
-    "subtitle": "Nuestras tecnologías robóticas aplican donde se usan ductos: desde suministro de aire y extractores industriales, hasta transporte de materias primas líquidas y gaseosas, y tratamiento de residuos."
+    "subtitle": "Las tecnologías JettyRobot se aplican en una amplia gama de industrias. Trabajamos dondequiera que las tuberías se utilicen para diversos fines, desde el suministro de aire o los escapes industriales, hasta el transporte de materias primas líquidas y gaseosas y el procesamiento de residuos."
   },
 
   "split": {
@@ -17,37 +17,57 @@
     },
 
     "sectors": {
-      "industrialProduction": { "label": "Producción industrial" },
-      "foodAndBeverage":     { "label": "Alimentos y bebidas" },
-      "wasteTreatment":      { "label": "Tratamiento de residuos" },
-      "oilAndGas":           { "label": "Petróleo y gas" },
-      "mining":              { "label": "Industria minera" },
-      "powerGeneration":     { "label": "Generación de energía" },
-      "waterTreatment":      { "label": "Tratamiento de agua" },
-      "chemical":            { "label": "Industria química" },
-      "pneumaticTransport":  { "label": "Transporte neumático" },
-      "hvac":                { "label": "Ventilación y A/A (HVAC)" },
-      "other":               { "label": "Otras industrias" }
+      "industrialProduction": {
+        "label": "Producción industrial"
+      },
+      "foodAndBeverage": {
+        "label": "Alimentos y bebidas"
+      },
+      "wasteTreatment": {
+        "label": "Tratamiento de residuos"
+      },
+      "oilAndGas": {
+        "label": "Petróleo y gas"
+      },
+      "mining": {
+        "label": "Industria minera"
+      },
+      "powerGeneration": {
+        "label": "Generación de energía"
+      },
+      "waterTreatment": {
+        "label": "Tratamiento de agua"
+      },
+      "chemical": {
+        "label": "Industria química"
+      },
+      "pneumaticTransport": {
+        "label": "Transporte neumático"
+      },
+      "hvac": {
+        "label": "Ventilación y A/A (HVAC)"
+      },
+      "other": {
+        "label": "Otras industrias"
+      }
     },
 
     "apps": [
-      "Inspección de tuberías",
-      "Limpieza de tuberías",
-      "Extracción industrial",
-      "Remoción de óxido y recubrimientos",
-      "Métodos de limpieza no abrasivos",
-      "Chorro de hielo seco",
-      "Chorro de agua a alta presión",
-      "Abrasión con granalla",
-      "Recubrimiento protector",
-      "Inspección visual",
-      "Ventilación y aire acondicionado",
-      "Limpieza con aire comprimido",
-      "Limpieza con cepillo",
-      "Aspirado",
-      "Desinfección",
-      "Medición de ovalidad",
-      "Medición de espesor de pared"
+      "Limpieza de tuberías y conductos",
+      "Desinfección y descontaminación",
+      "Granallado / Blasting",
+      "Decapado y preparación de superficies",
+      "Inspección y mantenimiento",
+      "Desbloqueo y remoción de obstrucciones",
+      "Aspiración industrial / vacío",
+      "Transportación neumática",
+      "Aplicaciones criogénicas",
+      "Limpieza con agua a alta presión",
+      "Limpieza con hielo seco",
+      "Remoción de pintura y óxido",
+      "Tratamiento de residuos",
+      "Filtración y ventilación",
+      "Servicios personalizados"
     ]
   },
 
@@ -62,21 +82,21 @@
 
     "form": {
       "first": "Nombre",
-      "last": "Apellidos",
+      "last": "Apellido",
       "company": "Empresa",
       "site": "Sitio web",
       "phone": "Teléfono",
-      "email": "E-mail",
+      "email": "Correo electrónico",
       "message": "Mensaje",
 
       "ph": {
         "first": "Tu nombre",
-        "last": "Tus apellidos",
+        "last": "Tu apellido",
         "company": "Ej. ACME S.A.",
         "site": "https://tu-dominio.com",
-        "phone": "Ej. +52 55 1234 5678",
-        "email": "tucorreo@dominio.com",
-        "message": "Cuéntanos qué necesitas..."
+        "phone": "Ej. +52 81 1234 5678",
+        "email": "tu@dominio.com",
+        "message": "Cuéntanos qué necesitas…"
       },
 
       "submit": "Enviar",
