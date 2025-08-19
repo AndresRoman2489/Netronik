@@ -103,6 +103,7 @@
   letter-spacing: .02em;
   cursor: pointer;
   transition: transform .2s ease, background .3s ease, box-shadow .3s ease;
+    text-decoration: none;  
 }
 .hero-cta:hover{
   background: #00bcd4;

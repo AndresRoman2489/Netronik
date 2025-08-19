@@ -11,6 +11,7 @@ import Home from "./pages/home";
 import Industries from "./pages/industries/Industries";
 import SiteLayout from "./layouts/SiteLayout";
 import Services from "./pages/services/Services";
+import OURrobots from "./pages/ourrobots/robots";
 
 // Ejemplos:
 
@@ -24,6 +25,7 @@ function AppShell() {
         <Route path="/" element={<Home />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/robots" element={<OURrobots/>}/>
         {/* ...otras rutas */}
       </Route>
     </Routes>

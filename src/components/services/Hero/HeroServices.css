@@ -3,14 +3,16 @@
 :root { --header-h: clamp(64px, 10vw + 24px, 108px); }
 
 .srv-hero {
-  /* mismos valores base que .ind-hero */
-  --_minH: 550px;
-  position: relative;
-  color: #fff;
-  background: linear-gradient(180deg,#0b0f14 0%,#11161d 100%);
-  padding: 28px 0 18px;
-  min-height: var(--_minH);
+    position: relative;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
+  display: grid;
+  place-items: left;
+  background: #000;
+  isolation: isolate;
+  color: white;
+  
 }
 
 /* Capa con la imagen (como .ind-hero__overlay) */
@@ -110,4 +112,25 @@
     max-width: 100%;
 
  }
+ 
 }
+@media (max-width: 768px){
+  .srv-hero h1{
+    /* baja en móviles: 22–30px según ancho */
+  
+    line-height: 1.15;
+  }
+  .srv-hero .lead{
+    /* 13–16px */
+   
+    line-height: 1.55;
+  }
+  .srv-hero__inner{
+    /* un poco menos de gutter para que quepa mejor */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* teléfonos muy pequeños */
+

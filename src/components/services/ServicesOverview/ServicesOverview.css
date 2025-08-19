@@ -1,0 +1,275 @@
+/* ==========================================================================
+   ServicesOverview – card + media con fondo unificado y NEÓN azul
+   ========================================================================== */
+
+/* Tokens */
+.srv-overview{
+  --accent: #26c6d1;                     /* azul del proyecto */
+  --accent-rgb: 38, 198, 209;            /* para rgba() del neón */
+  --ring: color-mix(in srgb, var(--accent) 24%, transparent);
+  --ink: #0b1220;
+  --ink-2: #4b5563;
+  --card-radius: 14px;
+  --wrap-max: 1200px;
+  --gutter-x: clamp(24px, 6vw, 72px);
+
+  /* ⚠️ Panel: card + contenedor del media + letterbox de img/video */
+  /* Si ves diferencia con el fondo del asset, prueba #f7f8fa o #f9fafb */
+  --panel-bg: #f5f6f7;
+
+  /* overlay tini para “blanquear” highlights del asset y homogeneizar */
+  --video-overlay: .012; /* 1.2% (sube/baja hasta .02 si hace falta) */
+}
+
+/* Sección */
+.srv-overview{
+    background: linear-gradient(to right, #111, #333);
+  color: var(--ink);
+  padding: clamp(36px, 6vw, 72px) 0;
+}
+.srv-overview__wrap{
+  max-width: var(--wrap-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter-x);
+}
+
+/* ========================================================================== */
+/* Cards                                                                      */
+/* ========================================================================== */
+
+/* 🔵 NEÓN AZUL: sin borde, con glow (normal + hover/focus) */
+.srv-card{
+  background: var(--panel-bg) !important;
+  border: none;                               /* quitamos el borde */
+  border-radius: var(--card-radius);
+  overflow: hidden;                            /* oculta bordes internos */
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.srv-card:hover{
+  transform: translateY(-1px);
+   box-shadow: 0 16px 32px rgba(0, 255, 255, 0.5);/* glow más intenso en hover */
+}
+/* accesibilidad: cuando el contenido recibe focus, reforzamos el neón */
+
+
+/* Tarjeta principal (texto + media) */
+.srv-card--xl{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(20px, 3.2vw, 36px);
+  padding: clamp(24px, 3vw, 40px);
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+@media (min-width: 1100px){
+  .srv-card--xl{ grid-template-columns: 1fr 1.25fr; }
+}
+.srv-card__body{
+  align-self: center;
+  max-width: 72ch;
+  color: var(--ink);
+}
+
+/* Media: MISMO fondo + overlay “lighten” para igualar mínimos */
+.srv-card__media{
+  position: relative;
+  align-self: center;
+  aspect-ratio: 4 / 3;
+  border-radius: calc(var(--card-radius) - 2px);
+  overflow: hidden;
+  background: var(--panel-bg) !important;
+}
+.srv-card__media::before{
+  content:"";
+  position:absolute; inset:0;
+  background: var(--panel-bg);
+  mix-blend-mode: lighten;
+  opacity: var(--video-overlay);
+  pointer-events:none;
+}
+
+/* El asset (img o video) usa el MISMO color en su letterbox */
+.srv-media{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: var(--panel-bg) !important;
+}
+
+/* Grid de 3 cards */
+.srv-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.8vw, 32px);
+  align-items: stretch;
+}
+.srv-grid .srv-card{ display: flex; flex-direction: column; }
+.srv-grid .srv-card__body{
+  flex: 1 1 auto;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(20px, 2.8vw, 28px);
+  color: var(--ink);
+}
+.srv-grid .srv-list{
+  width: 100%;
+  max-width: 56ch;
+  margin-inline: auto;
+  text-align: left;
+}
+
+/* ========================================================================== */
+/* Tipografía                                                                 */
+/* ========================================================================== */
+
+.srv-title{
+  color: var(--ink);
+  font-weight: 900;
+  letter-spacing: .01em;
+  line-height: 1.06;
+  font-size: clamp(30px, 3.8vw, 44px);
+  margin: 0 0 12px;
+  text-wrap: balance;
+}
+.srv-lead{
+  color: var(--ink-2);
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+
+/* Meta */
+.srv-meta{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 2vw, 28px);
+  margin: 10px 0 22px;
+}
+.srv-meta__col:nth-child(2){
+  padding-left: clamp(12px, 2vw, 24px);
+  border-left: 1px solid #edf2f7;
+}
+.srv-meta__title{
+  color: var(--ink);
+  opacity: .75;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+/* Lista */
+.srv-list{ margin: 0; padding: 0; list-style: none; }
+.srv-list__item{
+  position: relative;
+  padding-left: 20px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  font-size: 14px;
+}
+.srv-list__item::before{
+  content: "";
+  position: absolute;
+  left: 0; top: .68em;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px rgba(var(--accent-rgb), .22);
+}
+
+/* Titulares de cards */
+.srv-card__title{
+  color: var(--ink);
+  font-weight: 800;
+  font-size: clamp(18px, 2.2vw, 22px);
+  letter-spacing: .01em;
+  margin: 0 0 10px;
+}
+.srv-card__sub{
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+/* Botón */
+.srv-btn{
+  margin-top: auto;
+  align-self: center;
+  background: #0b0f14;
+  color: #fff;
+  border: 1px solid #0b0f14;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: .01em;
+  transition: background .15s, border-color .15s, box-shadow .15s, transform .12s;
+}
+.srv-btn:hover{
+  background: var(--accent);
+  border-color: var(--accent);
+  /* hacemos eco del neón en el botón */
+  box-shadow:
+    0 0 14px rgba(var(--accent-rgb), .28),
+    0 0 26px rgba(var(--accent-rgb), .20);
+}
+.srv-btn:active{ transform: translateY(1px); }
+
+/* Responsive */
+@media (max-width: 1100px){
+  .srv-card--xl{ grid-template-columns: 1fr; }
+  .srv-card__media{ order: -1; }
+}
+@media (max-width: 860px){
+  .srv-grid{ grid-template-columns: 1fr; }
+  .srv-meta__col:nth-child(2){ border-left: 0; padding-left: 0; }
+}
+@media (max-width: 560px){
+  .srv-title{ font-size: clamp(24px, 7vw, 30px); }
+  .srv-lead { font-size: clamp(13px, 3.6vw, 15px); }
+  .srv-overview__wrap{ padding: 0 clamp(18px, 5vw, 28px); }
+}
+.srv-card--xl .srv-card__body{
+  display: flex;           /* convierte el body en contenedor flex */
+  flex-direction: column;  /* apila título, lead, meta, botón */
+  align-items: flex-start; /* mantiene los textos alineados a la izquierda */
+}
+
+.srv-card--xl .srv-btn{
+  align-self: center;                     /* centra el botón horizontalmente */
+  margin-top: clamp(14px, 2vw, 20px);     /* anula el margin-top:auto global */
+}
+/* === Más espacio entre el contenido y el botón en las cards del grid === */
+.srv-grid .srv-card__body{
+  display: flex;            /* asegura flex para poder usar el truco */
+  flex-direction: column;
+}
+
+/* Deja un margen inferior consistente a TODO lo que está antes del botón */
+.srv-grid .srv-card__body > *:not(.srv-btn){
+  margin-bottom: clamp(14px, 2.2vw, 22px);
+}
+
+/* El botón sigue anclado abajo, pero ahora SIEMPRE habrá un mínimo de espacio arriba */
+.srv-grid .srv-card__body .srv-btn{
+  margin-top: auto;
+  /* si quieres además un colchón respecto al borde inferior */
+  margin-bottom: clamp(12px, 1.8vw, 18px);
+}
+
+/* Opcional: más aire en móvil, donde suele verse más “apretado” */
+@media (max-width: 560px){
+  .srv-grid .srv-card__body > *:not(.srv-btn){
+    margin-bottom: clamp(16px, 3vw, 24px);
+  }
+  .srv-grid .srv-card__body .srv-btn{
+    margin-bottom: clamp(14px, 3vw, 22px);
+  }
+}

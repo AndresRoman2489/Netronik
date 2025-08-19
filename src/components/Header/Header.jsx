@@ -127,7 +127,7 @@ useEffect(() => {
   {t('nav.industry', 'Industria')}
 </Link>
         <Link to="/services" onClick={() => setMenuOpen(false)}>{t('nav.services', 'Servicios')}</Link>
-        <a href="#">{t('nav.robots', 'Nuestros Robots')}</a>
+        <Link to="/robots" onClick={()=> setMenuOpen(false)}>{t('nav.robots', 'Nuestros Robots')}</Link>
         <a href="#">
           {t('nav.about', 'Acerca de nosotros')}
           <i className="fas fa-chevron-down small-icon"></i>

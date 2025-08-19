@@ -7,7 +7,7 @@ import "./HeroServices.css";
  * Cuando tengas tu imagen final, cámbiala por:
  *   import heroBg from "../../assets/img/services-hero.jpg";
  */
-import heroBg from "../../../assets/img/heroindserv.webp";
+import heroBg from "../../../assets/img/jettyrobot_cover.jpg";
 
 export default function HeroServices() {
   const { t } = useTranslation("services");
@@ -16,9 +16,8 @@ export default function HeroServices() {
     <section
       className="srv-hero"
       style={{ "--hero-bg": `url(${heroBg})` }}
-      data-aos="fade-up"
     >
-      <div className="srv-hero__overlay" aria-hidden="true" />
+      <div data-aos="fade-up" className="srv-hero__overlay" aria-hidden="true" />
       <div className="srv-hero__inner">
         <div className="srv-hero__content">
           <h1 data-aos="fade-up" data-aos-delay="100">

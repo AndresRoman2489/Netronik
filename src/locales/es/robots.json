@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "title": "Conoce a los Robots JettyRobot",
+    "lead": "Fabricamos robots JettyRobot que inspeccionan, limpian, mantienen y reparan tuberías, ductos y sistemas HVAC. Estamos preparados para los entornos más exigentes."
+  },
+  "catalog": {
+    "learnMore": "Saber más",
+    "jr6": {
+      "title": "JettyRobot 6",
+      "subtitle": "Listo para inspeccionar y limpiar tuberías en un amplio rango. Hasta 1,500 mm según el kit.",
+      "forTitle": "Para qué situaciones",
+      "for": ["Universal", "Para el entorno severo de la industria pesada"]
+    },
+    "jrs": {
+      "title": "JettyRobot S",
+      "subtitle": "Listo para operaciones de trabajo en tuberías desde 200 mm de diámetro.",
+      "forTitle": "Para qué situaciones",
+      "for": ["Alta resistencia", "Para entornos industriales exigentes"]
+    },
+    "special": {
+      "title": "Soluciones Especiales JettyRobot",
+      "subtitle": "¿Los parámetros de los robots estándar no te alcanzan? ¿Necesitas una herramienta especial, integración de proceso u optimización de producción? Te ayudamos.",
+      "forTitle": "Para qué situaciones",
+      "for": ["Soluciones a medida para tus tuberías", "Para todo tipo de tuberías"]
+    },
+    "tools": {
+      "title": "Herramientas y Accesorios JettyRobot",
+      "subtitle": "Herramientas para limpieza e inspección. Accesorios para diversas aplicaciones.",
+      "items": ["Herramientas para limpieza e inspección", "Accesorios para diversas aplicaciones"]
+    }
+  }
+}

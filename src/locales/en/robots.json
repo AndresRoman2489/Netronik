@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "title": "Meet the JettyRobot Robots",
+    "lead": "We manufacture JettyRobot robots that inspect, clean, maintain and repair pipes, ducts, and HVAC systems. We are prepared for the most demanding environments."
+  },
+  "catalog": {
+    "learnMore": "Learn more",
+    "jr6": {
+      "title": "JettyRobot 6",
+      "subtitle": "Ready to inspect and clean pipes across a wide range. Up to 1,500 mm depending on the kit.",
+      "forTitle": "For which situations",
+      "for": ["Universal", "For the harsh environment of heavy industry"]
+    },
+    "jrs": {
+      "title": "JettyRobot S",
+      "subtitle": "Ready for working operations in pipes from a diameter of 200 mm.",
+      "forTitle": "For which situations",
+      "for": ["Highly resistant", "For the harsh industrial environment"]
+    },
+    "special": {
+      "title": "JettyRobot Special Solutions",
+      "subtitle": "Not satisfied with the parameters of standard robots? Need a special tool, process integration or production optimization? We’ll help you.",
+      "forTitle": "For which situations",
+      "for": ["Tailor-made solutions for your pipes", "For all pipes"]
+    },
+    "tools": {
+      "title": "JettyRobot Tools and Accessories",
+      "subtitle": "Tools for cleaning and inspection. Accessories for various applications.",
+      "items": ["Tools for cleaning and inspection", "Accessories for various applications"]
+    }
+  }
+}

@@ -21,7 +21,7 @@
         "label": "Producción industrial"
       },
       "foodAndBeverage": {
-        "label": "Alimentos y bebidas"
+        "label": "Industria de alimentos y bebidas"
       },
       "wasteTreatment": {
         "label": "Tratamiento de residuos"
@@ -36,7 +36,7 @@
         "label": "Generación de energía"
       },
       "waterTreatment": {
-        "label": "Tratamiento de agua"
+        "label": "Industria del agua"
       },
       "chemical": {
         "label": "Industria química"
@@ -45,7 +45,7 @@
         "label": "Transporte neumático"
       },
       "hvac": {
-        "label": "Ventilación y A/A (HVAC)"
+        "label": "Ventilación y Aire Acondicionado"
       },
       "other": {
         "label": "Otras industrias"
@@ -53,21 +53,23 @@
     },
 
     "apps": [
-      "Limpieza de tuberías y conductos",
-      "Desinfección y descontaminación",
-      "Granallado / Blasting",
-      "Decapado y preparación de superficies",
-      "Inspección y mantenimiento",
-      "Desbloqueo y remoción de obstrucciones",
-      "Aspiración industrial / vacío",
-      "Transportación neumática",
-      "Aplicaciones criogénicas",
-      "Limpieza con agua a alta presión",
-      "Limpieza con hielo seco",
-      "Remoción de pintura y óxido",
-      "Tratamiento de residuos",
-      "Filtración y ventilación",
-      "Servicios personalizados"
+      "Inspección de tuberías",
+      "Limpieza de tuberías",
+      "Escapes industriales",
+      "Eliminación de óxido y revestimiento viejo",
+      "Métodos de limpieza no abrasivos",
+      "Explosión de hielo seco",
+      "Chorro de agua a alta presión",
+      "Explosión abrasiva",
+      "Revestimiento protector",
+      "Inspección visual",
+      "Ventilación y Aire Acondicionado",
+      "Limpieza con aire comprimido",
+      "Limpieza con cepillo",
+      "Aspirar",
+      "Desinfección",
+      "Medición de la ovalidad",
+      "Medición del espesor de la pared"
     ]
   },
 

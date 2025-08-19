@@ -13,6 +13,8 @@ import imgPower      from "../../../assets/img/Power.jpg";
 import imgNeumatico  from "../../../assets/img/neumatico.jpg";
 import imgQuimica    from "../../../assets/img/Quimica.jpg";
 import imgOtras      from "../../../assets/img/Otras.jpg";
+import imgWater      from "../../../assets/img/Water.png";
+import imgHVAC       from "../../../assets/img/HVAC.jpg";
 import imgFallback   from "../../../assets/img/alt.jpeg";
 
 function Thumb({ src, alt }) {
@@ -36,10 +38,10 @@ export default function IndustriesSplit() {
     { title: t("split.sectors.oilAndGas.label"),            img: imgOilGas,   to: "#" },
     { title: t("split.sectors.mining.label"),               img: imgMina,     to: "#" },
     { title: t("split.sectors.powerGeneration.label"),      img: imgPower,    to: "#" },
-    { title: t("split.sectors.waterTreatment.label"),       img: imgPower,    to: "#" }, // cambia si tienes otra img
+    { title: t("split.sectors.waterTreatment.label"),       img: imgWater,    to: "#" }, // cambia si tienes otra img
     { title: t("split.sectors.chemical.label"),             img: imgQuimica,  to: "#" },
     { title: t("split.sectors.pneumaticTransport.label"),   img: imgNeumatico,to: "#" },
-    { title: t("split.sectors.hvac.label"),                 img: imgPower,    to: "#" }, // cambia si hay HVAC.jpg
+    { title: t("split.sectors.hvac.label"),                 img: imgHVAC ,    to: "#" }, // cambia si hay HVAC.jpg
     { title: t("split.sectors.other.label"),                img: imgOtras,    to: "#" },
   ];
 

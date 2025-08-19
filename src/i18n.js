@@ -10,6 +10,8 @@ import esIndustries from './locales/es/industries.json';
 import enIndustries from './locales/en/industries.json';
 import servicesEN from "./locales/en/services.json";
 import servicesES from "./locales/es/services.json";
+import robotsES from "./locales/es/robots.json";
+import robotsEN from "./locales/en/robots.json";
 
 i18n
   .use(LanguageDetector)
@@ -20,16 +22,17 @@ i18n
     resources: {
       es: { common: es,
        industries: esIndustries,
-       services: servicesEN,
         services: servicesES,
+        robots: robotsES
       },
       en: { common: en,
          industries: enIndustries,
-         services: servicesEN
+         services: servicesEN,
+         robots: robotsEN
 
        },
     },
-    ns: ["common",'industries','services'],
+    ns: ["common",'industries','services','robots'],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: { order: ["querystring", "localStorage", "navigator"], caches: ["localStorage"] },

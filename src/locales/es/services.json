@@ -6,5 +6,55 @@
     },
     "lead1": "Diseñamos y entregamos servicios robóticos llave en mano para inspeccionar, limpiar, mantener y reparar tuberías, ductos y sistemas HVAC en los entornos más exigentes.",
     "lead2": "Desde operaciones robóticas en sitio hasta renta y entrega de proyectos, nuestros especialistas te ayudan a resolver tareas complejas de forma segura, eficiente y con resultados predecibles."
-  }
+  },
+  
+  "buttons": {
+    "learnMore": "Saber más"
+  },
+  "overview": {
+    "title": "Trabajos Robóticos en tus Tuberías y Proyectos Llave en Mano",
+    "lead": "Estamos preparados para viajar por el mundo y realizar trabajos robóticos en tuberías o entregar proyectos llave en mano. Nuestro equipo tiene amplia experiencia en múltiples industrias y países.",
+    "meta": {
+      "what": {
+        "title": "¿Qué?",
+        "items": ["Limpieza, inspección y reparación de tuberías."]
+      },
+      "who": {
+        "title": "Para quién",
+        "items": ["Todas las industrias."]
+      }
+    }
+  },
+  "cards": {
+    "benefitsTitle": "Beneficios",
+    "rental": {
+      "title": "Renta de Robots",
+      "subtitle": "Para empresas de todas las industrias, sin importar el sector.",
+      "benefits": [
+        "Última tecnología disponible sin costos de inversión.",
+        "Renta con o sin operador, capacitación incluida.",
+        "Accesibilidad mundial con rapidez."
+      ]
+    },
+    "sale": {
+      "title": "Venta de Robots",
+      "subtitle": "Para empresas que brindan limpieza por contrato de ductos, HVAC y escapes industriales.",
+      "benefits": [
+        "Implementación de servicios con mayor eficiencia y rentabilidad.",
+        "La innovación te mantiene por delante de la competencia.",
+        "Cumplimos incluso los requerimientos más exigentes."
+      ]
+    },
+    "special": {
+      "title": "Soluciones Especiales",
+      "subtitle": "Resolvemos requerimientos no estándar para trabajos robóticos en tuberías e integramos la solución a tu proceso productivo.",
+      "benefits": [
+        "Modificaciones no estándar.",
+        "Herramientas especiales o incluso robots especiales.",
+        "Integración a tu proceso de producción."
+      ]
+    }
+    }
 }
+
+

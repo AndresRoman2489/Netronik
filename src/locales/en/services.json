@@ -6,5 +6,54 @@
     },
     "lead1": "We design and deliver turnkey robotic services to inspect, clean, maintain and repair pipes, ducts and HVAC systems in the most demanding environments.",
     "lead2": "From on-site robotic operations to rental and project delivery, our specialists help you solve complex tasks safely, efficiently and with predictable results."
+  },
+  "buttons": {
+    "learnMore": "Learn more"
+  },
+  "overview": {
+    "title": "Robotic Work in Your Pipes and Turnkey Projects",
+    "lead": "We are prepared to travel worldwide to carry out robotic work in pipelines or deliver turnkey projects. Our team has extensive experience across industries and countries.",
+    "meta": {
+      "what": {
+        "title": "What?",
+        "items": ["Cleaning, inspection and repair of pipelines."]
+      },
+      "who": {
+        "title": "Who for",
+        "items": ["All industries."]
+      }
+    }
+  },
+  "cards": {
+    "benefitsTitle": "Benefits",
+    "rental": {
+      "title": "Robot Rental",
+      "subtitle": "For companies in all industries, regardless of sector.",
+      "benefits": [
+        "The latest technology available with no investment costs.",
+        "Rental with or without operator, training included.",
+        "Easy accessibility worldwide."
+      ]
+    },
+    "sale": {
+      "title": "Sale of Robots",
+      "subtitle": "For companies providing contract cleaning of ducts, HVAC and industrial exhausts.",
+      "benefits": [
+        "Implementation of services with increased efficiency and profit.",
+        "Innovation means staying ahead of the competition.",
+        "We meet even the most demanding customer requirements."
+      ]
+    },
+    "special": {
+      "title": "Special Solutions",
+      "subtitle": "We can also solve non-standard requirements for robotic work in pipelines and integrate it into the production process.",
+      "benefits": [
+        "Non-standard modifications.",
+        "Special tools or even special robots.",
+        "Integration into your production process."
+      ]
+    }
   }
 }
+
+

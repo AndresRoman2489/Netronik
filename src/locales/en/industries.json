@@ -30,13 +30,13 @@
         "label": "Oil & gas"
       },
       "mining": {
-        "label": "Mining"
+        "label": "Mining Industry"
       },
       "powerGeneration": {
         "label": "Power generation"
       },
       "waterTreatment": {
-        "label": "Water treatment"
+        "label": "Water Industry"
       },
       "chemical": {
         "label": "Chemical industry"
@@ -45,7 +45,7 @@
         "label": "Pneumatic transport"
       },
       "hvac": {
-        "label": "Ventilation & A/C (HVAC)"
+        "label": "Ventilation and Air Conditioning"
       },
       "other": {
         "label": "Other industries"
@@ -53,21 +53,23 @@
     },
 
     "apps": [
-      "Pipe and duct cleaning",
-      "Disinfection and decontamination",
+      "Inspection of Pipelines",
+      "Pipe Cleaning",
+      "Industrial Exhausts",
+      "Removal of Rust and Old Coating",
+      "Non-Abrasive Cleaning Methods",
+      "Dry Ice Blasting",
+      "High Pressure Water Jetting",
       "Abrasive blasting",
-      "Pickling & surface preparation",
-      "Inspection and maintenance",
-      "Unclogging and blockage removal",
-      "Industrial vacuuming",
-      "Pneumatic conveying",
-      "Cryogenic applications",
-      "High-pressure water cleaning",
-      "Dry ice cleaning",
-      "Paint and rust removal",
-      "Waste treatment",
-      "Filtration and ventilation",
-      "Custom services"
+      "Protective coating",
+      "Visual Inspection",
+      "Ventilation and Air Conditioning",
+      "Compressed Air Cleaning",
+      "Brush Cleaning",
+      "Vacuuming",
+      "Disinfection",
+      "Ovality Measurement",
+      "Wall Thickness Measurement"
     ]
   },
 

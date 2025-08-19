@@ -3,6 +3,7 @@ import './Hero.css';
 import heroMp4 from '../../assets/video/hero-bg.mp4';
 import fallbackImg from '../../assets/img/alt.jpeg';
 import { useTranslation } from 'react-i18next';
+import { Link } from "react-router-dom";
 
 function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -16,19 +17,14 @@ function Hero() {
     const v = videoRef.current;
     if (!v) return;
 
-    // Asegura flags para políticas de autoplay
     v.muted = true;
-    v.playsInline = true; // iOS
+    v.playsInline = true;
     v.autoplay = true;
     v.loop = true;
 
     const tryPlay = () => {
       const p = v.play?.();
-      if (p && typeof p.then === 'function') {
-        p.catch(() => {
-          // Ignora el error de autoplay; reintentaremos al gesto del usuario
-        });
-      }
+      if (p && typeof p.then === 'function') p.catch(() => {});
     };
 
     const onLoadedData = () => {
@@ -41,7 +37,6 @@ function Hero() {
     v.addEventListener('error', onError);
     v.addEventListener('canplay', tryPlay, { once: true });
 
-    // Desbloqueo por primer gesto del usuario (Safari/iOS/Chrome estrictos)
     const unlock = () => {
       tryPlay();
       cleanupUnlock();
@@ -55,13 +50,11 @@ function Hero() {
     document.addEventListener('click', unlock, { once: true });
     document.addEventListener('keydown', unlock, { once: true });
 
-    // Reintenta cuando la pestaña vuelve al frente
     const onVis = () => {
       if (document.visibilityState === 'visible') tryPlay();
     };
     document.addEventListener('visibilitychange', onVis);
 
-    // Intento inicial
     tryPlay();
 
     return () => {
@@ -91,8 +84,6 @@ function Hero() {
           loop
           autoPlay
         >
-          {/* Si luego agregas una versión .webm, colócala antes del mp4 */}
-          {/* <source src={heroWebm} type="video/webm" /> */}
           <source src={heroMp4} type="video/mp4" />
           Tu navegador no soporta el video.
         </video>
@@ -100,26 +91,28 @@ function Hero() {
         <img src={fallbackImg} alt="Fondo estático" className="hero-fallback-img" />
       )}
 
-      {/* TEXTO VISUAL para el efecto (mezcla con el video) */}
+      {/* Capa decorativa: sin eventos */}
       <p className="hero-invert" data-text={subtitle} aria-hidden="true">
         {subtitle}
       </p>
 
-      {/* Overlay (oscurece la escena). Si NO quieres afectar el texto,
-          deja el overlay por debajo de .hero-invert (z-index menor) */}
+      {/* Overlay: sin eventos */}
       <div className="hero-overlay" />
 
-      {/* Contenido accesible por encima */}
+      {/* Contenido interactivo por encima */}
       <div className="hero-content">
         <p className="sr-only">{subtitle}</p>
-        <button
+
+        {/* Usa Link directamente y estilízalo como botón */}
+        <Link
+          to="/robots"
           className="hero-cta"
           data-aos="zoom-in"
           data-aos-delay="600"
           data-aos-duration="1000"
         >
-          {t('hero.cta')}
-        </button>
+          {t('hero.cta', 'Nuestros Robots')}
+        </Link>
       </div>
     </section>
   );

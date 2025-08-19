@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroIndustries.css";
 import { useTranslation } from 'react-i18next';
-import heroBg from "../../../assets/img/heroindserv.webp"; // usa tu imagen de tuberías
+import heroBg from "../../../assets/img/jettyrobot_cover.jpg"; // usa tu imagen de tuberías
 
 export default function HeroIndustries() {
   const { t } = useTranslation('industries');
@@ -10,9 +10,8 @@ export default function HeroIndustries() {
     <section
       className="ind-hero"
       style={{ "--hero-bg": `url(${heroBg})` }}
-      data-aos="fade-up"
     >
-      <div className="ind-hero__overlay" aria-hidden="true" />
+      <div data-aos="fade-up" className="ind-hero__overlay" aria-hidden="true" />
       <div className="ind-hero__inner">
         <div className="ind-hero__content">
           <h1 className="hero-tittle" data-aos="fade-up" data-aos-delay="100">

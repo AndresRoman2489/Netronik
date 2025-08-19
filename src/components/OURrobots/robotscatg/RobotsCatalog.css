@@ -1,0 +1,243 @@
+/* ============================================================
+   Robots Catalog – BLUE cards, tight grid, floating images
+   + imágenes más grandes
+   + “shake” activado por hover/focus en la CARD (no en la img)
+   ============================================================ */
+.rb-cat{
+  --accent: #26c6d1;              /* azul del proyecto (para efectos) */
+  --card-blue: #21c4cf;           /* azul principal de la card */
+  --card-blue-2: #18a9b3;         /* azul para degradado sutil */
+  --ink-on-blue: #ffffff;         /* textos en card azul */
+  --ink-on-blue-2: #e6f7fb;       /* subtítulo/blurb en card azul */
+
+            /* <-- faltaba, lo usamos en border-radius */
+  --wrap: 1200px;
+  --gx: clamp(16px, 4vw, 32px);
+
+  background: linear-gradient(180deg,#0b0f14 0%, #11161d 100%);
+  color: #0b1220;
+  padding: clamp(36px, 5vw, 64px) 0;
+}
+.rb-cat__wrap{
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--gx);
+}
+
+/* Grid pegadito: gap muy pequeño */
+.rb-cat__grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.5px, .6vw, 1px); /* pegaditas */
+}
+
+/* ===================== */
+/* Card base (azul)      */
+/* ===================== */
+
+.rb-card{
+  position: relative;
+  background: linear-gradient(180deg, var(--card-blue) 0%, var(--card-blue-2) 100%);
+  border-radius: var(--radius);
+  overflow: visible;               /* permite que la imagen se salga */
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  /* glow sutil */
+  box-shadow:
+    0 8px 18px rgba(0,0,0,.16),
+    0 0 22px rgba(38,198,209,.12);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.rb-card:hover{
+ transform:translateY(-2px) scale(1.02);
+    border-color:rgba(0,0,0,.16);
+    box-shadow:0 14px 30px rgba(0,0,0,.10);
+    filter:brightness(.985);
+    z-index:2;
+}
+
+/* Media SUPERPUESTA arriba y centrada */
+.rb-card__media{
+  position: absolute;
+  top: clamp(-36px, -4.6vw, -22px); /* sobresale por arriba */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rb-card__media img{
+  /* 🔼 un poco más grandes */
+  height: clamp(98px, 12vw, 140px);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,.18));
+  pointer-events: auto;
+  will-change: transform;
+}
+
+/* Cuerpo: deja espacio para la imagen superpuesta */
+.rb-card__body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: clamp(18px, 2vw, 22px);
+  padding-top: clamp(84px, 12.5vw, 120px); /* más espacio por imagen grande */
+  gap: clamp(10px, 1.2vw, 14px);
+}
+
+.rb-card__title{
+  font-weight: 900;
+  color: var(--ink-on-blue);
+  font-size: clamp(16px, 2vw, 18px);
+  margin: 0;
+}
+.rb-card__sub{
+  margin: 0;
+  color: var(--ink-on-blue-2);
+  font-size: clamp(12px, 1.6vw, 13px);
+  line-height: 1.55;
+}
+
+/* Mini subtítulo (For which situations...) */
+.rb-card__mini{
+  margin: 6px 0 0;
+  color: var(--ink-on-blue);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* Lista con check cuadrado blanco (estilo maqueta) */
+.rb-list{ margin: 0; padding: 0; list-style: none; }
+.rb-list__item{
+  position: relative;
+  padding-left: 18px;
+  color: var(--ink-on-blue);
+  font-size: 13px;
+  line-height: 1.48;
+}
+.rb-list__item::before{
+  content: "";
+  position: absolute;
+  left: 0; top: .45em;
+  width: 10px; height: 10px;
+  border-radius: 2px;
+  border: 2px solid #fff;            /* cajita blanca */
+  box-sizing: border-box;
+}
+.rb-list__item::after{
+  content: "✓";
+  position: absolute;
+  left: 1px; top: .10em;
+  font-size: 10px;
+  line-height: 1;
+  color: #fff;
+}
+
+/* Botón centrado */
+.rb-btn{
+  margin-top: auto;            /* empuja el botón hacia el fondo */
+  align-self: center;
+  background: #0b0f14;
+  color: #fff;
+  border: 1px solid #0b0f14;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .01em;
+  transition: background .15s, border-color .15s, box-shadow .15s, transform .12s;
+}
+.rb-btn:hover{
+  background: #048091;
+  border-color: #04adc4;
+  color: white;
+}
+.rb-btn:active{ transform: translateY(1px); }
+
+/* ============================== */
+/* Card ancha (Tools & Accessories) */
+/* ============================== */
+
+.rb-card--wide{
+  grid-column: 1 / -1;
+  background: linear-gradient(180deg, var(--card-blue) 0%, var(--card-blue-2) 100%);
+  min-height: clamp(220px, 30vw, 280px);
+  display: block;
+  padding: clamp(16px, 2vw, 22px) clamp(18px, 2.4vw, 24px);
+  padding-left: clamp(190px, 26vw, 280px); /* deja más espacio por imagen grande */
+  position: relative;
+  overflow: visible;
+}
+.rb-card--wide .rb-card__media{
+  position: absolute;
+  left: clamp(12px, 2vw, 24px);
+  top: clamp(-20px, -2.4vw, -10px);  /* superpuesta hacia arriba */
+  transform: none;
+}
+.rb-card--wide .rb-card__media img{
+  height: clamp(110px, 14.5vw, 160px);  /* 🔼 más grande */
+  pointer-events: auto;
+  will-change: transform;
+}
+.rb-card--wide .rb-card__body{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: clamp(10px, 1.2vw, 14px);
+  padding: 0;
+}
+.rb-list--cols2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 6px 18px;
+}
+
+/* Más aire entre contenido y botón (todas las cards) */
+.rb-card__body > *:not(.rb-btn){ margin-bottom: clamp(8px, 1.2vw, 12px); }
+.rb-card__body .rb-btn{ margin-bottom: clamp(10px, 1.2vw, 14px); }
+
+/* ============ Bounce ============ */
+@keyframes rb-bounce {
+  0%   { transform: translateY(0) scale(1); }
+  35%  { transform: translateY(-7px) scale(1.045); } /* un poquito más notorio */
+  60%  { transform: translateY(3px)  scale(0.998); }
+  85%  { transform: translateY(-2px) scale(1.01); }
+  100% { transform: translateY(0)   scale(1); }
+}
+
+/* Clase que inyectamos desde React para forzar el rebote */
+.rb-bounce-now{
+  animation: rb-bounce 520ms cubic-bezier(.34,1.56,.64,1) both;
+  will-change: transform;
+  transform: translateZ(0); /* aisla el transform del AOS padre */
+}
+
+/* Si AOS dejó transform en el wrapper del media, lo neutralizamos */
+.rb-card__media.aos-init,
+.rb-card__media.aos-animate{
+  transform: none !important;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .rb-cat__grid{ grid-template-columns: 1fr; }
+  .rb-card{ min-height: 300px; }
+
+  .rb-card--wide{
+    padding-left: clamp(18px, 3vw, 28px);
+    padding-top: clamp(96px, 20vw, 132px); /* espacio para mover media arriba */
+    min-height: clamp(240px, 48vw, 360px);
+  }
+  .rb-card--wide .rb-card__media{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .rb-card--wide .rb-card__body{
+    align-items: center;
+    text-align: center;
+  }
+  .rb-list--cols2{ grid-template-columns: 1fr; }
+}
