@@ -1,0 +1,138 @@
+:root{ --accent:#32C0CF; --ink:#e5e7eb; --muted:#aab3c2;
+       --bg:#0b0c10; --bg2:#10131a; --card:#12161f; --border:#263142; }
+
+/* Sección con fondo oscuro y degradado */
+.refs-sec{
+  position: relative;
+  padding: clamp(28px, 5vw, 64px) 0;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(50,192,207,.18), transparent 55%),
+    linear-gradient(180deg, var(--bg2), var(--bg));
+  overflow: clip;
+}
+@supports not (overflow: clip){ .refs-sec{ overflow: hidden; } }
+
+.refs-wrap{ width:min(1100px, 92%); margin:0 auto; }
+
+/* Header */
+.refs-header{ margin-bottom: clamp(16px, 3vw, 24px); }
+.refs-title{
+  margin:0 0 .4rem; font-weight:800; letter-spacing:-.015em;
+  font-size: clamp(22px, 3.2vw, 32px);
+  color:#e5e7eb ;
+}
+.refs-sub{ margin:0; color: #aab3c2; }
+
+/* Tabs */
+.refs-tabs{
+  display:flex; gap:.5rem; align-items:center;
+  overflow-x:auto; padding: .35rem 0 .25rem;
+  scrollbar-width:none;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.refs-tabs::-webkit-scrollbar{ display:none; }
+
+.refs-tab{
+  appearance:none; background:transparent; color:#e5e7eb;
+  border:1px solid transparent; border-radius:10px;
+  padding:.4rem .75rem; font-weight:600; white-space:nowrap;
+  position:relative; transition:background .15s ease, color .15s ease;
+  outline: none;
+}
+.refs-tab:hover{ background:rgba(255,255,255,.05); }
+.refs-tab.is-active{
+  color:#fff;
+}
+.refs-tab.is-active::after{
+  content:""; position:absolute; left:8px; right:8px; bottom:-8px;
+  height:3px; border-radius:2px; background:var(--accent);
+}
+.refs-tab:focus-visible{
+  box-shadow:0 0 0 3px rgba(50,192,207,.35);
+}
+
+/* Grid */
+.refs-grid{
+  margin-top: clamp(12px, 2.6vw, 20px);
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: clamp(12px, 2vw, 20px);
+}
+@media (min-width: 640px){ .refs-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px){ .refs-grid{ grid-template-columns: repeat(3, 1fr); } }
+
+/* Card */
+.refs-card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: 14px;
+  overflow:hidden;
+  display:flex; flex-direction:column;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.refs-card:hover{ border-color: rgba(50,192,207,.55); transform: translateY(-2px); }
+
+.refs-card__media{
+  aspect-ratio: 16/9;
+  background: linear-gradient(145deg, #0f131b, #0b0e14);
+}
+.refs-card__media img{
+  width:100%; height:100%; object-fit:cover; display:block; max-width:none;
+}
+
+.refs-card__body{ padding: .9rem .95rem 1rem; display:grid; gap:.45rem; }
+.refs-card__title{ margin:0; font-weight:800; line-height:1.25; font-size:1.05rem; color:#fff; }
+.refs-card__excerpt{ margin:0; color:#e5e7eb; opacity:.9; line-height:1.55; }
+.refs-card__meta{ margin:.2rem 0 0; font-size:.92rem; color:#aab3c2; }
+.refs-card__link{
+  margin-top:.35rem; color:var(--accent); text-decoration:underline; text-underline-offset:3px;
+  font-weight:600; width:max-content;
+}
+.refs-card__link:hover{ opacity:.9; }
+
+.refs-empty{ color:var(--muted); padding: 1rem 0; }
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce){
+  .refs-card, .refs-tab{ transition:none; }
+}
+/* === Fix: mismas alturas para todas las imágenes de las cards === */
+.refs-card__media{
+  position: relative;
+  aspect-ratio: 16 / 9;      /* alto consistente */
+  height: auto;
+  overflow: hidden;
+  background: linear-gradient(145deg, #0f131b, #0b0e14); /* por si no carga */
+}
+
+/* El <img> no debe definir el alto del contenedor */
+.refs-card__media > img{
+  position: absolute;
+  inset: 0;                  /* top:0 right:0 bottom:0 left:0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* recorta sin deformar */
+  object-position: center;   /* centra el recorte */
+  display: block;
+  max-width: none;
+}
+
+/* En desktop, por si alguna se pone "gigantona", limitamos un poco */
+@media (min-width: 1024px){
+  .refs-card__media{
+    max-height: 260px;       /* ajusta si quieres más/menos alto */
+  }
+}
+
+/* Fallback para navegadores sin soporte de aspect-ratio */
+@supports not (aspect-ratio: 1 / 1){
+  .refs-card__media{ height: 0; padding-top: 56.25%; } /* 16:9 */
+  .refs-card__media > img{
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  }
+}
+
+/* Asegura que todas las cards estiren igual su contenido */
+.refs-card{ display: flex; flex-direction: column; }
+.refs-card__body{ flex: 1 1 auto; }

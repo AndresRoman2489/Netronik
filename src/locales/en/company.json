@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "title": "JettyRobot Works in Pipes Around the World",
+    "subtitle": "We manufacture JettyRobot robots that inspect, clean, maintain and repair pipes, ducts and HVAC systems. We are prepared for the most demanding environments.We perform robotic works inside pipes, deliver turnkey robotic projects, and rent and sell robots JettyRobot for a variety of industries around the world."
+  },
+  "about": {
+    "title": "We Are JettyRobot",
+    "intro": [
+      "We solve your pipe and duct problems. Don't send your people into the pipes, send JettyRobot robots in. We inspect, clean, maintain, and repair pipes as small as 200 mm.",
+      "We have experience in the most demanding environments such as the oil & gas industry.",
+      "We are the world leader and perform robotic work in pipes around the world.",
+      "JettyRobot robots can transport various tools into a pipe to perform the necessary operations on site. We are able to adapt tools according to individual customer needs. The operator controls the work from the safety of a remote location."
+    ],
+    "sections": [
+      {
+        "id": "services",
+        "title": "What Services Do We Offer?",
+        "lead": "We implement JettyRobot services worldwide and in various industries.",
+        "bullets": [
+          "Robotic work in pipes and turnkey implementations worldwide.",
+          "JettyRobot rental with technology and operator.",
+          "JettyRobot rental with technology without our operator to trained customers.",
+          "Selling JettyRobot robots to companies providing contracted cleaning of ventilation systems, HVAC, and industrial exhausts.",
+          "We train JettyRobot users.",
+          "We provide after-sales and after-warranty services."
+        ]
+      },
+      {
+        "id": "history",
+        "title": "History of JettyRobot",
+        "paragraphs": [
+          "Work on the first JettyRobot prototype began in 2008. We designed it to clean ventilation systems and industrial exhausts using the dry ice blasting method.",
+          "The first prototype saw the light of day in May 2009. This was followed by extensive testing, development, innovation and, most importantly, experience gathering. We launched the first robot in an industrial environment at the turn of 2011 and 2012. Development followed again. We were keen to bring to market the best in the industry."
+        ]
+      },
+      {
+        "id": "innovation",
+        "title": "Development and Innovation",
+        "paragraphs": [
+          "In 2017, the JettyRobot company was formed from the project. From the original focus on ducts and industrial exhausts, we target work in many pipes and ducts. We weren't afraid of a challenge and that's when our claim \"Your Duct & Pipe Insider\" was born, accurately reflecting our change in focus.",
+          "JettyRobot robots became a versatile platform that transports technology into pipes and manages the relevant operations. We emphasize maximum flexibility of the solution so that tool changes can be handled quickly and easily on-site.",
+          "One robot can cover a wide range of operations with just a tool change. Our concept significantly increases work efficiency, shortens lead times and reduces operator training requirements as the operator works with the same robot over and over again."
+        ]
+      },
+      {
+        "id": "respond",
+        "title": "We Respond to Customer Needs",
+        "paragraphs": [
+          "We closely monitor the market and the needs of our customers so we can react quickly and expand our product and service offerings.",
+          "We have added tools for abrasive blasting, vacuuming, high pressure water jetting and protective coating to the original dry ice blasting tool.",
+          "We have added a high-resolution rotation, pan, tilt and up to 30× zoom camera to the built-in pipe inspection cameras.",
+          "New among JettyRobot's innovative tools is an arm carrying a probe for ultrasonic pipe wall thickness measurement that can also carry tools for coating thickness measurement and porosity inspection."
+        ]
+      },
+      {
+        "id": "future",
+        "title": "Plans for the Future",
+        "paragraphs": [
+          "We aim to support our customers even more in the field of preventive maintenance of technology and equipment.",
+          "We aim to apply the principles of Industry 4.0. Our activities focus on innovation and creating and working with digital twins. The increasing demands on the volume of work in preventive maintenance and increasing their efficiency are placing requirements on the implementation of support for automated inspection evaluation based on artificial intelligence and neural networks.",
+          "We work all over the world. In the implementation of projects we emphasize cooperation with local partners. Thanks to this cooperation, we are able to implement even the most challenging projects efficiently and to the full satisfaction of our customers."
+        ]
+      },
+      {
+        "id": "sister",
+        "title": "Sister Company",
+        "paragraphs": [
+          "Our sister company is JettyVision, which specialises in non-contact measurement and image processing.",
+          "JettyVision has many years of experience in the development and supply of machine vision systems, industrial automation, robotics, and high-accuracy measurement in various industries."
+        ]
+      }
+    ]
+  }
+}
+
+

@@ -1,0 +1,28 @@
+{
+  "faq": {
+    "title": "Are you in doubt? This will help you",
+    "subtitle": "Frequently asked questions to help you decide.",
+    "items": [
+      {
+        "id": "safety",
+        "q": "How Will You Improve the Safety of Your Workers?",
+        "a": "Put JettyRobot robots in the pipeline instead of people."
+      },
+      {
+        "id": "costs",
+        "q": "How Will You Reduce the Cost of Inspecting, Cleaning, and Operating Your Pipelines?",
+        "a": "When you deploy JettyRobot, you don't have to dismantle the pipeline and can better plan and utilize regular downtime. You'll find out more easily how your pipeline is performing, get back up to full speed faster, and save on pipeline replacement costs."
+      },
+      {
+        "id": "problem",
+        "q": "Don't Know How to Fix Your Piping Problem?",
+        "a": "Our JettyRobot development team is constantly working on improvements and designing new technologies. We will also come up with an individual solution for your operation."
+      },
+      {
+        "id": "automation",
+        "q": "Do You Need to Automate Operations in Production?",
+        "a": "We design customised solutions, integrate JettyRobot technology into production processes and automate production processes."
+      }
+    ]
+  }
+}

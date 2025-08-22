@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "title": "References",
+    "lead1": "We manufacture JettyRobot robots that inspect, clean, maintain and repair pipes, ducts, and HVAC systems. We are prepared for the most demanding environments.",
+    "lead2": "We perform robotic works inside pipes, deliver turnkey robotic projects, and rent and sell JettyRobot robots for a variety of industries around the world."
+  },
+  "grid": {
+    "title": "References by Industry",
+    "subtitle": "Explore our case studies and projects. Filter by industry to see relevant work.",
+    "tablistLabel": "Filter references by industry",
+    "tabs": [
+      { "key": "all", "label": "All" },
+      { "key": "oilGas", "label": "Oil and Gas" },
+      { "key": "power", "label": "Power Generation" },
+      { "key": "hvac", "label": "Ventilation and Air Conditioning" },
+      { "key": "food", "label": "Food and Beverage" },
+      { "key": "industrial", "label": "Industrial Production" }
+    ],
+    "industry": {
+      "all": "All",
+      "oilGas": "Oil and Gas",
+      "power": "Power Generation",
+      "hvac": "Ventilation and Air Conditioning",
+      "food": "Food and Beverage",
+      "industrial": "Industrial Production"
+    },
+    "meta": { "industry": "Industry", "country": "Country" },
+    "cta": "Read more",
+    "empty": "No references found for this industry.",
+    "items": [
+      {
+        "title": "Helping to comply with hygiene limits in waste treatment and reducing operating costs",
+        "excerpt": "One of the biggest problems in waste processing is dust.",
+        "country": "Germany",
+        "category": "industrial",
+        "href": "#",
+        "imgKey": "industrial-alemania"
+      },
+      {
+        "title": "Gas Compressor Station Pipeline Cleaning for Petroleum Development in Oman",
+        "excerpt": "Another project successfully completed this time in the Sultanate of Oman.",
+        "country": "Oman",
+        "category": "oilGas",
+        "href": "#",
+        "imgKey": "oman"
+      },
+      {
+        "title": "Rapid Renewal of the Coating of a Penstock in a Hydroelectric Power Plant",
+        "excerpt": "JettyRobot completed a time-critical project to prepare penstock surfaces.",
+        "country": "Czech Republic",
+        "category": "power",
+        "href": "#",
+        "imgKey": "penstock-hydro"
+      },
+      {
+        "title": "We Disinfect Ducts and Piping With JettyRobot",
+        "excerpt": "Strict measures had an impact on decontamination, influencing economy and industry.",
+        "country": "Czech Republic",
+        "category": "hvac",
+        "href": "#",
+        "imgKey": "hvac-disinfect"
+      },
+      {
+        "title": "We Won Over Dirty Kitchen Exhausts With JettyRobot!",
+        "excerpt": "Cleaning grease in kitchen ducts is very challenging. Kitchen grease is very stubborn, sticky and difficult to remove.",
+        "country": "Norway",
+        "category": "hvac",
+        "href": "#",
+        "imgKey": "kitchen-exhausts-norway"
+      },
+      {
+        "title": "Distillery Cleaning Successfully Completed",
+        "excerpt": "Our customer is a global alcoholic beverage manufacturer whose portfolio includes brands around the world.",
+        "country": "United Kingdom",
+        "category": "food",
+        "href": "#",
+        "imgKey": "distillery-uk"
+      },
+      {
+        "title": "Food Processing Plant Cleaning – USA",
+        "excerpt": "Cleaning for a global food company focused on processing and food products.",
+        "country": "USA",
+        "category": "food",
+        "href": "#",
+        "imgKey": "food-plant-usa"
+      },
+      {
+        "title": "Successful HVAC Duct Cleaning After Fire in Linköping Sweden",
+        "excerpt": "The customer required HVAC duct cleaning in a four-story office building that had been damaged by fire.",
+        "country": "Sweden",
+        "category": "hvac",
+        "href": "#",
+        "imgKey": "hvac-fire-sweden"
+      },
+      {
+        "title": "Successful JettyRobot Project on a Gas Pipeline in Russia",
+        "excerpt": "Cleaning and inspection during a pipeline renovation project.",
+        "country": "Russia",
+        "category": "oilGas",
+        "href": "#",
+        "imgKey": "pipeline-russia"
+      },
+      {
+        "title": "Successful Test and Cleaning in Australia With JettyRobot S",
+        "excerpt": "JettyRobot S has successfully passed tests with our customer in the oil and gas industry in Australia.",
+        "country": "Australia",
+        "category": "oilGas",
+        "href": "#",
+        "imgKey": "australia-jettyrobot-s"
+      },
+      {
+        "title": "Successful Pitch Cleaning in Wood Veneer Production",
+        "excerpt": "Pitch deposits in dryer exhausts were reduced effectively.",
+        "country": "Canada",
+        "category": "industrial",
+        "href": "#",
+        "imgKey": "wood-veneer-canada"
+      }
+    ]
+  }
+}

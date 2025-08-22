@@ -1,10 +1,11 @@
 import React from "react";
+import "../../../components/Industries/Hero/HeroIndustries.css";               // reutilizamos el MISMO CSS
 import { useTranslation } from "react-i18next";
-import "../../Industries/Hero/HeroIndustries.css";                 // reutilizamos el MISMO CSS
-import heroBg from "../../../assets/img/jettyrobot_cover.jpg";
+import heroBg from "../../../assets/img/jettyrobot_cover.jpg"; // pon aquí tu imagen
 
-export default function HeroServices() {
-  const { t } = useTranslation("services");
+export default function CompanyHero() {
+  // usa el namespace de i18n para la página de Company
+  const { t } = useTranslation("company");
 
   return (
     <section className="ind-hero">
@@ -20,7 +21,7 @@ export default function HeroServices() {
         data-aos-delay="200"
       />
 
-      {/* Filtro oscuro + degradado superior */}
+      {/* Filtro oscuro + degradado (idéntico a Industries) */}
       <div className="ind-hero__overlay" aria-hidden="true" />
       <div className="ind-hero__grad" aria-hidden="true" />
 
@@ -32,24 +33,14 @@ export default function HeroServices() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {t("hero.title.line1")}{" "}
-            <span className="accent">{t("hero.title.line2")}</span>
+            {t("hero.title")}
           </h1>
-
           <p
             className="ind-hero__lead"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            {t("hero.lead1")}
-          </p>
-
-          <p
-            className="ind-hero__lead"
-            data-aos="fade-up"
-            data-aos-delay="260"
-          >
-            {t("hero.lead2")}
+            {t("hero.subtitle")}
           </p>
         </div>
       </div>

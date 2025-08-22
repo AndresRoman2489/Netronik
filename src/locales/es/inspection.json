@@ -1,0 +1,41 @@
+{
+  "hero": { "title": "Inspección de tuberías" },
+  "overview": {
+    "p1": "La inspección de tuberías es una parte importante de los sistemas de mantenimiento preventivo en todas las industrias. Minimiza el riesgo de accidentes y evita paros no planificados. Cada parada significa grandes pérdidas económicas.",
+    "p2": "A JettyRobot se le puede acoplar una variedad de herramientas para seleccionar el método adecuado. En muchos casos, el primer paso necesario para inspeccionar una tubería es limpiarla.",
+    "p3": "Una ventaja importante de JettyRobot es que la transición entre limpieza e inspección solo implica cambiar la herramienta instalada en el robot.",
+    "p4": "La maniobrabilidad de JettyRobot le permite trabajar en curvas y verticales. Su alcance ayuda a reducir el volumen de trabajo y los costos de acceso. Los ahorros provienen principalmente de reducir las desconexiones y el volumen de posibles excavaciones.",
+    "gallery": {
+      "img1Alt": "Interior de una tubería tras el tratamiento",
+      "img2Alt": "Vista de inspección en la pantalla de control de JettyRobot",
+      "img3Alt": "JettyRobot trabajando dentro de una tubería"
+    }
+  },
+  "methods": {
+    "title": "Métodos típicos de inspección",
+    "links": {
+      "visual":  { "label": "Inspección visual",                "href": "/services#visual-inspection" },
+      "ovality": { "label": "Medición de ovalidad",             "href": "/services#ovality" },
+      "wall":    { "label": "Medición de espesor de pared",     "href": "/services#wall-thickness" }
+    }
+  },
+  "contact": {
+    "before": "¿No encontraste lo que necesitas? No pasa nada.",
+    "linkLabel": "Llena nuestro formulario de contacto",
+    "after": "y te responderemos. Juntos encontraremos una solución a la medida para tu producción industrial",
+    "href": "/"
+  },
+  "impl": {
+    "title": "Mira algunas de nuestras implementaciones exitosas",
+    "items": [
+      {
+        "label": "Renovación rápida del revestimiento de una tubería forzada en central hidroeléctrica",
+        "href": "/references"
+      },
+      {
+        "label": "Limpieza de gasoducto en estación compresora para desarrollo petrolero en Omán",
+        "href": "/references"
+      }
+    ]
+  }
+}

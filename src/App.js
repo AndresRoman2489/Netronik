@@ -12,6 +12,10 @@ import Industries from "./pages/industries/Industries";
 import SiteLayout from "./layouts/SiteLayout";
 import Services from "./pages/services/Services";
 import OURrobots from "./pages/ourrobots/robots";
+import Company from "./pages/Company/Company";
+import References from "./pages/References/References";
+import Costumers from "./pages/Costumers/costumers";
+import Inspection from "./pages/inspection-pipelines/inspection-pipelines";
 
 // Ejemplos:
 
@@ -26,6 +30,11 @@ function AppShell() {
         <Route path="/industries" element={<Industries />} />
         <Route path="/services" element={<Services />} />
         <Route path="/robots" element={<OURrobots/>}/>
+        <Route path="/company" element={<Company/>}/>
+        <Route path="/references" element={<References/>}/>
+        <Route path="/costumers" element={<Costumers/>}/>
+        <Route path="/inspection" element={<Inspection/>}/>
+       
         {/* ...otras rutas */}
       </Route>
     </Routes>

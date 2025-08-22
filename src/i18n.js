@@ -12,6 +12,16 @@ import servicesEN from "./locales/en/services.json";
 import servicesES from "./locales/es/services.json";
 import robotsES from "./locales/es/robots.json";
 import robotsEN from "./locales/en/robots.json";
+import companyES from "./locales/es/company.json";
+import companyEN from "./locales/en/company.json";
+import referencesES from "./locales/es/references.json";
+import ReferencesEN from "./locales/en/references.json";
+import CostumersES from "./locales/es/costumers.json";
+import CostumersEN from "./locales/en/costumers.json";
+import inspectionES from "./locales/es/inspection.json";
+import inspectionEN from "./locales/en/inspection.json";
+import FAQES from "./locales/es/FAQ.json";
+import FAQEN from "./locales/en/FAQ.json";
 
 i18n
   .use(LanguageDetector)
@@ -23,16 +33,26 @@ i18n
       es: { common: es,
        industries: esIndustries,
         services: servicesES,
-        robots: robotsES
+        robots: robotsES,
+        company: companyES,
+        references: referencesES,
+        costumers:CostumersES,
+        inspection:inspectionES,
+        FAQ:FAQES
       },
       en: { common: en,
          industries: enIndustries,
          services: servicesEN,
-         robots: robotsEN
+         robots: robotsEN,
+         company:companyEN,
+         references: ReferencesEN,
+         costumers:CostumersEN,
+         inspection:inspectionEN,
+         FAQ:FAQEN
 
        },
     },
-    ns: ["common",'industries','services','robots'],
+    ns: ["common",'industries','services','robots','company','references','costumers','inspection'],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: { order: ["querystring", "localStorage", "navigator"], caches: ["localStorage"] },

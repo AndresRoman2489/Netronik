@@ -1,0 +1,70 @@
+/* ================= Vars por defecto ================= */
+:root{
+  --header-h: clamp(72px, 8vw + 20px, 112px); /* se actualiza vía JS */
+  --hero-bg: #32C0CF;         /* color plano del hero */
+  --overlay-alpha: .18;       /* intensidad del filtro oscuro */
+  --hero-top-gap: clamp(14px, 2.8vw, 28px);
+  --h-hero: clamp(280px, 42dvh, 520px); /* tamaño compacto */
+}
+
+/* ================= Contenedor ================= */
+.flat-hero{
+  position: relative;
+  background: var(--hero-bg);
+  color: #fff;
+  isolation: isolate;
+  overflow: clip;
+
+  /* deja espacio para el header transparente */
+  padding-top: calc(var(--header-h) + var(--hero-top-gap) + max(0px, env(safe-area-inset-top)));
+  min-height: var(--h-hero);
+
+  display: grid;
+  align-items: center; /* centra verticalmente */
+}
+@supports not (overflow: clip){ .flat-hero{ overflow: hidden; } }
+
+/* Filtro oscuro uniforme */
+.flat-hero__overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,var(--overlay-alpha));
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Contenido */
+.flat-hero__inner{
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding-block: clamp(16px, 4vw, 32px) clamp(20px, 4vw, 36px);
+  position: relative;
+  z-index: 1; /* sobre el overlay */
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+
+/* Título plano y responsivo */
+.flat-hero__title{
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: -.01em;
+  line-height: 1.06;
+  font-size: clamp(28px, 5.4vw, 56px);
+  text-wrap: balance;
+}
+
+/* Subtítulo opcional */
+.flat-hero__sub{
+  margin: .5rem 0 0;
+  font-size: clamp(14px, 2.2vw, 18px);
+  line-height: 1.55;
+  opacity: .95;
+}
+
+/* ================= Modificadores opcionales ================= */
+/* Más compacto aún */
+.flat-hero.is-mini{ --h-hero: clamp(220px, 34dvh, 420px); }
+/* Más oscuro el filtro */
+.flat-hero.is-darker{ --overlay-alpha: .28; }
+/* Fondo alterno si algún día lo necesitas */
+/* .flat-hero.is-dark{ --hero-bg:#0b0c10; } */

@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "title": "JettyRobot funciona en tuberías de todo el mundo",
+    "subtitle": "Fabricamos robots JettyRobot que inspeccionan, limpian, mantienen y reparan tuberías, conductos y sistemas HVAC. Estamos preparados para los entornos más exigentes. Realizamos trabajos robóticos dentro de tuberías, entregamos proyectos robóticos llave en mano y alquilamos y vendemos robots JettyRobot para una variedad de industrias alrededor del mundo."
+  },
+  "about": {
+    "title": "Somos JettyRobot",
+    "intro": [
+      "Resolvemos sus problemas en tuberías y ductos. No envíe a su personal dentro de las tuberías: envíe robots JettyRobot. Inspeccionamos, limpiamos, damos mantenimiento y reparamos tuberías desde 200 mm.",
+      "Tenemos experiencia en los entornos más exigentes, como la industria de oil & gas.",
+      "Somos líderes mundiales y realizamos trabajos robóticos en tuberías en todo el mundo.",
+      "Los robots JettyRobot transportan diversas herramientas dentro de la tubería para ejecutar operaciones necesarias en sitio. Podemos adaptar las herramientas según las necesidades de cada cliente. El operador controla el trabajo de forma segura desde una ubicación remota."
+    ],
+    "sections": [
+      {
+        "id": "services",
+        "title": "¿Qué servicios ofrecemos?",
+        "lead": "Implementamos servicios JettyRobot en todo el mundo y en diversas industrias.",
+        "bullets": [
+          "Trabajo robótico en tuberías e implementaciones llave en mano a nivel mundial.",
+          "Renta de JettyRobot con tecnología y operador.",
+          "Renta de JettyRobot con tecnología sin nuestro operador para clientes capacitados.",
+          "Venta de robots JettyRobot a empresas que brindan limpieza contratada de sistemas de ventilación, HVAC y escapes industriales.",
+          "Capacitamos a usuarios de JettyRobot.",
+          "Ofrecemos servicio posventa y también fuera de garantía."
+        ]
+      },
+      {
+        "id": "history",
+        "title": "Historia de JettyRobot",
+        "paragraphs": [
+          "El trabajo en el primer prototipo de JettyRobot comenzó en 2008. Lo diseñamos para limpiar sistemas de ventilación y escapes industriales mediante hielo seco.",
+          "El primer prototipo vio la luz en mayo de 2009. Le siguieron pruebas exhaustivas, desarrollo, innovación y, sobre todo, aprendizaje. Lanzamos el primer robot en un entorno industrial a finales de 2011 e inicios de 2012. Después continuó el desarrollo. Queríamos llevar al mercado lo mejor de la industria."
+        ]
+      },
+      {
+        "id": "innovation",
+        "title": "Desarrollo e Innovación",
+        "paragraphs": [
+          "En 2017, la empresa JettyRobot surgió del proyecto. Desde el enfoque original en ductos y escapes industriales pasamos a trabajar en diversos tipos de tuberías y conductos. No temimos al reto y nació nuestro lema “Your Duct & Pipe Insider”, reflejando el cambio de enfoque.",
+          "Los robots JettyRobot se convirtieron en una plataforma versátil que transporta tecnología dentro de las tuberías y gestiona las operaciones pertinentes. Priorizamos la máxima flexibilidad para que los cambios de herramienta se realicen de forma rápida y sencilla en sitio.",
+          "Un solo robot puede cubrir una amplia gama de operaciones con solo cambiar la herramienta. Nuestro concepto incrementa la eficiencia, acorta los tiempos de entrega y reduce la capacitación del operador al trabajar repetidamente con el mismo robot."
+        ]
+      },
+      {
+        "id": "respond",
+        "title": "Respondemos a las Necesidades del Cliente",
+        "paragraphs": [
+          "Monitoreamos de cerca el mercado y las necesidades de nuestros clientes para reaccionar con rapidez y ampliar la oferta de productos y servicios.",
+          "Añadimos herramientas para arenado/abrasivo, aspirado, hidrochorro de alta presión y recubrimiento protector al método original de limpieza con hielo seco.",
+          "Integramos cámaras de inspección con rotación, paneo, inclinación y zoom de hasta 30× con alta resolución.",
+          "Entre las herramientas innovadoras se encuentra un brazo con sonda para medición ultrasónica del espesor de pared que también admite herramientas para medición de espesor de recubrimiento e inspección de porosidad."
+        ]
+      },
+      {
+        "id": "future",
+        "title": "Planes a Futuro",
+        "paragraphs": [
+          "Buscamos apoyar aún más a nuestros clientes en el ámbito del mantenimiento preventivo de tecnología y equipos.",
+          "Aplicaremos los principios de Industria 4.0. Nuestras actividades se centran en la innovación y en crear y trabajar con gemelos digitales. Las crecientes demandas en volumen y eficiencia del mantenimiento preventivo requieren soporte para evaluación automatizada basada en inteligencia artificial y redes neuronales.",
+          "Trabajamos en todo el mundo. En los proyectos enfatizamos la cooperación con socios locales. Gracias a ello implementamos incluso los proyectos más desafiantes de forma eficiente y con plena satisfacción del cliente."
+        ]
+      },
+      {
+        "id": "sister",
+        "title": "Empresa Hermana",
+        "paragraphs": [
+          "Nuestra empresa hermana es JettyVision, especializada en medición sin contacto y procesamiento de imágenes.",
+          "JettyVision cuenta con gran experiencia en el desarrollo y suministro de sistemas de visión, automatización industrial, robótica y medición de alta precisión en diversas industrias."
+        ]
+      }
+    ]
+  }
+}
+
+
+

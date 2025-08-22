@@ -6,7 +6,12 @@
       "services": "Servicios",
       "robots": "Nuestros Robots",
       "about": "Acerca de nosotros",
-      "contact": "Contactar"
+      "contact": "Contactar",
+      "aboutMenu": {
+  "company": "Compañía",
+  "references": "Referencias",
+  "customers": "Clientes"
+}
     }
   },
   "hero": {

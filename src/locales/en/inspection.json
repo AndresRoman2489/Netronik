@@ -1,0 +1,41 @@
+{
+  "hero": { "title": "Inspection of Pipelines" },
+  "overview": {
+    "p1": "Pipeline inspection is an important part of preventive maintenance systems across all industries. You minimise the risk of accidents and prevent unplanned downtime. Every shutdown means high economic losses.",
+    "p2": "A variety of tools can be fitted to JettyRobot to allow the selection of a suitable method. In many cases, the necessary first step to inspect a pipe is to clean it.",
+    "p3": "A significant advantage of the JettyRobot is that the transition between cleaning and inspection only means changing the tool installed on the robot.",
+    "p4": "JettyRobot's manoeuvrability allows it to work in bends and verticals. Its reach helps reduce work volume and access costs. Savings come mainly from reducing disconnections and the volume of potential excavation works.",
+    "gallery": {
+      "img1Alt": "Interior of a pipe after treatment",
+      "img2Alt": "Inspection view on JettyRobot control screen",
+      "img3Alt": "JettyRobot working inside a pipeline"
+    }
+  },
+  "methods": {
+    "title": "Typical Inspection Methods",
+    "links": {
+      "visual":  { "label": "Visual inspection",            "href": "/services#visual-inspection" },
+      "ovality": { "label": "Ovality measurement",          "href": "/services#ovality" },
+      "wall":    { "label": "Wall thickness measurement",   "href": "/services#wall-thickness" }
+    }
+  },
+  "contact": {
+    "before": "Didn't find what you need? Never mind.",
+    "linkLabel": "Fill in our contact form",
+    "after": "and we will get back to you. Together we will find a tailor-made solution for your industrial production",
+    "href": "/"
+  },
+  "impl": {
+    "title": "Take a Look at Our Successful Implementations",
+    "items": [
+      {
+        "label": "Rapid Renewal of the Coating of a Penstock in a Hydroelectric Power Plant",
+        "href": "/references"
+      },
+      {
+        "label": "Gas Compressor Station Pipeline Cleaning for Petroleum Development in Oman",
+        "href": "/references"
+      }
+    ]
+  }
+}

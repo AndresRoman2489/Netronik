@@ -1,8 +1,7 @@
 /* Estado base del header */
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   z-index: 999;
   display: flex;
@@ -13,87 +12,90 @@
   font-family: 'Segoe UI', sans-serif;
   box-sizing: border-box;
 
-  background-color: rgba(0, 0, 0, 0); /* translúcido */
+  background-color: rgba(0, 0, 0, 0);
   -webkit-backdrop-filter: blur(8px);
   color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* línea inferior activa */
-  transition: background-color 0.3s, border-bottom 0.3s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color .3s, border-bottom .3s;
 }
-
-/* Al hacer scroll, más visible y sin línea inferior */
 .header.scrolled {
-  background-color: rgba(0, 0, 0, 0.75); /* más opaco */
+  background-color: rgba(0,0,0,.75);
   border-bottom: 1px solid transparent;
 }
-
-/* Si quieres bordes laterales marcados como Colossal */
 .header > *:not(:last-child) {
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   padding-right: 1.5rem;
   margin-right: 1.5rem;
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+.header-left { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 
-.logo {
-  height: 100px;
-}
+.logo { height: 100px; }
 
 .slogan {
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: .9rem;
   color: white;
   margin-right: 1rem;
   white-space: nowrap;
 }
 
-.social-icons {
-  display: flex;
-  gap: 0.5rem;
-}
+.social-icons { display: flex; gap: .5rem; }
+.social-icons a { color: white; font-size: 1.1rem; transition: color .2s; text-decoration: none; }
+.social-icons a:hover { color: #00bcd4; }
 
-.social-icons a {
-  color: white;
-  font-size: 1.1rem;
-  transition: color 0.2s;
-}
+.header-right { display: flex; gap: 1.5rem; align-items: center; font-weight: 600; flex-wrap: wrap; }
+.header-right a { color: white; text-decoration: none; transition: color .2s; }
+.header-right a:hover { color: #00bcd4; }
 
-.social-icons a:hover {
-  color: #00bcd4;
-}
-
-.header-right {
-  display: flex;
-  gap: 1.5rem;
+/* ==== ABOUT DROPDOWN ==== */
+.about { position: relative; }
+.about-toggle {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
   align-items: center;
-  font-weight: 600;
-  flex-wrap: wrap;
+  gap: .35rem;
+  font: inherit;
+  text-decoration: none; /* sin subrayado */
 }
+.about-menu {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  display: none;
+  min-width: 180px;
+  background: #000;
+  border-radius: 6px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.45);
+  padding: .5rem 0;
+  z-index: 1000;
+}
+.about.open .about-menu { display: block; }
 
-.header-right a {
-  color: white;
+
+
+.about-item {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: .8rem 1rem;
   text-decoration: none;
-  transition: color 0.2s;
+  font-weight: 700;
+}
+.about-item:hover {
+  background: rgba(255,255,255,.08);
 }
 
-.header-right a:hover {
-  color: #00bcd4;
-}
+/* Rotación del caret */
+.about.open .small-icon { transform: rotate(180deg); transition: transform .2s ease; }
+.small-icon { font-size: .6rem; margin-left: 4px; transition: transform .2s ease; }
 
-.flag-icon {
-  width: 20px;
-  height: 15px;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-/* === Dropdown de idioma (ADITIVO, no rompe nada) === */
-.language { position: relative; }            /* para posicionar el menú */
+/* === Dropdown de idioma === */
+.language { position: relative; }
 .lang-toggle {
   display: inline-flex;
   align-items: center;
@@ -104,12 +106,11 @@
   cursor: pointer;
   padding: 0;
 }
-
 .lang-menu {
   position: absolute;
   top: 120%;
   right: 0;
-  display: none;               /* oculto por defecto */
+  display: none;
   min-width: 160px;
   padding: .4rem;
   background: rgba(0,0,0,.80);
@@ -120,9 +121,7 @@
   box-shadow: 0 8px 24px rgba(0,0,0,.35);
   z-index: 1000;
 }
-
 .language.open .lang-menu { display: block; }
-
 .lang-item {
   width: 100%;
   display: flex;
@@ -136,126 +135,62 @@
   border-radius: 8px;
   cursor: pointer;
 }
-.jetty-wrap{
-  position: relative;
-  display: inline-block;
-}
-.brand{
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;            /* separación entre logos */
-}
-.logo-jetty{
-  height: 42px;                 /* ajusta 36–48 si lo necesitas */
-  object-fit: contain;
-  display: block;
-}
-.logo-jetty.text-white{
-  position: absolute;
-  inset: 0;
-  /* Volvemos “blanco puro” lo que quede visible */
-  filter: brightness(0) invert(1);
+.lang-item:hover { background: rgba(255,255,255,.08); }
 
-  /* --- MÁSCARA: oculta el icono de la izquierda, deja ver solo el texto --- */
-  /* Ajusta este corte si ves que “muerde” el icono o deja restos. */
+.flag-icon { width: 20px; height: 15px; margin-right: 5px; vertical-align: middle; }
+
+/* Jetty dual logo */
+.jetty-wrap{ position: relative; display: inline-block; }
+.brand{ display: flex; align-items: center; gap: .75rem; }
+.logo-jetty{ height: 42px; object-fit: contain; display: block; }
+.logo-jetty.text-white{
+  position: absolute; inset: 0;
+  filter: brightness(0) invert(1);
   --jetty-text-cut: 24%;
   -webkit-mask-image: linear-gradient(to right, transparent var(--jetty-text-cut), #000 calc(var(--jetty-text-cut) + 1px));
   mask-image: linear-gradient(to right, transparent var(--jetty-text-cut), #000 calc(var(--jetty-text-cut) + 1px));
 }
 
-/* base en color (abajo) */
-.logo-jetty.base{ position: relative; z-index: 0; }
-
-.lang-item:hover { background: rgba(255,255,255,.08); }
-
-
-.small-icon {
-  font-size: 0.6rem;
-  margin-left: 4px;
+/* Hambúrguer */
+.hamburger{
+  appearance:none; -webkit-appearance:none;
+  background:transparent; border:0; outline:none;
+  padding:0; margin:0; line-height:1; color:#fff;
+  font-size:1.6rem; display:none; cursor:pointer;
 }
 
+/* ====== Responsive ====== */
+@media (max-width: 768px){
+  .header{ flex-direction:column; align-items:flex-start; padding:0 1rem !important; }
+  .header > *:not(:last-child){ border-right:0; padding-right:0; margin-right:0; }
 
-.hamburger {
-  appearance: none;
-  -webkit-appearance: none;
-  background: transparent;
-  border: 0;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-  color: #fff;
-  font-size: 1.6rem;       /* tu tamaño de icono */
-  display: none;
-  cursor: pointer;
-}
+  .header-left{ width:100%; justify-content:space-between; gap:0 !important; }
+  .lang-menu{ right:1rem; }
 
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0rem 1rem !important;
-     
-  }
-.header > *:not(:last-child) {
-  border-right: 0px solid rgba(255, 255, 255, 0.1);
-  padding-right: 0rem;
-  margin-right: 0rem;
-}
+  .hamburger{ display:block; position:absolute; top:1.2rem; right:2rem; }
 
-
-  .header-left {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0rem !important;
-  }
-.lang-menu { right: 1rem; }
-
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 1.2rem;
-    right: 2rem;
-  }
-
-  .header-right {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-    padding-top: 1rem;  
-  }
-
-.header-right.open {
-    display: flex;
-     
-  }
-    .header.menu-open{
-    background-color: rgba(0, 0, 0, 0.75);
+  .header-right{ display:none; flex-direction:column; width:100%; margin-top:1rem; padding-top:1rem; }
+  .header-right.open{ display:flex; }
+  .header.menu-open,
+  .header:has(.header-right.open){
+    background-color: rgba(0,0,0,.75);
     transition: background-color .3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-   .header:has(.header-right.open){
-    background-color: rgba(0, 0, 0, 0.75);
-    transition: background-color .3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
   }
 
-  .header-right a,
-  .language {
-    padding-left: 1rem;
-  }
+  .header-right a, .language { padding-left: 1rem; }
+  .slogan{ font-size:.8rem; max-width:100%; white-space:normal; }
+  .logo-jetty{ height:30px; }
 
-  .slogan {
-    font-size: 0.8rem;
-    max-width: 100%;
-    white-space: normal;
-  }
-   .logo-jetty{ height: 30px; }
+  .social-icons{ margin-top:.5rem; padding-left:1rem; padding-bottom:1rem; }
 
-  .social-icons {
-    margin-top: 0.5rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
+  /* About menu en móvil: en flujo */
+  .about-menu{
+    position: static;
+    margin-top: .4rem;
+    width: 100%;
+    box-shadow: none;
+    background: rgba(0,0,0,.9);
+    border-radius: 8px;
   }
 }

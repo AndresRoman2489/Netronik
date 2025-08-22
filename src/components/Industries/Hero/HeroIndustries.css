@@ -1,100 +1,188 @@
-/* Hero compacto, alineado a la izquierda, con fondo oscurecido */
+/* --------------------------------------------------------------
+   HERO Industrias — alto grande, izquierda, filtro oscuro.
+   Respeta header fijo y es responsivo. Estilo minimal moderno.
+--------------------------------------------------------------- */
 
-:root { --header-h: clamp(64px, 10vw + 24px, 108px); }
+/* =================== Variables globales =================== */
+:root{
+  /* Alto “real” del header fijo o sticky (ajústalo si lo cambias) */
+  --header-h: clamp(72px, 8vw + 20px, 112px);
 
+  /* Alturas objetivo del hero */
+  --h-desktop: clamp(540px, 86vh, 960px);  /* desktop: casi full screen */
+  --h-mobile:  clamp(420px, 82vh, 760px);  /* móviles: alto generoso */
 
-.ind-hero {
-  padding-top: var(--header-h);
-  min-height: clamp(260px, 58vh, 560px);
+  /* Gutter y ancho máximo de contenido */
+  --gutter-x: clamp(12px, 5vw, 40px);
+  --maxw: 1200px;
 
+  /* Tipografía */
+  --title-size: clamp(30px, 5.2vw, 46px);
+  --lead-size:  clamp(15px, 1.9vw, 18px);
+  --lead-color: #cdd6e1;
+
+  /* Espacio extra entre header y el bloque de texto */
+  --top-gap: clamp(20px, 3.5vw, 64px);
 }
 
+/* =================== Fixes globales seguros =================== */
+/* Evita “rendija” en móvil: no reserves gutter en ambos lados */
+html { scrollbar-gutter: auto; }
+@media (min-width: 1024px){
+  /* En desktop puedes estabilizar el gutter sin both-edges */
+  html { scrollbar-gutter: stable; }
+}
+
+/* Evita scroll horizontal accidental */
+body { overflow-x: clip; }
+@supports not (overflow: clip) { body { overflow-x: hidden; } }
+
+/* Si algún contenedor usa 100vw, fuerza 100% para no exceder viewport */
+.site-header, .header, .hero, .hero-industries { width: 100% !important; }
+
+/* =================== Estructura del hero =================== */
 .ind-hero{
-   position: relative;
+  position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: grid;
-  place-items: left;
-  background: #000;
+  color: #fff;
   isolation: isolate;
-  color: white;
-  
+
+  /* Evita que el header tape el texto */
+  padding-top: calc(var(--header-h) + var(--top-gap) + max(8px, env(safe-area-inset-top)));
+
+  /* Alto mínimo del hero */
+  min-height: var(--h-desktop);
+
+  /* Para centrar verticalmente el contenido */
+  display: grid;
+
+  /* Contención segura por si algo se sale */
+  overflow: clip;
+}
+@supports not (overflow: clip) {
+  .ind-hero{ overflow: hidden; }
 }
 
+/* Fondo: imagen a pantalla completa (usa <img class="ind-hero__bg">) */
+.ind-hero__bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  display: block;
+  max-width: none;
+  /* micro-zoom + raster para evitar bordes de subpíxel */
+  backface-visibility: hidden;
+  transform: translateZ(0) scale(1.02);
+  image-rendering: auto;
+}
+
+/* Capa oscura */
 .ind-hero__overlay{
   position: absolute;
   inset: 0;
-  background-image: var(--hero-bg);
-  background-size: cover;
-  background-position: center;
-  filter: brightness(.46) saturate(.95);
-  transform: scale(1.035);
-  z-index: 0;
-  
-}
-
-.ind-hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 42%);
   z-index: 1;
+  background: rgba(0,0,0,.44);
   pointer-events: none;
 }
 
+/* Degradado superior sutil (mejora legibilidad junto al header) */
+.ind-hero__grad{
+  position:absolute;
+  inset:0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, transparent 40%);
+}
+
+/* Contenedor de contenido */
 .ind-hero__inner{
+  max-width: var(--maxw);
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: var(--gutter-x);
+  display: flex;
+  align-items: center;      /* centra verticalmente */
   position: relative;
   z-index: 2;
-  max-width: 1200px;            /* ancho de contenido */
-  margin: 0 auto;
-  padding: 0 24px;              /* respiración lateral */
-  display: flex;
-  align-items: center;
-  min-height: var(--_minH);
-  
+  min-height: inherit;      /* hereda el alto del hero */
 }
 
+/* Bloque de texto */
 .ind-hero__content{
-  max-width: 680px;             /* caja de texto parecida al mock */
+  max-width: 720px;
   text-align: left;
-    
+  display: grid;
+  gap: clamp(8px, 1.4vw, 16px);
+
+  /* Pequeño empuje a la izquierda en desktop para “alinear” con borde */
+  margin-left: clamp(-2px, -0.4vw, -10px);
 }
 
-.ind-hero h1{
-  margin: 0 0 .5rem;
+/* Título y subtítulo */
+.ind-hero__title{
+  margin: 0;
   font-weight: 900;
   letter-spacing: .01em;
-  font-size: clamp(36px, 6vw, 50px);
+  font-size: var(--title-size);
+  line-height: 1.06;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
-.ind-hero .lead{
-  color: #cbd3dd;
-  line-height: 1.6;
+.ind-hero__lead{
   margin: 0;
-  font-size: clamp(16px, 2vw, 20px); 
+  font-size: var(--lead-size);
+  line-height: 1.6;
+  color: var(--lead-color);
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
-/* Ajuste suave en móviles */
-@media (max-width: 768px){
-.ind-hero {
-  padding-top: var(--header-h);
-  min-height: clamp(260px, 58vh, 560px);
-  /* 260px en móviles chicos, ~58% del alto de la ventana normalmente,
-     y como máximo ~560px en desktop */
+/* Asegura que medios dentro del hero no empujen layout */
+.hero-industries img,
+.hero-industries video,
+.ind-hero img,
+.ind-hero video {
+  width: 100% !important;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: none;
 }
 
-  .ind-hero__content{ max-width: 100%; }
+/* Si tienes barra de redes/menu flotante dentro del hero */
+.hero-industries [data-social],
+.ind-hero [data-social] {
+  position: absolute;
+  right: max(12px, env(safe-area-inset-right));
+  left: auto;
+  overflow: visible;
+  max-width: calc(100% - 24px);
 }
-/* ——— Mobile overrides ——— */
-@media (max-width: 768px){
-  .ind-hero h1{
-    
-    line-height: 1.15;
+
+/* =================== Responsive =================== */
+@media (max-width: 920px){
+  .ind-hero{
+    min-height: var(--h-mobile);
+    --top-gap: clamp(18px, 4.5vw, 32px);
+    --title-size: clamp(26px, 7.4vw, 36px);
+    --lead-size:  clamp(14px, 4vw, 16px);
   }
-  .ind-hero .lead{
-    
-    line-height: 1.55;
+  .ind-hero__content{
+    max-width: 100%;
+    margin-left: 0;
   }
+  .ind-hero__title{ line-height: 1.12; }
+  .ind-hero__lead{ line-height: 1.55; }
 }
 
-/* teléfonos muy pequeños */
+@media (max-width: 560px){
+  .ind-hero{
+    --title-size: clamp(24px, 7.2vw, 30px);
+    --top-gap: clamp(20px, 6vw, 36px);
+  }
+}

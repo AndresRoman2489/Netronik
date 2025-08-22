@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "title": "Referencias",
+    "lead1": "Fabricamos robots JettyRobot que inspeccionan, limpian, mantienen y reparan tuberías, conductos y sistemas HVAC. Estamos preparados para los entornos más exigentes.",
+    "lead2": "Realizamos trabajos robóticos dentro de tuberías, entregamos proyectos robóticos llave en mano y rentamos y vendemos robots JettyRobot para una variedad de industrias en todo el mundo."
+  },
+  "grid": {
+    "title": "Referencias por industria",
+    "subtitle": "Explora nuestros casos y proyectos. Filtra por industria para ver trabajos relevantes.",
+    "tablistLabel": "Filtrar referencias por industria",
+    "tabs": [
+      { "key": "all", "label": "Todas" },
+      { "key": "oilGas", "label": "Petróleo y Gas" },
+      { "key": "power", "label": "Generación de Energía" },
+      { "key": "hvac", "label": "Ventilación y Aire Acondicionado" },
+      { "key": "food", "label": "Alimentos y Bebidas" },
+      { "key": "industrial", "label": "Producción Industrial" }
+    ],
+    "industry": {
+      "all": "Todas",
+      "oilGas": "Petróleo y Gas",
+      "power": "Generación de Energía",
+      "hvac": "Ventilación y Aire Acondicionado",
+      "food": "Alimentos y Bebidas",
+      "industrial": "Producción Industrial"
+    },
+    "meta": { "industry": "Industria", "country": "País" },
+    "cta": "Leer más",
+    "empty": "No se encontraron referencias para esta industria.",
+    "items": [
+      {
+        "title": "Ayudar a cumplir con los límites de higiene en el tratamiento de residuos y reducir los costes operativos",
+        "excerpt": "Uno de los mayores problemas en el procesamiento de residuos es el polvo.",
+        "country": "Alemania",
+        "category": "industrial",
+        "href": "#",
+        "imgKey": "industrial-alemania"
+      },
+      {
+        "title": "Limpieza de gasoducto en estación compresora para desarrollo petrolero en Omán",
+        "excerpt": "Otro proyecto exitoso completado, esta vez en el Sultanato de Omán.",
+        "country": "Omán",
+        "category": "oilGas",
+        "href": "#",
+        "imgKey": "oman"
+      },
+      {
+        "title": "Renovación rápida del revestimiento de una tubería forzada en central hidroeléctrica",
+        "excerpt": "JettyRobot completó a tiempo un proyecto crítico para preparar superficies de la tubería forzada.",
+        "country": "República Checa",
+        "category": "power",
+        "href": "#",
+        "imgKey": "penstock-hydro"
+      },
+      {
+        "title": "Desinfección de ductos y tuberías con JettyRobot",
+        "excerpt": "Las medidas estrictas impactaron la descontaminación y la economía.",
+        "country": "República Checa",
+        "category": "hvac",
+        "href": "#",
+        "imgKey": "hvac-disinfect"
+      },
+      {
+        "title": "Limpieza de campanas y ductos de cocina con JettyRobot",
+        "excerpt": "Quitar grasa en ductos de cocina es muy desafiante: es terca, pegajosa y difícil de eliminar.",
+        "country": "Noruega",
+        "category": "hvac",
+        "href": "#",
+        "imgKey": "kitchen-exhausts-norway"
+      },
+      {
+        "title": "Limpieza de destilería completada con éxito",
+        "excerpt": "Nuestro cliente es un fabricante global de bebidas alcohólicas con marcas alrededor del mundo.",
+        "country": "Reino Unido",
+        "category": "food",
+        "href": "#",
+        "imgKey": "distillery-uk"
+      },
+      {
+        "title": "Limpieza en planta de alimentos – USA",
+        "excerpt": "Servicio para una empresa global enfocada en el procesamiento de alimentos.",
+        "country": "EE. UU.",
+        "category": "food",
+        "href": "#",
+        "imgKey": "food-plant-usa"
+      },
+      {
+        "title": "Limpieza de conductos HVAC tras incendio en Linköping, Suecia",
+        "excerpt": "El cliente requirió limpieza de conductos en un edificio de oficinas de cuatro pisos.",
+        "country": "Suecia",
+        "category": "hvac",
+        "href": "#",
+        "imgKey": "hvac-fire-sweden"
+      },
+      {
+        "title": "Proyecto exitoso en gasoducto – Rusia",
+        "excerpt": "Limpieza e inspección durante la renovación de un gasoducto.",
+        "country": "Rusia",
+        "category": "oilGas",
+        "href": "#",
+        "imgKey": "pipeline-russia"
+      },
+      {
+        "title": "Prueba y limpieza exitosas en Australia con JettyRobot S",
+        "excerpt": "JettyRobot S pasó con éxito pruebas con nuestro cliente en la industria de petróleo y gas en Australia.",
+        "country": "Australia",
+        "category": "oilGas",
+        "href": "#",
+        "imgKey": "australia-jettyrobot-s"
+      },
+      {
+        "title": "Limpieza de resina en producción de chapa de madera",
+        "excerpt": "Se redujeron eficazmente los depósitos en los escapes del secador.",
+        "country": "Canadá",
+        "category": "industrial",
+        "href": "#",
+        "imgKey": "wood-veneer-canada"
+      }
+    ]
+  }
+}

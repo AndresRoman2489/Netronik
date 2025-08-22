@@ -1,0 +1,28 @@
+{
+  "faq": {
+    "title": "¿Tienes dudas? Esto te ayudará",
+    "subtitle": "Preguntas frecuentes para ayudarte a decidir.",
+    "items": [
+      {
+        "id": "safety",
+        "q": "¿Cómo mejorarás la seguridad de tus trabajadores?",
+        "a": "Coloca robots JettyRobot dentro de la tubería en lugar de personas."
+      },
+      {
+        "id": "costs",
+        "q": "¿Cómo reducirás el costo de inspeccionar, limpiar y operar tus tuberías?",
+        "a": "Al implementar JettyRobot, no tienes que desmantelar la tubería y puedes planificar mejor y aprovechar las paradas programadas. Conocerás más fácilmente el desempeño de tu tubería, volverás a operar a máxima velocidad más rápido y ahorrarás en costos de reemplazo."
+      },
+      {
+        "id": "problem",
+        "q": "¿No sabes cómo resolver tu problema de tuberías?",
+        "a": "Nuestro equipo de desarrollo de JettyRobot trabaja continuamente en mejoras y en diseñar nuevas tecnologías. También propondremos una solución a la medida para tu operación."
+      },
+      {
+        "id": "automation",
+        "q": "¿Necesitas automatizar operaciones en producción?",
+        "a": "Diseñamos soluciones personalizadas, integramos la tecnología JettyRobot en los procesos de producción y automatizamos procesos productivos."
+      }
+    ]
+  }
+}

@@ -4,7 +4,7 @@ import "../../Industries/Hero/HeroIndustries.css";                 // reutilizam
 import heroBg from "../../../assets/img/jettyrobot_cover.jpg";
 
 export default function HeroServices() {
-  const { t } = useTranslation("services");
+  const { t } = useTranslation("costumers");
 
   return (
     <section className="ind-hero">
