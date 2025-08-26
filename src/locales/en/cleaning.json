@@ -1,0 +1,75 @@
+{
+  "hero": { "title": "Pipe Cleaning" },
+  
+ 
+  "intro": {
+    "heading": "Typical Cleaning Methods",
+    "p1": "Cleaning is a common operation carried out in piping maintenance in all industries. In many cases, piping cleaning is a necessary first step to performing a",
+    "inspectionLink": "piping inspection",
+    "p2": "Pipe cleaning is the operation for which JettyRobot was designed from the beginning. A variety of tools can be fitted to JettyRobot allowing the selection of the appropriate method.",
+    "p3.1": "JettyRobot's manoeuvring capabilities",
+    "p3.2": "allow it to work in bends and verticals",
+    "p3.3": "In addition, the robot's reach allows for a significant reduction in the volume of work and associated costs to access the pipeline. The savings are mainly in the reduction of the number of places where pipelines need to be disconnected or in the",
+    "p3.4": "reduction of the volume of potential excavation works",
+    "p3.5": "— this often makes the difference between feasible and not",
+    "p3.6": ""
+  },
+  "methods": {
+    "title": "Typical Cleaning Methods",
+    "nonAbrasive": {
+      "title": "Non-abrasive Cleaning",
+      "items": {
+        "dryIce": "Dry ice cleaning",
+        "brush": "Brush cleaning",
+        "air": "Compressed air cleaning",
+        "vacuum": "Vacuuming"
+      }
+    },
+    "abrasive": {
+      "title": "Abrasive Blasting",
+      "media": ["Soda","Nut shells","Steel grit","Slag","Aluminium oxide","Silicon carbide","Sponges","Dry ice with abrasive"]
+    },
+    "hpw": { "title": "High Pressure Water Jetting" },
+    "cta": {
+      "1": "Didn't find what you need? Never mind.",
+      "link": "Fill in our contact form",
+      "2": "and we will get back to you. Together we will find a tailor-made solution for your industrial production."
+    }
+  },
+  "pairs": {
+    "rubber": "Rubber",
+    "plastics": "Plastics",
+    "foundry": "Foundry",
+    "metalworking": "Metalworking",
+    "paintShop": "Paint Shop",
+    "weldingShop": "Welding Shop"
+  },
+  "alts": {
+    "rubber":   { "before": "Rubber duct before cleaning", "after": "Rubber duct after cleaning" },
+    "plastics": { "before": "Plastic duct before cleaning", "after": "Plastic duct after cleaning" },
+    "foundry":  { "before": "Foundry pipe before cleaning", "after": "Foundry pipe after cleaning" },
+    "metal":    { "before": "Metalworking duct before cleaning", "after": "Metalworking duct after cleaning" },
+    "paint":    { "before": "Paint shop duct before cleaning", "after": "Paint shop duct after cleaning" },
+    "welding":  { "before": "Welding shop duct before cleaning", "after": "Welding shop duct after cleaning" }
+  },
+  "refs": {
+    "title": "Take a Look at Our Successful Implementations",
+    "items": [
+      { "label": "Gas Compressor Station Pipeline Cleaning for Petroleum Development in Oman", "href": "#" },
+      { "label": "We Won Over Dirty Kitchen Exhausts With JettyRobot!", "href":  "#" },
+      { "label": "Food Processing Plant Cleaning – USA", "href":  "#" },
+      { "label": "Distillery Cleaning Successfully Completed", "href":  "#" },
+      { "label": "Successful Pitch Cleaning in Wood Veneer Production", "href":  "#" },
+      { "label": "Rapid Renewal of the Coating of a Penstock in a Hydroelectric Power Plant", "href":  "#" }
+    ]
+  },
+  "links": {
+    "inspection":  "/inspection",
+    "contact":  "#",
+    "dryIce":  "#",
+    "brush":  "#",
+    "compressedAir":  "#",
+    "vacuuming":  "#" 
+  }
+}
+

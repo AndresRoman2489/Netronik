@@ -1,0 +1,47 @@
+{
+  "hero": { "title": "Revestimiento protector" },
+  
+  "intro": {
+    "p1": "Los recubrimientos protectores en las superficies internas de las tuberías son comunes en muchas industrias. Su propósito puede ser proteger contra la corrosión, reducir la colecta de fricción y prevenir la penetración de átomos del medio transportado en la estructura del material. Una parte importante de la aplicación de recubrimientos protectores es la preparación de la superficie limpia.",
+    "p2": "Se aplican recubrimientos tanto a tuberías nuevas como a tuberías ya operativas. En estos casos, desmontar la tubería es muy difícil o imposible, por lo que JettyRobot resulta ideal.",
+    "p3": "JettyRobot puede instalarse como herramienta para la implementación de recubrimientos, dependiendo del tipo de material y tecnología escogidos. Siempre en combinación con una limpieza bien diseñada y la preparación del sustrato.",
+    "p4": "La maniobrabilidad de JettyRobot permite trabajar en curvaturas e incluso en verticales, con una gran reducción de tiempos y costos de acceso."
+  },
+  "cta": {
+    "pre": "¿No encontraste lo que necesitabas? No importa.",
+    "link": "Rellena nuestro formulario de contacto",
+    "post": "y nos pondremos en contacto contigo. Juntos encontraremos una solución a medida para tu producción industrial."
+  },
+  "apps": {
+    "title1": "Aplicaciones típicas para",
+    "title2": "superficies internas de tuberías",
+    "items": [
+      "Protector de la superficie interna contra la corrosión o desgaste.",
+      "Mejora de propiedades superficiales de la tubería (p. ej., reducción de fricción).",
+      "Protección contra incendios.",
+      "Barrera entre la tubería y el medio transportado (p. ej., evitar migración de átomos).",
+      "Tratado de la superficie interior de circunferencias soldadas."
+    ]
+  },
+  "videos": {
+    "multi": {
+      "title": "Aplicación de múltiples capas de recubrimiento",
+      "url": "https://www.youtube.com/watch?v=WjmTyM43Cms&t=1s"
+    },
+    "poly": {
+      "title": "Aplicación de poliurea",
+      "url": "https://www.youtube.com/watch?v=yjzVLaODwmY"
+    }
+  },
+  "refs": {
+    "titleLine1": "Eche un vistazo a nuestras",
+    "titleLine2": "implementaciones exitosas",
+    "items": [
+      {
+        "label": "Renovación rápida del revestimiento de una tubería forzada en una central hidroeléctrica",
+        "href": "#"
+      }
+    ]
+  }
+}
+

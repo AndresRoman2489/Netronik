@@ -70,7 +70,7 @@
     "items": {
       "inspect": { "title": "Inspection", "desc": "Discover the condition of your pipes." },
       "clean": { "title": "Cleaning", "desc": "Get back to peak performance." },
-      "restore": { "title": "Lining restoration", "desc": "Save money on pipe replacements." },
+      "restore": { "title": "Coating restoration", "desc": "Save money on pipe replacements." },
       "turnkey": { "title": "Turnkey services", "desc": "Leave the worries to us." }
     },
     "more": "Learn more"

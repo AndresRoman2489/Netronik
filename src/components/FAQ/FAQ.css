@@ -1,24 +1,22 @@
 :root{
-  /* Paleta dark tecnológica */
+  /* Paleta & layout */
   --bg: #0b0e14;
-  --bg-2: #0f131b;
   --panel: #0f141d;
   --panel-stroke: rgba(255,255,255,.06);
   --ink: #e9eef5;
   --muted: #a6b2bf;
-  --accent: #32C0CF;           /* tu turquesa */
-  --accent-2: #27aebd;
+  --accent: #32C0CF;
   --wrap: min(1100px, 92%);
   --radius: 16px;
 
-  /* Icono FAQ – alta visibilidad */
-  --faq-icn-size: 44px;                 /* ↑ tamaño */
-  --faq-icn-stroke: 4px;                /* ↑ grosor barras */
-  --faq-icn-color: #fff;                /* barras blancas */
-  --faq-icn-ring: rgba(255,255,255,.52);
-  --faq-icn-ring-hover: rgba(255,255,255,.7);
+  /* Icono FAQ */
+  --faq-icn-size: 44px;           /* tamaño del botón redondo */
+  --faq-icn-stroke: 4px;          /* grosor de las barras + */
+  --faq-icn-color: #fff;          /* color de las barras */
+  --faq-icn-ring: rgba(255,255,255,.55);
+  --faq-icn-ring-hover: rgba(255,255,255,.75);
   --faq-icn-bg: rgba(255,255,255,.12);
-  --faq-icn-bg-open: rgba(50,192,207,.25);
+  --faq-icn-bg-open: rgba(50,192,207,.22);
 }
 
 .faq-sec{
@@ -28,12 +26,12 @@
     radial-gradient(1200px 700px at 20% -10%, rgba(50,192,207,.18), transparent 50%),
     radial-gradient(900px 600px at 100% 10%, rgba(39,174,189,.18), transparent 55%),
     linear-gradient(180deg, #0b0e14 0%, #0b0e14 100%);
-  color: var(--ink);
+  color: #e9eef5;
   padding-block: clamp(36px, 6vw, 88px);
   overflow: clip;
 }
 
-/* Malla sutil tipo “tech” */
+/* Malla sutil tipo “tech” (muy ligera) */
 .faq-sec::before{
   content:"";
   position:absolute;
@@ -57,40 +55,46 @@
 }
 .faq-sub{
   margin: .4rem 0 0;
-  color: var(--muted);
+  color: #a6b2bf;
   font-size: clamp(14px, 2vw, 18px);
 }
 
 /* Lista como “cards” */
 .faq-list{ display: grid; gap: clamp(10px, 1.8vw, 14px); }
 
+/* === CARD ====================================================== */
 .faq-item{
-  background: color-mix(in oklab, var(--panel) 88%, transparent);
+  /* Glass-look sin filtros caros: color + sombras suaves */
+  background: rgba(15,20,29,.90);
   border: 1px solid var(--panel-stroke);
   border-radius: var(--radius);
-  backdrop-filter: saturate(120%) blur(6px);
-  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+  box-shadow:
+    0 6px 20px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.04);
   position: relative;
-  /* IMPORTANTE: dejamos visible para que no recorte el icono/glow */
+
+  /* ¡clave! dejamos visible para que el icono/glow no se recorte */
   overflow: visible;
-  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  will-change: transform, box-shadow;
 }
 .faq-item:hover{
   border-color: rgba(50,192,207,.28);
-  box-shadow: 0 10px 32px rgba(0,0,0,.35);
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.05);
   transform: translateY(-1px);
 }
-
-/* Borde de acento al estar abierto */
 .faq-item.is-open{ border-color: color-mix(in oklab, var(--accent) 42%, white 0%); }
 
-/* Glow suave detrás del título al hover/open */
+/* Glow interior, suave, sin salirse del card */
 .faq-item::before{
   content:"";
-  position:absolute; inset: -20% -10% auto -10%;
+  position:absolute; left: 0; right: 0; top: 0;
   height: 120px;
-  background: radial-gradient(300px 120px at 20% 50%, rgba(50,192,207,.20), transparent 60%);
-  opacity: 0; transition: opacity .25s ease;
+  background: radial-gradient(320px 120px at 22% 50%, rgba(50,192,207,.20), transparent 65%);
+  opacity: 0; transition: opacity .2s ease;
   pointer-events:none;
 }
 .faq-item:hover::before,
@@ -99,7 +103,7 @@
 /* Quitamos el <hr> separador */
 .faq-sep{ display: none; }
 
-/* Botón pregunta */
+/* === BOTÓN PREGUNTA =========================================== */
 .faq-q{ margin: 0; }
 .faq-btn{
   all: unset;
@@ -109,11 +113,13 @@
   gap: 12px;
   width: 100%;
   cursor: pointer;
-  /* ↑ más padding derecho para despegar el icono del borde redondeado */
-  padding-left: clamp(16px, 2.8vw, 22px);
-  padding-right: clamp(28px, 4.8vw, 44px);
-  padding-top: clamp(14px, 2.4vw, 18px);
-  padding-bottom: clamp(14px, 2.4vw, 18px);
+
+  /* padding derecho calcula espacio del icono + margen de respiración */
+  padding:
+    clamp(14px, 2.4vw, 18px)
+    calc(var(--faq-icn-size) + 30px)
+    clamp(14px, 2.4vw, 18px)
+    clamp(16px, 2.8vw, 22px);
 }
 .faq-btn:focus-visible{
   outline: 2px solid color-mix(in oklab, var(--accent) 70%, white 0%);
@@ -126,21 +132,22 @@
   line-height: 1.35;
 }
 
-/* === Icono + / × — alta visibilidad y sin recortes === */
+/* === ICONO + / × ============================================== */
 .faq-icn{
   width: var(--faq-icn-size);
   height: var(--faq-icn-size);
   border-radius: 999px;
   position: relative;
   flex: 0 0 auto;
-  background: linear-gradient(180deg, var(--faq-icn-bg), rgba(255,255,255,.04));
+
+  background: linear-gradient(180deg, var(--faq-icn-bg), rgba(255,255,255,.05));
   box-shadow:
-    0 0 0 2px var(--faq-icn-ring) inset,
-    0 0 0 0 rgba(50,192,207,.00);
-  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-  mix-blend-mode: normal;
-  /* Glow que no se recorta (porque el card ahora no corta overflow) */
-  filter: drop-shadow(0 0 10px rgba(50,192,207,.35));
+    0 0 0 2px var(--faq-icn-ring) inset,     /* aro visible */
+    0 0 18px rgba(50,192,207,.28);           /* glow controlado (rápido) */
+
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;  /* evita flicker en rotación */
 }
 .faq-icn::before,
 .faq-icn::after{
@@ -152,7 +159,7 @@
   width: 20px;
   height: var(--faq-icn-stroke);
   border-radius: 2px;
-  transition: transform .25s ease, opacity .25s ease, background .25s ease;
+  transition: transform .2s ease, opacity .2s ease;
 }
 .faq-icn::after{
   width: var(--faq-icn-stroke);
@@ -161,53 +168,43 @@
 .faq-item:hover .faq-icn{
   box-shadow:
     0 0 0 2px var(--faq-icn-ring-hover) inset,
-    0 0 22px 0 rgba(50,192,207,.30);
+    0 0 22px rgba(50,192,207,.34);
 }
 .faq-item.is-open .faq-icn{
-  transform: rotate(45deg);  /* '+' -> '×' */
+  transform: rotate(45deg);                    /* '+' -> '×' */
   background: linear-gradient(180deg, var(--faq-icn-bg-open), rgba(50,192,207,.08));
   box-shadow:
     0 0 0 2px rgba(50,192,207,.75) inset,
-    0 0 28px 0 rgba(50,192,207,.42);
+    0 0 26px rgba(50,192,207,.36);
 }
 
-/* Panel respuesta con animación */
+/* === PANEL RESPUESTA ========================================== */
 .faq-a-wrap{
   display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows .28s ease;
+  grid-template-rows: 0fr;                     /* cerrado */
+  transition: grid-template-rows .2s ease;
   padding-inline: clamp(16px, 2.8vw, 22px);
 }
-.faq-item.is-open .faq-a-wrap{ grid-template-rows: 1fr; }
+.faq-item.is-open .faq-a-wrap{ grid-template-rows: 1fr; }  /* abierto */
 
 .faq-a-inner{ overflow: hidden; }
 .faq-a{
   margin: 0 0 clamp(12px, 2vw, 14px);
-  color: var(--muted);
+  color: #a6b2bf;
   font-size: clamp(15px, 1.8vw, 18px);
   line-height: 1.7;
 }
-
-/* Divisor interior opcional */
 .faq-item:not(.is-open) .faq-a-wrap{ border-top: 1px solid transparent; }
 .faq-item.is-open .faq-a-wrap{ border-top: 1px solid var(--panel-stroke); }
 
-/* Contraste reforzado */
+/* Accesibilidad & preferencias */
 @media (prefers-contrast: more){
   :root{
     --faq-icn-stroke: 4.5px;
-    --faq-icn-ring: rgba(255,255,255,.8);
-    --faq-icn-ring-hover: rgba(255,255,255,.95);
+    --faq-icn-ring: rgba(255,255,255,.85);
+    --faq-icn-ring-hover: #fff;
   }
 }
-
-/* Modo de colores forzados (Windows HC) */
-@media (forced-colors: active){
-  .faq-icn{
-    background: Canvas !important;
-    box-shadow: 0 0 0 2px CanvasText inset !important;
-    filter: none !important;
-  }
-  .faq-icn::before,
-  .faq-icn::after{ background: CanvasText !important; }
+@media (prefers-reduced-motion: reduce){
+  .faq-item, .faq-icn, .faq-a-wrap{ transition: none !important; }
 }

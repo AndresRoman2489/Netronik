@@ -1,14 +1,14 @@
 {
   "hero": {
-    "title": "Elige tu industria y encontramos la solución",
-    "subtitle": "Las tecnologías JettyRobot se aplican en una amplia gama de industrias. Trabajamos dondequiera que las tuberías se utilicen para diversos fines, desde el suministro de aire o los escapes industriales, hasta el transporte de materias primas líquidas y gaseosas y el procesamiento de residuos."
+    "title": "Elige tu industria y encontraremos la solución",
+    "subtitle": "Las tecnologías JettyRobot se aplican en una amplia variedad de industrias. Trabajamos donde se usan tuberías: desde suministro de aire o extracción industrial, hasta transporte de materias primas líquidas y gaseosas, y tratamiento de residuos."
   },
 
   "split": {
-    "sectorsTitle": "Sectores industriales",
+    "sectorsTitle": "Sectores de la industria",
     "sectorsHint": "¿Dónde funciona nuestra tecnología?",
     "appsTitle": "Aplicaciones y métodos",
-    "appsHint": "Selecciona la tarea que necesitas resolver",
+    "appsHint": "Elige la tarea que necesitas resolver",
 
     "buttons": {
       "open": "Abrir",
@@ -17,90 +17,65 @@
     },
 
     "sectors": {
-      "industrialProduction": {
-        "label": "Producción industrial"
-      },
-      "foodAndBeverage": {
-        "label": "Industria de alimentos y bebidas"
-      },
-      "wasteTreatment": {
-        "label": "Tratamiento de residuos"
-      },
-      "oilAndGas": {
-        "label": "Petróleo y gas"
-      },
-      "mining": {
-        "label": "Industria minera"
-      },
-      "powerGeneration": {
-        "label": "Generación de energía"
-      },
-      "waterTreatment": {
-        "label": "Industria del agua"
-      },
-      "chemical": {
-        "label": "Industria química"
-      },
-      "pneumaticTransport": {
-        "label": "Transporte neumático"
-      },
-      "hvac": {
-        "label": "Ventilación y Aire Acondicionado"
-      },
-      "other": {
-        "label": "Otras industrias"
-      }
+      "industrialProduction": { "label": "Producción industrial", "to": "/" },
+      "foodAndBeverage":      { "label": "Alimentos y bebidas",  "to": "/" },
+      "wasteTreatment":       { "label": "Tratamiento de residuos", "to": "/" },
+      "oilAndGas":            { "label": "Petróleo y gas",       "to": "/" },
+      "mining":               { "label": "Industria minera",     "to": "/" },
+      "powerGeneration":      { "label": "Generación de energía","to": "/" },
+      "waterTreatment":       { "label": "Industria del agua",   "to": "/" },
+      "chemical":             { "label": "Industria química",    "to": "/" },
+      "pneumaticTransport":   { "label": "Transporte neumático", "to": "/" },
+      "hvac":                 { "label": "Ventilación y aire acondicionado", "to": "/" },
+      "other":                { "label": "Otras industrias",     "to": "/" }
     },
 
     "apps": [
-      "Inspección de tuberías",
-      "Limpieza de tuberías",
-      "Escapes industriales",
-      "Eliminación de óxido y revestimiento viejo",
-      "Métodos de limpieza no abrasivos",
-      "Explosión de hielo seco",
-      "Chorro de agua a alta presión",
-      "Explosión abrasiva",
-      "Revestimiento protector",
-      "Inspección visual",
-      "Ventilación y Aire Acondicionado",
-      "Limpieza con aire comprimido",
-      "Limpieza con cepillo",
-      "Aspirar",
-      "Desinfección",
-      "Medición de la ovalidad",
-      "Medición del espesor de la pared"
+      { "id": "inspectionOfPipelines", "label": "Inspección de tuberías", "to": "/inspection" },
+      { "id": "pipeCleaning", "label": "Limpieza de tuberías", "to": "/cleaning" },
+      { "id": "industrialExhausts", "label": "Extractores/Exhaustos industriales", "to": "/" },
+      { "id": "rustRemoval", "label": "Remoción de óxido y recubrimiento viejo", "to": "/" },
+      { "id": "nonAbrasive", "label": "Métodos de limpieza no abrasivos", "to": "/" },
+      { "id": "dryIce", "label": "Limpieza con hielo seco", "to": "/" },
+      { "id": "highPressureWater", "label": "Chorro de agua a alta presión", "to": "/" },
+      { "id": "abrasiveBlasting", "label": "Arenado/Abrasivo", "to": "/" },
+      { "id": "protectiveCoating", "label": "Recubrimiento protector", "to": "/coating" },
+      { "id": "visualInspection", "label": "Inspección visual", "to": "/" },
+      { "id": "hvac", "label": "Ventilación y aire acondicionado", "to": "/" },
+      { "id": "compressedAir", "label": "Limpieza con aire comprimido", "to": "/" },
+      { "id": "brushCleaning", "label": "Limpieza con cepillo", "to": "/" },
+      { "id": "vacuuming", "label": "Aspirado", "to": "/" },
+      { "id": "disinfection", "label": "Desinfección", "to": "/" },
+      { "id": "ovality", "label": "Medición de ovalidad", "to": "/" },
+      { "id": "wallThickness", "label": "Medición de espesor de pared", "to": "/" }
     ]
   },
 
   "partners": {
-    "title": "Cooperamos con éxito con empresas de todo el mundo"
+    "title": "Colaboramos con éxito con empresas de todo el mundo"
   },
 
   "contact": {
     "titleLine1": "¿No estás seguro de lo que necesitas?",
     "titleAccent": "Contáctanos.",
-    "lead": "Nuestros especialistas se pondrán en contacto contigo a la brevedad.",
-
+    "lead": "Nuestros especialistas te responderán a la brevedad.",
     "form": {
       "first": "Nombre",
       "last": "Apellido",
       "company": "Empresa",
       "site": "Sitio web",
       "phone": "Teléfono",
-      "email": "Correo electrónico",
+      "email": "Correo",
       "message": "Mensaje",
-
       "ph": {
         "first": "Tu nombre",
         "last": "Tu apellido",
         "company": "Ej. ACME S.A.",
         "site": "https://tu-dominio.com",
-        "phone": "Ej. +52 81 1234 5678",
+        "phone": "Ej. +52 833-000-0000",
         "email": "tu@dominio.com",
         "message": "Cuéntanos qué necesitas…"
       },
-
       "submit": "Enviar",
       "privacy": "Tus datos están seguros con nosotros. Respetamos tu privacidad."
     }

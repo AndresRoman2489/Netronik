@@ -1,0 +1,116 @@
+/* src/sections/BeforeAfterInline/BeforeAfterInline.css */
+
+.ba-inline{
+  padding-block: clamp(28px, 6vw, 72px);
+  background: transparent;
+  color-scheme: dark;
+}
+.ba-wrap{ width: var(--wrap); margin-inline: auto; }
+
+.ba-block + .ba-block{ margin-top: clamp(22px, 4vw, 36px); }
+
+.ba-title{
+  margin: 0 0 .6rem 0;
+  font-weight: 800;
+  font-size: clamp(18px, 2.6vw, 24px);
+  letter-spacing: -.01em;
+  color: var(--ink);
+}
+
+.ba-grid{
+  display: grid;
+  grid-template-columns: 1fr clamp(34px, 6vw, 56px) 1fr;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.ba-fig{
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: clip;
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 8px 26px rgba(0,0,0,.32);
+}
+
+.ba-fig img{
+  display: block;
+  width: 100%;
+  height: clamp(180px, 32vw, 340px);
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform .35s ease;
+}
+.ba-fig:hover img{ transform: scale(1.03); }
+
+.ba-cap{ display:none; }
+.ba-cap--ok{ display:none; }
+
+/* Flecha turquesa */
+.ba-arrow{
+  width: 100%; height: 100%;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='%23000' d='M17 4l17 20L17 44l-3-3 13-17L14 7z'/></svg>") center / 42% no-repeat;
+  background: #32C0CF;
+  filter: drop-shadow(0 0 6px rgba(50,192,207,.45));
+}
+
+/* Responsive: pila vertical */
+@media (max-width: 900px){
+  .ba-grid{
+    grid-template-columns: 1fr;
+  }
+  .ba-arrow{
+    transform: rotate(90deg);
+    height: 36px;
+  }
+  .ba-fig img{
+    height: clamp(180px, 48vw, 280px);
+  }
+}
+.ip-sec { padding: clamp(28px, 6vw, 72px) 0; }
+.ip-wrap{ width:min(1100px, 92%); margin-inline:auto; }
+
+.ip-h2{
+  font-weight: 900;
+  letter-spacing: -.01em;
+  font-size: clamp(26px, 4.6vw, 40px);
+  margin: 10px 0 14px;
+}
+.ip-h2--mt{ margin-top: clamp(26px,4vw,40px); }
+
+.ip-p{ line-height:1.7; margin:0 0 12px; }
+.ip-list{ margin: 0 0 16px 1.1rem; line-height: 1.65; }
+.ip-contact{ margin-top: 10px; }
+
+.clink{
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.clink:hover{ opacity:.9; }
+
+/* ====== Before/After (reutiliza tu look) ====== */
+.ba-block{ margin: clamp(18px,3.5vw,28px) 0; }
+.ba-title{ font-weight:800; font-size: clamp(20px,3.8vw,28px); margin:0 0 12px; }
+.ba-grid{
+  display:grid; gap: clamp(10px,2.2vw,16px);
+  grid-template-columns: 1fr 48px 1fr;
+  align-items:center;
+}
+.ba-fig{
+  border-radius: 14px; overflow: hidden;
+  background:#0e0e10; /* por si la img tarda */
+}
+.ba-fig img{ display:block; width:100%; height:auto; transition: transform .35s ease; }
+.ba-fig:hover img{ transform: scale(1.03); }
+
+.ba-arrow{
+  width:48px; height:48px; border-radius:999px;
+  background: linear-gradient(180deg, rgba(50,192,207,.18), rgba(50,192,207,.05));
+  position:relative;
+  box-shadow: 0 0 0 1.5px rgba(50,192,207,.55) inset, 0 0 28px 0 rgba(50,192,207,.35);
+}
+.ba-arrow::before{
+  content:""; position:absolute; inset:0; margin:auto;
+  width:16px; height:16px; border:4px solid transparent; border-left-color:#2cc3cf; border-top-color:#2cc3cf;
+}
+
+/* Responsive: una debajo de otra en móvil */

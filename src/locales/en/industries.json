@@ -17,59 +17,37 @@
     },
 
     "sectors": {
-      "industrialProduction": {
-        "label": "Industrial production"
-      },
-      "foodAndBeverage": {
-        "label": "Food & beverage"
-      },
-      "wasteTreatment": {
-        "label": "Waste treatment"
-      },
-      "oilAndGas": {
-        "label": "Oil & gas"
-      },
-      "mining": {
-        "label": "Mining Industry"
-      },
-      "powerGeneration": {
-        "label": "Power generation"
-      },
-      "waterTreatment": {
-        "label": "Water Industry"
-      },
-      "chemical": {
-        "label": "Chemical industry"
-      },
-      "pneumaticTransport": {
-        "label": "Pneumatic transport"
-      },
-      "hvac": {
-        "label": "Ventilation and Air Conditioning"
-      },
-      "other": {
-        "label": "Other industries"
-      }
+      "industrialProduction": { "label": "Industrial production", "to": "/industrialprod" },
+      "foodAndBeverage":      { "label": "Food & beverage",       "to": "/" },
+      "wasteTreatment":       { "label": "Waste treatment",       "to": "/" },
+      "oilAndGas":            { "label": "Oil & gas",             "to": "/" },
+      "mining":               { "label": "Mining Industry",       "to": "/" },
+      "powerGeneration":      { "label": "Power generation",      "to": "/" },
+      "waterTreatment":       { "label": "Water Industry",        "to": "/" },
+      "chemical":             { "label": "Chemical industry",     "to": "/" },
+      "pneumaticTransport":   { "label": "Pneumatic transport",   "to": "/" },
+      "hvac":                 { "label": "Ventilation and Air Conditioning", "to": "/" },
+      "other":                { "label": "Other industries",      "to": "/" }
     },
 
     "apps": [
-      "Inspection of Pipelines",
-      "Pipe Cleaning",
-      "Industrial Exhausts",
-      "Removal of Rust and Old Coating",
-      "Non-Abrasive Cleaning Methods",
-      "Dry Ice Blasting",
-      "High Pressure Water Jetting",
-      "Abrasive blasting",
-      "Protective coating",
-      "Visual Inspection",
-      "Ventilation and Air Conditioning",
-      "Compressed Air Cleaning",
-      "Brush Cleaning",
-      "Vacuuming",
-      "Disinfection",
-      "Ovality Measurement",
-      "Wall Thickness Measurement"
+      { "id": "inspectionOfPipelines", "label": "Inspection of Pipelines", "to": "/inspection" },
+      { "id": "pipeCleaning", "label": "Pipe Cleaning", "to": "/cleaning" },
+      { "id": "industrialExhausts", "label": "Industrial Exhausts", "to": "/" },
+      { "id": "rustRemoval", "label": "Removal of Rust and Old Coating", "to": "/" },
+      { "id": "nonAbrasive", "label": "Non-Abrasive Cleaning Methods", "to": "/" },
+      { "id": "dryIce", "label": "Dry Ice Blasting", "to": "/" },
+      { "id": "highPressureWater", "label": "High Pressure Water Jetting", "to": "/" },
+      { "id": "abrasiveBlasting", "label": "Abrasive blasting", "to": "/" },
+      { "id": "protectiveCoating", "label": "Protective coating", "to": "/coating" },
+      { "id": "visualInspection", "label": "Visual Inspection", "to": "/" },
+      { "id": "hvac", "label": "Ventilation and Air Conditioning", "to": "/" },
+      { "id": "compressedAir", "label": "Compressed Air Cleaning", "to": "/" },
+      { "id": "brushCleaning", "label": "Brush Cleaning", "to": "/" },
+      { "id": "vacuuming", "label": "Vacuuming", "to": "/" },
+      { "id": "disinfection", "label": "Disinfection", "to": "/" },
+      { "id": "ovality", "label": "Ovality Measurement", "to": "/" },
+      { "id": "wallThickness", "label": "Wall Thickness Measurement", "to": "/" }
     ]
   },
 
@@ -81,7 +59,6 @@
     "titleLine1": "Not sure what you need?",
     "titleAccent": "Contact us.",
     "lead": "Our specialists will get back to you promptly.",
-
     "form": {
       "first": "First name",
       "last": "Last name",
@@ -90,7 +67,6 @@
       "phone": "Phone",
       "email": "Email",
       "message": "Message",
-
       "ph": {
         "first": "Your name",
         "last": "Your last name",
@@ -100,7 +76,6 @@
         "email": "you@domain.com",
         "message": "Tell us what you need..."
       },
-
       "submit": "Send",
       "privacy": "Your data is safe with us. We respect your privacy."
     }

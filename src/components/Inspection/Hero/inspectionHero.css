@@ -10,7 +10,9 @@
 /* ================= Contenedor ================= */
 .flat-hero{
   position: relative;
-  background: var(--hero-bg);
+     color-scheme: dark;
+    background: radial-gradient(1200px 700px at 20% -10%, rgba(50, 192, 207, .18), transparent 50%), radial-gradient(900px 600px at 100% 10%, rgba(39, 174, 189, .18), transparent 55%), linear-gradient(180deg, #0b0e14 0%, #0b0e14 100%);
+    
   color: #fff;
   isolation: isolate;
   overflow: clip;

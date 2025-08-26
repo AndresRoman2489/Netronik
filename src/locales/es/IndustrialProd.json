@@ -1,0 +1,92 @@
+{
+  "hero": { "title": "Producción industrial" },
+
+  "links": { "contact": "/" },
+
+  "prelist": {
+    "lead": "Los clientes de JettyRobot en el sector de la producción industrial provienen principalmente de las siguientes industrias:",
+    "items": [
+      "Industria del caucho",
+      "Industria de neumáticos",
+      "Industria automotriz",
+      "Fundiciones",
+      "Talleres de pintura",
+      "Procesamiento de metales",
+      "Plantas de soldadura",
+      "Procesamiento de madera",
+      "Procesamiento de espuma",
+      "Producción farmacéutica"
+    ],
+    "cta": {
+      "1": "¿No encontraste lo que necesitabas? No importa.",
+      "link": "Rellena nuestro formulario de contacto",
+      "2": "y nos pondremos en contacto contigo. Juntos encontraremos una solución a medida para tu producción industrial."
+    }
+  },
+
+  "pre": {
+    "title": "Problemas que los clientes resuelven con más frecuencia",
+    "p1": "Tecnología de producción con extracción industrial: el aire que fluye por el ducto lleva partículas de suciedad hacia los filtros de salida, tecnología RTO, etc. La suciedad se deposita en los ductos y los conductos sucios generan problemas en el proceso de producción.",
+    "p2": "Tecnología de producción con suministro de aire exterior limpio: el aire contiene partículas de polvo que se depositan en los conductos y, con el tiempo, pueden comenzar a causar problemas en la línea de producción.",
+    "contact": {
+      "1": "¿No encontraste lo que necesitabas? No pasa nada.",
+      "link": "Rellena nuestro formulario de contacto",
+      "2": "y nos pondremos en contacto contigo. Juntos encontraremos una solución a medida para tu producción industrial."
+    }
+  },
+
+  "needs": {
+    "title": "Necesidades de los clientes de producción industrial",
+    "items": [
+      "La tecnología de producción no funciona correctamente porque el escape o el suministro de aire están obstruidos.",
+      "La autoridad de bomberos exige medidas de seguridad y parte de ellas es limpiar el escape de la tecnología y/o el sistema de manejo de aire.",
+      "El departamento de calidad exige altos estándares en producción; normalmente incluye la limpieza regular del aire de extracción y de suministro en la planta.",
+      "Los procedimientos de limpieza existentes han dejado de ser adecuados por cambios en la legislación o mayores requisitos de calidad.",
+      "Se requiere limpiar parte de la tecnología sin detener todo el sistema, o es necesario reducir el tiempo de inactividad."
+    ]
+  },
+
+  "ba": {
+    "rubber": "Caucho",
+    "plastics": "Plásticos",
+    "foundry": "Fundición",
+    "metalworking": "Trabajo de metales",
+    "paintShop": "Taller de pintura",
+    "weldingShop": "Taller de soldadura"
+  },
+
+  "baAlt": {
+    "rubber":   { "before": "Caucho — antes",   "after": "Caucho — después" },
+    "plastics": { "before": "Plásticos — antes", "after": "Plásticos — después" },
+    "foundry":  { "before": "Fundición — antes", "after": "Fundición — después" },
+    "metal":    { "before": "Trabajo de metales — antes", "after": "Trabajo de metales — después" },
+    "paint":    { "before": "Taller de pintura — antes",  "after": "Taller de pintura — después" },
+    "welding":  { "before": "Taller de soldadura — antes", "after": "Taller de soldadura — después" }
+  },
+
+  "post": {
+    "coop": {
+      "title": "Cómo es la cooperación con JettyRobot",
+      "items": [
+        "Realizamos una inspección inicial de la tubería (inspección visual u otro método).",
+        "Sugerimos el método de limpieza más eficaz. En producción industrial solemos elegir uno de los métodos no abrasivos; otros métodos bajo solicitud.",
+        "Ejecutamos la limpieza en el tiempo y alcance acordados con el cliente.",
+        "Entregamos al cliente un informe del trabajo realizado."
+      ],
+      "more": {
+        "1": "¿Necesitas más información o un método de limpieza distinto?",
+        "link": "Rellena nuestro formulario de contacto",
+        "2": "y prepararemos una solución a medida para tus necesidades."
+      }
+    },
+    "where": {
+      "title": "¿Dónde trabaja JettyRobot?",
+      "lead": "¿Quieres ver mejor cómo trabajamos? Revisa algunas de nuestras implementaciones exitosas.",
+      "refs": [
+        { "label": "Limpieza de brea en producción de chapa de madera (éxito)", "href": "/references/wood-veneer-pitch-cleaning" },
+        { "label": "Limpieza de destilería completada con éxito", "href": "/references/distillery-cleaning-completed" },
+        { "label": "Limpieza en planta procesadora de alimentos — EE. UU.", "href": "/references/food-processing-usa" }
+      ]
+    }
+  }
+}

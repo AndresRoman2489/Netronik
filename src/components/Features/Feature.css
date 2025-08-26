@@ -91,3 +91,21 @@
   border-color: #04adc4;
   color: white;
 }
+/* Quita subrayado y mantiene color en las cards */
+.features-container .feature-card {
+  text-decoration: none;   /* clave */
+  color: inherit;
+  display: block;          /* toda la card clicable */
+}
+.features-container .feature-card:visited {
+  color: inherit;
+}
+.features-container .feature-card:hover,
+.features-container .feature-card:focus {
+  text-decoration: none;
+}
+
+/* Por si tu hoja global subraya todo dentro del <a> */
+.features-container .feature-card .feature-overlay h3 {
+  text-decoration: none;
+}

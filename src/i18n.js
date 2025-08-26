@@ -22,6 +22,12 @@ import inspectionES from "./locales/es/inspection.json";
 import inspectionEN from "./locales/en/inspection.json";
 import FAQES from "./locales/es/FAQ.json";
 import FAQEN from "./locales/en/FAQ.json";
+import cleaningEN from "./locales/en/cleaning.json";
+import cleaningES from "./locales/es/cleaning.json";
+import coatingEN from "./locales/en/coating.json";
+import coatingES from "./locales/es/coating.json";
+import industrialProdEN from "./locales/en/IndustrialProd.json";
+import industrialProdES from "./locales/es/IndustrialProd.json";
 
 i18n
   .use(LanguageDetector)
@@ -38,7 +44,10 @@ i18n
         references: referencesES,
         costumers:CostumersES,
         inspection:inspectionES,
-        FAQ:FAQES
+        FAQ:FAQES,
+        cleaning:cleaningES,
+        coating:coatingES,
+        industrialProd:industrialProdES
       },
       en: { common: en,
          industries: enIndustries,
@@ -48,11 +57,17 @@ i18n
          references: ReferencesEN,
          costumers:CostumersEN,
          inspection:inspectionEN,
-         FAQ:FAQEN
+         FAQ:FAQEN,
+         cleaning:cleaningEN,
+         coating:coatingEN,
+          industrialProd:industrialProdEN
 
        },
     },
-    ns: ["common",'industries','services','robots','company','references','costumers','inspection'],
+    ns: ["common",'industries','services','robots','company','references','costumers','inspection',"FAQ",
+  "cleaning",
+  "coating",
+  "industrialProd"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: { order: ["querystring", "localStorage", "navigator"], caches: ["localStorage"] },

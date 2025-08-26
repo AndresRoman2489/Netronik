@@ -1,0 +1,76 @@
+
+{
+  "hero": { "title": "Limpieza de tuberías" },
+
+
+  "intro": {
+    "heading": "Métodos de limpieza típicos",
+    "p1": "La limpieza es una operación común realizada en el mantenimiento de tuberías en todas las industrias. En muchos casos, la limpieza de tuberías es un primer paso necesario para realizar una",
+    "inspectionLink": "inspección de tuberías",
+    "p2": "La limpieza de tuberías es la operación para la que JettyRobot fue diseñado desde el principio. Se puede instalar una variedad de herramientas en JettyRobot que permiten seleccionar el método apropiado.",
+    "p3.1": "Las capacidades de maniobra de JettyRobot",
+    "p3.2": "permiten que funcione en curvas y verticales",
+    "p3.3": "Además, el alcance del robot permite una reducción significativa del volumen de trabajo y de los costos asociados para acceder a la tubería. Los ahorros se deben principalmente a la reducción del número de lugares donde se necesita desconectar las tuberías o a la",
+    "p3.4": "reducción del volumen de posibles trabajos de excavación",
+    "p3.5": "— esto a menudo marca la diferencia entre que un trabajo sea viable o no",
+    "p3.6": ""
+  },
+  "methods": {
+    "title": "Métodos de limpieza típicos",
+    "nonAbrasive": {
+      "title": "Limpieza no abrasiva",
+      "items": {
+        "dryIce": "Limpieza con hielo seco",
+        "brush": "Limpieza con cepillo",
+        "air": "Limpieza con aire comprimido",
+        "vacuum": "Aspirado"
+      }
+    },
+    "abrasive": {
+      "title": "Explosión abrasiva",
+      "media": ["Soda","Conchas de nueces","Grano de acero","Escoria","Óxido de aluminio","Carburo de silicio","Esponjas","Hielo seco con abrasivo"]
+    },
+    "hpw": { "title": "Chorro de agua a alta presión" },
+    "cta": {
+      "1": "¿No encontraste lo que necesitabas? No importa.",
+      "link": "Rellena nuestro formulario de contacto",
+      "2": "y nos pondremos en contacto contigo. Juntos encontraremos una solución a medida para tu producción industrial."
+    }
+  },
+  "pairs": {
+    "rubber": "Caucho",
+    "plastics": "Plásticos",
+    "foundry": "Fundición",
+    "metalworking": "Metalworking",
+    "paintShop": "Tienda de pintura",
+    "weldingShop": "Tienda de soldadura"
+  },
+  "alts": {
+    "rubber":   { "before": "Conducto de caucho antes de la limpieza", "after": "Conducto de caucho después de la limpieza" },
+    "plastics": { "before": "Conducto plástico antes de la limpieza", "after": "Conducto plástico después de la limpieza" },
+    "foundry":  { "before": "Tubería de fundición antes de la limpieza", "after": "Tubería de fundición después de la limpieza" },
+    "metal":    { "before": "Conducto de metalworking antes de la limpieza", "after": "Conducto de metalworking después de la limpieza" },
+    "paint":    { "before": "Conducto de tienda de pintura antes de la limpieza", "after": "Conducto de tienda de pintura después de la limpieza" },
+    "welding":  { "before": "Conducto de soldadura antes de la limpieza", "after": "Conducto de soldadura después de la limpieza" }
+  },
+  "refs": {
+    "title": "Eche un vistazo a nuestras implementaciones exitosas",
+    "items": [
+      { "label": "Limpieza de tuberías de estaciones compresoras de gas para el desarrollo petrolero en Omán", "href": "#" },
+      { "label": "¡ganamos los gases de escape sucios de la cocina con JettyRobot!", "href": "#" },
+      { "label": "Limpieza de plantas procesadoras de alimentos - Estados Unidos", "href": "#" },
+      { "label": "Limpieza de destilería completada con éxito", "href": "#" },
+      { "label": "Limpieza exitosa de brea en la producción de chapas de madera", "href": "#" },
+      { "label": "Renovación rápida del revestimiento de una tubería forzada en una central hidroeléctrica", "href": "#" }
+    ]
+  },
+  "links": {
+    "inspection": "/inspection",
+    "contact": "#",
+    "dryIce": "#",
+    "brush": "#",
+    "compressedAir": "#",
+    "vacuuming": "#"
+  }
+}
+

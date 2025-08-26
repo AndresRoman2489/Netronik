@@ -1,0 +1,92 @@
+{
+  "hero": { "title": "Industrial Production" },
+
+  "links": { "contact": "/" },
+
+  "prelist": {
+    "lead": "JettyRobot’s customers in the sector of industrial production are primarily from the following industries:",
+    "items": [
+      "Rubber industry",
+      "Tyre industry",
+      "Automotive industry",
+      "Foundries",
+      "Paint shops",
+      "Metal processing",
+      "Welding plants",
+      "Wood processing",
+      "Foam processing",
+      "Pharmaceutical production"
+    ],
+    "cta": {
+      "1": "Didn't find what you need? Never mind.",
+      "link": "Fill in our contact form",
+      "2": "and we will get back to you. Together we will find a tailor-made solution for your industrial production."
+    }
+  },
+
+  "pre": {
+    "title": "What Problems Customers Solve Most Often",
+    "p1": "Production technology with industrial exhausts — air flowing through the duct carries dirt particles to outlet filters, RTO technology, etc. Dirt settles in the ductwork and dirty ducts cause problems in the production process.",
+    "p2": "Production technology with clean outdoor air supply — the air contains dust particles that settle in the ductwork and, over time, can start causing issues in the production line.",
+    "contact": {
+      "1": "Didn't find what you need? Never mind.",
+      "link": "Fill in our contact form",
+      "2": "and we will get back to you. Together we will find a tailor-made solution for your industrial production."
+    }
+  },
+
+  "needs": {
+    "title": "Customer Needs From Industrial Production",
+    "items": [
+      "The production technology is not working properly because the exhaust or the air supply to the technology is clogged.",
+      "The Fire Authority requires fire safety and part of the measure is to clean the exhaust from the technology and/or the air-handling system.",
+      "Quality requires high standards in production to ensure and declare quality to customers; this usually includes regular cleaning of exhaust and supply air in production.",
+      "Existing cleaning procedures are no longer suitable due to changes in legislation, increased quality requirements, etc.",
+      "Cleaning of part of the technology is required without shutting down the entire system, or downtime needs to be reduced."
+    ]
+  },
+
+  "ba": {
+    "rubber": "Rubber",
+    "plastics": "Plastics",
+    "foundry": "Foundry",
+    "metalworking": "Metalworking",
+    "paintShop": "Paint shop",
+    "weldingShop": "Welding shop"
+  },
+
+  "baAlt": {
+    "rubber":   { "before": "Rubber — before",   "after": "Rubber — after" },
+    "plastics": { "before": "Plastics — before", "after": "Plastics — after" },
+    "foundry":  { "before": "Foundry — before",  "after": "Foundry — after" },
+    "metal":    { "before": "Metalworking — before", "after": "Metalworking — after" },
+    "paint":    { "before": "Paint shop — before",   "after": "Paint shop — after" },
+    "welding":  { "before": "Welding shop — before", "after": "Welding shop — after" }
+  },
+
+  "post": {
+    "coop": {
+      "title": "How the Cooperation With JettyRobot Works",
+      "items": [
+        "We provide an initial inspection of the piping (visual inspection or another method).",
+        "We suggest the most effective cleaning method. In industrial production, we usually choose one of the non-abrasive methods; other methods on request.",
+        "We implement cleaning within the time and scope agreed by the customer.",
+        "We provide our customers with a report of the cleaning performed."
+      ],
+      "more": {
+        "1": "Need more details or a different cleaning method?",
+        "link": "Fill in our contact form",
+        "2": "and we will prepare a tailor-made solution for your needs."
+      }
+    },
+    "where": {
+      "title": "Where Does JettyRobot Work?",
+      "lead": "Would you like to get a better idea of how JettyRobot works? Take a look at our successful implementations.",
+      "refs": [
+        { "label": "Successful Pitch Cleaning in Wood Veneer Production", "href": "/references/wood-veneer-pitch-cleaning" },
+        { "label": "Distillery Cleaning Successfully Completed", "href": "/references/distillery-cleaning-completed" },
+        { "label": "Food Processing Plant Cleaning – USA", "href": "/references/food-processing-usa" }
+      ]
+    }
+  }
+}

@@ -18,14 +18,14 @@ const servicios = [
     icon: <FaBroom />,
     defaultTitle: 'Limpieza',
     defaultDesc: 'Vuelve a la máxima potencia.',
-    to: '/'
+    to: '/cleaning'
   },
   {
     id: 'restore',
     icon: <FaTools />,
     defaultTitle: 'Restauración de revestimiento',
     defaultDesc: 'Ahorra dinero en reemplazos de tuberías.',
-    to: '/'
+    to: '/coating'
   },
   {
     id: 'turnkey',

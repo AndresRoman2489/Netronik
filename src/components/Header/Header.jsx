@@ -17,7 +17,7 @@ function Header() {
   const langRef   = useRef(null);
   const aboutRef  = useRef(null);
 
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(); // default ns = "common"
   const currentLng = (i18n.resolvedLanguage || i18n.language || 'es').toLowerCase();
   const isES = currentLng.startsWith('es');
 
@@ -86,7 +86,7 @@ function Header() {
     await i18n.changeLanguage(lng);
     setLangOpen(false);
     document.documentElement.lang = lng;
-    window.location.reload();
+    // No necesitamos recargar la página.
   };
 
   return (
@@ -118,16 +118,16 @@ function Header() {
         </p>
 
         <div className="social-icons">
-          <a href="https://www.facebook.com/profile.php?id=100038810928238#" target="_blank" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-          <a href="https://www.youtube.com/channel/UCiZ0oWgrVoEvxdiv7EujwSw" target="_blank"aria-label="YouTube"><i className="fab fa-youtube"></i></a>
-          <a href="https://www.linkedin.com/company/jettyrobot/" target='_blank' aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/jettyrobot/" target='_blank' aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100038810928238#" target="_blank" rel="noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/channel/UCiZ0oWgrVoEvxdiv7EujwSw" target="_blank" rel="noreferrer" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/company/jettyrobot/" target='_blank' rel="noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/jettyrobot/" target='_blank' rel="noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
         </div>
       </div>
 
       <button
         className="hamburger"
-        aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+        aria-label={menuOpen ? t('header.nav.closeMenu', 'Cerrar menú') : t('header.nav.openMenu', 'Abrir menú')}
         aria-expanded={menuOpen}
         onClick={() => setMenuOpen(o => !o)}
       >
@@ -138,7 +138,6 @@ function Header() {
       <nav
         className={`header-right ${menuOpen ? 'open' : ''}`}
         onClick={(e) => {
-          // No cierres si el click fue dentro de language o about (para toggles)
           if (e.target.closest('.language')) return;
           if (e.target.closest('.about')) return;
 
@@ -150,43 +149,44 @@ function Header() {
         }}
       >
         <Link to="/industries" onClick={() => setMenuOpen(false)}>
-          {t('nav.industry', 'Industria')}
+          {t('header.nav.industry')}
         </Link>
 
         <Link to="/services" onClick={() => setMenuOpen(false)}>
-          {t('nav.services', 'Servicios')}
+          {t('header.nav.services')}
         </Link>
 
         <Link to="/robots" onClick={() => setMenuOpen(false)}>
-          {t('nav.robots', 'Nuestros Robots')}
+          {t('header.nav.robots')}
         </Link>
 
-       {/* === About dropdown === */}
-<div className={`about ${aboutOpen ? 'open' : ''}`} ref={aboutRef}>
-  <button
-    className="about-toggle"
-    type="button"
-    aria-haspopup="menu"
-    aria-expanded={aboutOpen}
-    onClick={() => setAboutOpen(v => !v)}
-  >
-    {t('header.nav.about')}
-    <i className="fas fa-chevron-down small-icon"></i>
-  </button>
+        {/* === About dropdown === */}
+        <div className={`about ${aboutOpen ? 'open' : ''}`} ref={aboutRef}>
+          <button
+            className="about-toggle"
+            type="button"
+            aria-haspopup="menu"
+            aria-expanded={aboutOpen}
+            onClick={() => setAboutOpen(v => !v)}
+          >
+            {t('header.nav.about')}
+            <i className="fas fa-chevron-down small-icon"></i>
+          </button>
 
-  <div className="about-menu" role="menu" aria-label="About menu">
-    <Link to="/company" className="about-item" role="menuitem" onClick={() => setAboutOpen(false)}>
-      {t('header.nav.aboutMenu.company')}
-    </Link>
-    <Link to="/references" className="about-item" role="menuitem" onClick={() => setAboutOpen(false)}>
-      {t('header.nav.aboutMenu.references')}
-    </Link>
-    <Link to="/costumers" className="about-item" role="menuitem" onClick={() => setAboutOpen(false)}>
-      {t('header.nav.aboutMenu.customers')}
-    </Link>
-  </div>
-</div>
-        <a href="#contact">{t('nav.contact', 'Contactar')}</a>
+          <div className="about-menu" role="menu" aria-label="About menu">
+            <Link to="/company" className="about-item" role="menuitem" onClick={() => setAboutOpen(false)}>
+              {t('header.nav.aboutMenu.company')}
+            </Link>
+            <Link to="/references" className="about-item" role="menuitem" onClick={() => setAboutOpen(false)}>
+              {t('header.nav.aboutMenu.references')}
+            </Link>
+            <Link to="/costumers" className="about-item" role="menuitem" onClick={() => setAboutOpen(false)}>
+              {t('header.nav.aboutMenu.customers')}
+            </Link>
+          </div>
+        </div>
+
+        <a href="#contact">{t('header.nav.contact')}</a>
 
         {/* === Selector de idioma === */}
         <div className={`language ${langOpen ? 'open' : ''}`} ref={langRef}>
@@ -196,7 +196,7 @@ function Header() {
             onClick={() => setLangOpen(v => !v)}
             aria-haspopup="menu"
             aria-expanded={langOpen}
-            aria-label="Cambiar idioma"
+            aria-label={t('header.nav.changeLanguage', 'Cambiar idioma')}
           >
             <img
               src={isES ? 'https://flagcdn.com/mx.svg' : 'https://flagcdn.com/us.svg'}

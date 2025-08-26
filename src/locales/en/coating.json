@@ -1,0 +1,47 @@
+{
+  "hero": { "title": "Protective coating" },
+  
+  "intro": {
+    "p1": "Protective coatings on the internal surfaces of pipes are common across many industries. Their purpose can be corrosion protection, reduced friction, and preventing atom migration from the conveyed medium into the pipe material. Proper surface preparation is essential.",
+    "p2": "Coatings are applied to both new and in-service pipelines. In the latter, dismantling the pipe is difficult or impossible, which makes JettyRobot ideal.",
+    "p3": "JettyRobot can be equipped as an applicator depending on the coating material and technology used, always together with a well-designed cleaning and substrate preparation.",
+    "p4": "JettyRobot’s manoeuvrability enables work in bends and verticals, significantly reducing access time and costs."
+  },
+  "cta": {
+    "pre": "Didn't find what you need? Never mind.",
+    "link": "Fill in our contact form",
+    "post": "and we will get back to you. Together we’ll find a tailor-made solution for your production."
+  },
+  "apps": {
+    "title1": "Typical applications for",
+    "title2": "internal pipe surfaces",
+    "items": [
+      "Protection of the internal surface against corrosion or wear.",
+      "Improving surface properties of the pipe (e.g., reducing friction).",
+      "Fire protection.",
+      "Barrier between the pipe and the conveyed medium (e.g., preventing atom migration).",
+      "Treatment of the internal surface of welded circumferences."
+    ]
+  },
+  "videos": {
+    "multi": {
+      "title": "Multi-layer coating application",
+      "url": "https://www.youtube.com/watch?v=WjmTyM43Cms&t=1s"
+    },
+    "poly": {
+      "title": "Polyurea application",
+      "url": "https://www.youtube.com/watch?v=yjzVLaODwmY"
+    }
+  },
+  "refs": {
+    "titleLine1": "Take a Look at Our",
+    "titleLine2": "Successful Implementations",
+    "items": [
+      {
+        "label": "Rapid Renewal of a Penstock Coating in a Hydroelectric Power Plant",
+        "href": "#"
+      }
+    ]
+  }
+}
+
