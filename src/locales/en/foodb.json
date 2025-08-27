@@ -1,0 +1,57 @@
+{
+  "hero": { "title": "Food and Beverage Industry" },
+
+  "links": {
+    "contact": "/",
+    "pipeCleaning": "/"
+  },
+  "top": {
+    "lead1": {
+      "1": "In food processing plants and industry, high demands are placed on the cleanliness of all environments. All food and beverage transport pipelines must meet strict hygiene conditions.When changing production recipes,",
+      "link": "perfect cleaning of the piping",
+      "2": "is necessary to avoid contamination of the food."
+    },
+    "lead2": "The food and beverage industry also includes the production of food and beverage packaging (e.g. the production of food and beverage cans)."
+  },
+  "fiAlt": {
+    "circle": { "before": "Food piping — before", "after": "Food piping — after" },
+    "rect":   { "before": "Conveyor/piping — before", "after": "Conveyor/piping — after" }
+  },
+  "pre": {
+    "title": "What Problems Customers Solve Most Often",
+    "p1": "Production technology with industrial exhausts – air flowing through the duct carries dirt particles to the outlet filters, RTO technology, etc. Dirt particles settle in the duct and dirty ducts cause problems in the production process.",
+    "p2": "Production technology with clean outdoor air supply – the air contains dust particles that settle in the ductwork and over time can start to cause problems in the production process.",
+    "p3": "Cleaning of pipelines for the transport of individual product components – most often pneumatic conveying. Between changes in production recipes, an efficient, quick and hygienic cleaning of the transport route is necessary to avoid cross-contamination of products.",
+    "contact": { "1": "Are you dealing with another problem? Never mind,", "link": "fill in our contact form", "2": "and we will prepare a tailor-made solution to your needs." }
+  },
+  "needs": {
+    "title": "Customer Needs From the Food Industry",
+    "items": [
+      "The production process requires cleaning of conveyor lines when changing the recipe to avoid cross-contamination of products.",
+      "The production technology is not working properly because the exhaust from the technology or the air supply to the technology is clogged.",
+      "The Fire Authority requires fire safety and part of the measure is to clean the exhaust from the technology and/or the air-handling system.",
+      "The quality department requires high standards in production to ensure and declare quality to customers. The process typically includes the introduction of regular cleaning of exhaust and supply air in production.",
+      "Production requires cleaning of part of the technology without shutting down the entire system, or needs to reduce downtime for maintenance."
+    ]
+  },
+  "post": {
+    "coop": {
+      "title": "How the Cooperation With JettyRobot Works",
+      "items": [
+        "We will provide an initial inspection of the piping either by visual inspection or other methods.",
+        "We will suggest the most effective cleaning method. In food production, we usually choose one of the non-abrasive cleaning methods; other methods on request.",
+        "Implementation of cleaning within the time and scope agreed by the customer.",
+        "We provide our customers with a report of the cleaning performed."
+      ],
+      "more": { "1": "Need more detailed information or require a different cleaning method?", "link": "Fill in our contact form", "2": "and we will prepare a tailor-made solution for your needs." }
+    },
+    "where": {
+      "title": "Where Does JettyRobot Work?",
+      "lead": "Do you want to get a better idea of how JettyRobot works? Take a look at our successful implementations.",
+      "refs": [
+        { "label": "Distillery Cleaning Successfully Completed", "href": "/references/distillery-cleaning-completed" },
+        { "label": "Food Processing Plant Cleaning – USA", "href": "/references/food-processing-usa" }
+      ]
+    }
+  }
+}

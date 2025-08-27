@@ -38,7 +38,7 @@ const features = [
  */
 const linksById = {
   industry:  '/industrialprod',
-  food:      '/',
+  food:      '/foodb',
   waste:     '/',
   oilGas:    '/',
   mining:    '/',

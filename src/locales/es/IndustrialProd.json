@@ -83,9 +83,9 @@
       "title": "¿Dónde trabaja JettyRobot?",
       "lead": "¿Quieres ver mejor cómo trabajamos? Revisa algunas de nuestras implementaciones exitosas.",
       "refs": [
-        { "label": "Limpieza de brea en producción de chapa de madera (éxito)", "href": "/references/wood-veneer-pitch-cleaning" },
-        { "label": "Limpieza de destilería completada con éxito", "href": "/references/distillery-cleaning-completed" },
-        { "label": "Limpieza en planta procesadora de alimentos — EE. UU.", "href": "/references/food-processing-usa" }
+        { "label": "Limpieza de brea en producción de chapa de madera (éxito)", "href": "/" },
+        { "label": "Limpieza de destilería completada con éxito", "href": "/" },
+        { "label": "Limpieza en planta procesadora de alimentos — EE. UU.", "href": "/" }
       ]
     }
   }

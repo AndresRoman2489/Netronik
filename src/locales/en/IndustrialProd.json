@@ -83,9 +83,9 @@
       "title": "Where Does JettyRobot Work?",
       "lead": "Would you like to get a better idea of how JettyRobot works? Take a look at our successful implementations.",
       "refs": [
-        { "label": "Successful Pitch Cleaning in Wood Veneer Production", "href": "/references/wood-veneer-pitch-cleaning" },
-        { "label": "Distillery Cleaning Successfully Completed", "href": "/references/distillery-cleaning-completed" },
-        { "label": "Food Processing Plant Cleaning – USA", "href": "/references/food-processing-usa" }
+        { "label": "Successful Pitch Cleaning in Wood Veneer Production", "href": "/" },
+        { "label": "Distillery Cleaning Successfully Completed", "href": "/" },
+        { "label": "Food Processing Plant Cleaning – USA", "href": "/" }
       ]
     }
   }

@@ -28,6 +28,8 @@ import coatingEN from "./locales/en/coating.json";
 import coatingES from "./locales/es/coating.json";
 import industrialProdEN from "./locales/en/IndustrialProd.json";
 import industrialProdES from "./locales/es/IndustrialProd.json";
+import foodbEN from "./locales/en/foodb.json";
+import foodbES from "./locales/es/foodb.json";
 
 i18n
   .use(LanguageDetector)
@@ -47,7 +49,8 @@ i18n
         FAQ:FAQES,
         cleaning:cleaningES,
         coating:coatingES,
-        industrialProd:industrialProdES
+        industrialProd:industrialProdES,
+        foodb:foodbES
       },
       en: { common: en,
          industries: enIndustries,
@@ -60,14 +63,15 @@ i18n
          FAQ:FAQEN,
          cleaning:cleaningEN,
          coating:coatingEN,
-          industrialProd:industrialProdEN
+          industrialProd:industrialProdEN,
+          foodb:foodbEN
 
        },
     },
     ns: ["common",'industries','services','robots','company','references','costumers','inspection',"FAQ",
   "cleaning",
   "coating",
-  "industrialProd"],
+  "industrialProd","foodb"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: { order: ["querystring", "localStorage", "navigator"], caches: ["localStorage"] },

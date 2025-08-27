@@ -1,0 +1,57 @@
+{
+  "hero": { "title": "Industria de alimentos y bebidas" },
+
+  "links": {
+    "contact": "/contacto",
+    "pipeCleaning": "/inspeccion"
+  },
+  "top": {
+    "lead1": {
+      "1": "En plantas procesadoras de alimentos y en la industria, altas exigencias se colocan en el limpieza de todos los entornos. Todas las tuberías de transporte de alimentos y bebidas deben cumplir estrictas condiciones de higiene. Al cambiar las recetas de producción,",
+      "link": "la limpieza perfecta de las tuberías",
+      "2": "es necesaria para evitar la contaminación de los alimentos."
+    },
+    "lead2": "La industria de alimentos y bebidas también incluye la fabricación de envases (p. ej., latas para alimentos y bebidas)."
+  },
+  "fiAlt": {
+    "circle": { "before": "Tubería de alimentos — antes", "after": "Tubería de alimentos — después" },
+    "rect":   { "before": "Transportador/tubería — antes", "after": "Transportador/tubería — después" }
+  },
+  "pre": {
+    "title": "Problemas Que Los Clientes Resuelven Con Más Frecuencia",
+    "p1": "Tecnología de producción con extracciones industriales: el aire que fluye por el ducto lleva partículas de suciedad hacia los filtros de salida, tecnología RTO, etc. La suciedad se deposita en los conductos y causa problemas en el proceso productivo.",
+    "p2": "Tecnología de producción con suministro de aire exterior limpio: el aire contiene partículas de polvo que se depositan en los ductos y, con el tiempo, pueden empezar a causar problemas en el proceso de producción.",
+    "p3": "Limpieza de tuberías para el transporte de componentes individuales del producto (generalmente transporte neumático). Entre cambios de receta, se requiere una limpieza eficiente, rápida e higiénica de la ruta de transporte para evitar la contaminación cruzada de los productos.",
+    "contact": { "1": "¿Tienes otro problema? No pasa nada,", "link": "rellena nuestro formulario de contacto", "2": "y prepararemos una solución a medida para tus necesidades." }
+  },
+  "needs": {
+    "title": "Necesidades del Cliente en la Industria Alimentaria",
+    "items": [
+      "El proceso de producción requiere la limpieza de las líneas de transporte al cambiar la receta para evitar la contaminación cruzada.",
+      "La tecnología de producción no funciona correctamente porque el escape o el suministro de aire de la tecnología está obstruido.",
+      "La autoridad de protección civil exige medidas de seguridad contra incendios, incluida la limpieza del escape de la tecnología y/o del sistema de tratamiento de aire.",
+      "El departamento de calidad exige altos estándares para asegurar y declarar la calidad a los clientes; generalmente incluye limpieza regular de extracción y suministro de aire en producción.",
+      "Se requiere limpiar una parte de la tecnología sin detener todo el sistema o se necesita reducir el tiempo de inactividad por mantenimiento."
+    ]
+  },
+  "post": {
+    "coop": {
+      "title": "¿Cómo Funciona la Cooperación Con JettyRobot?",
+      "items": [
+        "Realizamos una inspección inicial de las tuberías mediante inspección visual u otros métodos.",
+        "Proponemos el método de limpieza más eficaz. En alimentación solemos elegir métodos no abrasivos; otros a solicitud.",
+        "Ejecución de la limpieza en el tiempo y alcance acordados con el cliente.",
+        "Entregamos al cliente un informe del trabajo realizado."
+      ],
+      "more": { "1": "¿Necesitas más detalle u otro método de limpieza?", "link": "Rellena nuestro formulario de contacto", "2": "y prepararemos una solución a medida para tus necesidades." }
+    },
+    "where": {
+      "title": "¿Dónde Trabaja JettyRobot?",
+      "lead": "¿Quieres ver mejor cómo trabajamos? Mira algunas de nuestras implementaciones exitosas.",
+      "refs": [
+        { "label": "Limpieza de destilería completada con éxito", "href": "/referencias/limpieza-destileria" },
+        { "label": "Limpieza en planta procesadora de alimentos – EE. UU.", "href": "/referencias/procesadora-alimentos-usa" }
+      ]
+    }
+  }
+}

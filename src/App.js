@@ -19,6 +19,7 @@ import Inspection from "./pages/inspection-pipelines/inspection-pipelines";
 import Cleaning from "./pages/Cleaning/pipe_cleaning";
 import Coating from "./pages/Coating/Protective_coating";
 import IndustrialProd from "./pages/Industrial_prod/industrial_prod";
+import FoodB from "./pages/FoodBeverage/FoodB";
 
 // Ejemplos:
 
@@ -40,6 +41,7 @@ function AppShell() {
         <Route path="/cleaning" element={<Cleaning/>}/>
         <Route path="/coating" element={<Coating/>}/>
         <Route path="/industrialprod" element={<IndustrialProd/>}/>
+        <Route path="/foodb" element={<FoodB/>}/>
        
         {/* ...otras rutas */}
       </Route>

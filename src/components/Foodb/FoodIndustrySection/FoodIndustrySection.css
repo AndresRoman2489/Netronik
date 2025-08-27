@@ -1,0 +1,97 @@
+/* ================================
+   FoodIndustrySection.css (single images)
+   ================================ */
+
+:root{
+  --accent: #32C0CF;
+  --ink: #0b0e14;
+}
+
+/* -------- Links turquesa dentro de esta sección -------- */
+.ip-sec .clink{
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: from-font;
+  border-bottom: 0;
+  transition: opacity .2s ease;
+}
+.ip-sec .clink:hover{ opacity:.9; }
+
+.fi-circles{
+  /* una sola imagen centrada y fluida */
+  display: grid;
+  grid-template-columns: minmax(260px, 820px);
+  justify-content: center;
+  justify-items: center;
+  gap: clamp(14px, 3vw, 28px);
+  margin: clamp(10px, 2.6vw, 24px) 0 clamp(12px, 3vw, 26px);
+}
+
+.fi-circle{
+  margin: 0;
+  width: 100%;
+  max-width: 820px;       /* ajusta si quieres más/menos ancho */
+  /* SIN borde redondeado ni relación forzada */
+  overflow: visible;
+  background: transparent;
+  padding: 0;
+  box-shadow: 0 8px 26px rgba(0,0,0,.12); /* opcional */
+}
+
+.fi-circle img{
+  display: block;
+  width: 100%;
+  height: auto;           /* mantiene proporción original */
+  object-fit: contain;    /* evita recortes si el contenedor fuese más pequeño */
+  border-radius: 0;       /* ← sin borde redondeado */
+}
+
+.fi-circle:hover img{ transform: scale(1.02); }
+
+/* ===== BANNER BEFORE/AFTER (una sola imagen) ===== */
+.fi-rects{
+  display: grid;
+  grid-template-columns: minmax(260px, 820px); /* ancho cómodo */
+  justify-content: center;
+  justify-items: center;
+  gap: clamp(12px, 2.6vw, 20px);
+  align-items: start;
+}
+.fi-rect{
+  margin: 0;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #0e0e10;            /* por si tarda en cargar */
+  box-shadow: 0 8px 26px rgba(0,0,0,.22);
+}
+.fi-rect img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Etiqueta opcional (si la usas) */
+.fi-rect__label{
+  position: absolute;
+  top: 8px; left: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: rgba(11,14,20,.86);
+  color: #fff;
+  display: none;
+}
+.fi-rect__label--ok{ background: rgba(27,143,90,.9); }
+
+/* ===== Responsive ===== */
+@media (max-width: 760px){
+  .fi-circles{ grid-template-columns: minmax(240px, 100%); }
+  .fi-circle{ max-width: none; }
+
+  .fi-rects{ grid-template-columns: minmax(240px, 100%); }
+}
