@@ -1,0 +1,63 @@
+{
+  "hero": { "title": "Industria minera" },
+
+  "links": {
+    "contact": "/",
+    "inspection": "/inspection",
+    "visualInspection": "/",
+    "cleaning": "/cleaning",
+    "dft": "/coating"
+  },
+
+  "top": {
+    "p1": "En la extracción de minerales, se utilizan tuberías para transportar las materias primas de manera eficiente durante el procesamiento, utilizando una corriente de agua para transportar las materias primas.",
+    "p2": "Las tuberías están equipadas con un revestimiento interno para evitar el desgaste abrasivo de la propia tubería. Si el revestimiento está dañado, puede adherirse al oleoducto y posteriormente bloquear la tubería. En caso de no control del desgaste del forro, el propio oleoducto puede sufrir daños progresivos, provocando un accidente y un cierre. Los cierres en esta industria significan altas pérdidas económicas para las empresas mineras."
+  },
+
+  "pre": {
+    "title": "Qué problemas resuelven los clientes con más frecuencia",
+    "p1": "Mantenimiento preventivo y minimización del tiempo de inactividad - Con un sistema de mantenimiento preventivo correctamente configurado, se pueden evitar tiempos de inactividad inesperados. Usando la tecnología JettyRobot, puedes inspeccionar tus tuberías y utilizarla para planificar el mantenimiento oportuno de forma controlada según el estado real y el desgaste de la tubería.",
+    "p2": {
+      "1": "Inspección e inspección de tuberías - utilizando la tecnología JettyRobot, es posible inspeccionar tuberías y planificar el mantenimiento oportuno.",
+      "link1": "inspección de la tubería",
+      "2": " y otras verificaciones relacionadas."
+    },
+    "p3": "Transporte de tecnología a la tubería - JettyRobot puede equiparse con tecnologías que le permiten reparación in situ del revestimiento dañado.",
+    "contact": {
+      "1": "¿Estás lidiando con otro problema? No importa,",
+      "link": "rellena nuestro formulario de contacto",
+      "2": "y prepararemos una solución a medida para tus necesidades."
+    }
+  },
+
+  "needs": {
+    "title": "Necesidades de los clientes de la industria minera",
+    "items": [
+      "Determinar el estado real del revestimiento dentro de la tubería.",
+      "Restaurar el revestimiento en la tubería."
+    ]
+  },
+
+  "post": {
+    "coop": {
+      "title": "Cómo funciona la cooperación con JettyRobot",
+      "items": [
+        "Programaremos un flujo de trabajo detallado contigo.",
+        { "1": "El primer paso antes de la ", "link": "inspección", "2": " es limpiar las tuberías." },
+        { "1": "Para la limpieza se suele utilizar ", "link": "chorro de agua a alta presión", "2": "." },
+        { "1": "Nosotros inspeccionamos el oleoducto utilizando, principalmente, ", "link1": "inspección visual", "2": " y mediciones como la ", "link2": "medición del espesor residual del revestimiento (DFT)", "3": ", además de otros métodos bajo petición." },
+        "Al final, el cliente recibe un informe de la inspección.",
+        "Con base en los resultados de la inspección, es posible: planificar la reparación de las zonas dañadas. Generalmente se utilizan los siguientes métodos para retirar el revestimiento dañado y preparar la superficie para el nuevo revestimiento: chorro de agua a alta presión, granallado abrasivo y otros métodos bajo petición."
+      ],
+      "more": {
+        "1": "¿Necesitas información más detallada o un método de limpieza diferente?",
+        "link": "Rellena nuestro formulario de contacto",
+        "2": "y prepararemos una solución a medida para tus necesidades."
+      }
+    }
+  },
+
+  "alts": {
+    "photo": "Interior de tubería en operación minera"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "hero": { "title": "Petróleo y gas" },
+
+  "links": {
+    "contact": "/",
+    "inspection": "/inspection",
+    "visualInspection": "/i",
+    "cleaning": "/cleaning",
+    "coating": "/coating",
+    "wallThickness": "/inspection/wall-thickness"
+  },
+
+  "top": {
+    "p1": "La industria de extracción y procesamiento de petróleo y gas se basa en gran medida en el transporte de materias primas a través de tuberías. Suministra materias primas esenciales tanto para la industria petroquímica como para la generación de energía.",
+    "p2": "Actualmente también es objeto de atención mundial en términos de seguridad y protección del medio ambiente."
+  },
+
+  "pre": {
+    "title": "Qué problemas resuelven los clientes con más frecuencia",
+    "p1": "Mantenimiento preventivo y minimización de paradas: la industria del petróleo y gas de hoy exige un sistema de mantenimiento preventivo eficaz. Esto permite minimizar el riesgo de accidentes y prevenir tiempos de inactividad no planificados. Como en muchas otras industrias, cada parada significa grandes pérdidas económicas.",
+    "p2": {
+      "1": "Inspección y verificación de tuberías: utilizando la tecnología JettyRobot, es posible inspeccionar tuberías y planificar un mantenimiento oportuno según su estado real y desgaste. Con un alcance de hasta 1.500 m, el JettyRobot más reciente reduce significativamente el número de desconexiones de tubería y mejora la velocidad de la inspección.",
+      "link1": "inspección de la tubería",
+      "2": "ya sea mediante",
+      "link2": "inspección visual"
+    },
+    "p3": "Transporte de tecnologías al interior de la tubería – JettyRobot puede equiparse con tecnologías para la limpieza de tuberías y la restauración de recubrimientos protectores in situ.",
+    "p4": "En la industria del petróleo y gas, el enfoque principal de JettyRobot es el trabajo robótico en tuberías no aptas para pigging y en aquellas donde aún no existen condiciones para el despliegue de pigs (p. ej., durante la construcción). Al mismo tiempo, es muy adecuado para el despliegue en casos donde “algo” está ocurriendo dentro de la tubería y el posible despliegue de un pig está asociado con el riesgo de que se quede atascado.",
+    "contact": {
+      "1": "¿Estás lidiando con otro problema? No importa,",
+      "link": "rellena nuestro formulario de contacto",
+      "2": "y prepararemos una solución a la medida de tus necesidades."
+    }
+  },
+
+  "needs": {
+    "title": "Necesidades de los clientes del sector de petróleo y gas",
+    "lead": "En el exigente entorno de la industria del petróleo y gas, los clientes necesitan especialmente:",
+    "items": [
+      "Determinar el estado de la tubería.",
+      "Realizar una inspección antes de la puesta en marcha.",
+      "Limpiar y poner en servicio la estación compresora o la estación de válvulas.",
+      "Limpiar tuberías y otras conducciones no aptas para pigging.",
+      "Renovar el recubrimiento interno de la tubería.",
+      "Reducir los tiempos de inactividad y minimizar las pérdidas.",
+      "Tratar las soldaduras circunferenciales desde el interior."
+    ]
+  },
+
+  "post": {
+    "coop": {
+      "title": "Cómo funciona la cooperación con JettyRobot",
+      "items": [
+        "Programaremos contigo un flujo de trabajo detallado.",
+        {
+          "1": "Proporcionamos",
+          "link1": "inspección visual de la tubería",
+          "mid": ",",
+          "link2": "medición del espesor residual de pared de la tubería",
+          "tail": " e inspección de la calidad del recubrimiento."
+        },
+        {
+          "1": "Propondremos el",
+          "link": "método de limpieza más efectivo",
+          "rest": ", de acuerdo con los requisitos del proyecto. Normalmente elegimos uno de los métodos de limpieza no abrasivos: hielo seco, cepillos, aire comprimido. Si es necesario, utilizaremos: chorro de agua a alta presión, granallado abrasivo u otros métodos bajo petición."
+        },
+        "Implementación de la limpieza dentro del tiempo y el alcance acordados por el cliente.",
+        {
+          "1": "Al volver a recubrir: preparación de la superficie de la tubería (calidad, rugosidad), aplicación del recubrimiento. Inspección de calidad del recubrimiento – inspección visual,",
+          "linkCoating": "medición del espesor de recubrimiento (DFT)",
+          "2": ", detección de poros (holiday detection)",
+          "tail": "."
+        },
+        "Entregamos a los clientes un informe de la inspección, la limpieza y el recubrimiento."
+      ],
+      "more": {
+        "1": "¿Necesitas información más detallada o un método de limpieza diferente?",
+        "link": "Rellena nuestro formulario de contacto",
+        "2": "y prepararemos una solución a medida para tus necesidades."
+      }
+    },
+    "where": {
+      "title": "¿Dónde funciona JettyRobot?",
+      "lead": "¿Quieres hacerte una mejor idea de cómo trabaja JettyRobot? Echa un vistazo a nuestras implementaciones exitosas.",
+      "refs": [
+        { "label": "Limpieza de tuberías en estación compresora para Petroleum Development en Omán", "href": "/references/pipeline-cleaning-oman" },
+        { "label": "Proyecto exitoso en un gasoducto en Rusia", "href": "/references/gas-pipeline-russia" },
+        { "label": "Prueba y limpieza exitosas en Australia con JettyRobot", "href": "/references/test-cleaning-australia" }
+      ]
+    }
+  },
+
+  "alts": { "photo": "JettyRobot trabajando dentro de una tubería de petróleo y gas" }
+}

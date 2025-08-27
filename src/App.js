@@ -20,7 +20,9 @@ import Cleaning from "./pages/Cleaning/pipe_cleaning";
 import Coating from "./pages/Coating/Protective_coating";
 import IndustrialProd from "./pages/Industrial_prod/industrial_prod";
 import FoodB from "./pages/FoodBeverage/FoodB";
-
+import Wastetreatment from "./pages/WasteTreatment/wastetreatment";
+import Oilgas from "./pages/Oil&gas/Oil&gas";
+import MiningIndustry from "./pages/Mining/MiningIndustry";
 // Ejemplos:
 
 function AppShell() {
@@ -42,7 +44,9 @@ function AppShell() {
         <Route path="/coating" element={<Coating/>}/>
         <Route path="/industrialprod" element={<IndustrialProd/>}/>
         <Route path="/foodb" element={<FoodB/>}/>
-       
+        <Route path="/wasteT" element={<Wastetreatment/>}/>
+       <Route path="/oilgas" element={<Oilgas/>}/>
+       <Route path="/mining" element={<MiningIndustry/>}/>
         {/* ...otras rutas */}
       </Route>
     </Routes>

@@ -1,0 +1,68 @@
+{
+  "hero": { "title": "Tratamiento de residuos" },
+
+  "links": {
+    "contact": "/"
+  },
+
+  "top": {
+    "lead": "En las salas de procesamiento de residuos se instalan tecnologías para extraer el aire contaminado, con el fin de reducir el polvo en la nave y evitar que se propague al entorno de la planta de procesamiento. Sin estas tecnologías, los niveles de polvo en el entorno serían muy altos."
+  },
+
+  "pre": {
+    "title": "Qué problemas resuelven los clientes con más frecuencia",
+    "p1": "Mantenimiento regular de la tecnología - Aunque las tecnologías de extracción están diseñadas para manejar grandes volúmenes de polvo, aún requieren mantenimiento regular. Una reducción de su eficiencia conduce a un aumento del polvo en la nave y sus alrededores y, como consecuencia, se superan los límites de polvo establecidos por las normas de higiene.",
+    "p2": "Limpieza de sistemas de transporte neumático - un sistema neumático de transporte de residuos puede formar parte de la tecnología de tratamiento de residuos. Debido a la variedad en la composición de los residuos, la suciedad puede asentarse en la tubería. Por lo tanto, la tubería debe limpiarse periódicamente para garantizar el funcionamiento fiable de toda la tecnología.",
+    "p3": "Limpieza de bajantes de residuos - un área completamente separada en la gestión de residuos son los bajantes de residuos en edificios residenciales. Estos conductos requieren mantenimiento y limpieza regulares para garantizar condiciones higiénicas y evitar la propagación de olores en los edificios residenciales.",
+    "contact": {
+      "1": "¿Estás lidiando con otro problema? No importa,",
+      "link": "rellena nuestro formulario de contacto",
+      "2": "y prepararemos una solución a medida para tus necesidades."
+    }
+  },
+
+  "needs": {
+    "title": "Necesidades de los clientes de la industria de tratamiento de residuos",
+    "items": [
+      "La tecnología de producción no funciona correctamente porque el escape está obstruido.",
+      "La tecnología de producción no funciona correctamente porque la tubería de transporte de residuos está obstruida.",
+      "La Autoridad de Bomberos exige seguridad contra incendios y parte de la medida es limpiar el escape.",
+      "El Departamento de Calidad exige el cumplimiento de las normas de higiene establecidas en las condiciones de operación, tanto en la nave como en sus alrededores.",
+      "Como parte de la operación, las tuberías deben desinfectarse. La desinfección puede proporcionarse mediante desinfectante o utilizando tecnología de limpieza con efecto desinfectante.",
+      "La producción requiere la aplicación de un recubrimiento protector en el interior de la tubería.",
+      "La producción requiere limpiar parte de la tecnología sin detener todo el sistema o necesita reducir el tiempo de inactividad por mantenimiento.",
+      "El operador necesita cumplir con los requisitos de higiene para las cámaras de eliminación de residuos en un edificio residencial."
+    ]
+  },
+
+  "post": {
+    "coop": {
+      "title": "Cómo funciona la cooperación con JettyRobot",
+      "items": [
+        "Realizaremos una inspección inicial de la tubería, ya sea por inspección visual u otros métodos.",
+        "Sugeriremos el método de limpieza más efectivo. Normalmente elegimos uno de los métodos no abrasivos: hielo seco, cepillos, aire presurizado; otros métodos bajo petición.",
+        "Implementación de la limpieza dentro del tiempo y el alcance acordados por el cliente.",
+        "Proporcionamos a nuestros clientes un informe de la limpieza realizada."
+      ],
+      "more": {
+        "1": "¿Necesitas información más detallada o un método de limpieza diferente?",
+        "link": "Rellena nuestro formulario de contacto",
+        "2": "y prepararemos una solución a medida para tus necesidades."
+      }
+    },
+    "where": {
+      "title": "¿Dónde funciona JettyRobot?",
+      "lead": "¿Quieres tener una mejor idea de cómo trabaja JettyRobot? Echa un vistazo a nuestras implementaciones exitosas.",
+      "refs": [
+        {
+          "label": "Ayudando a cumplir con los límites de higiene en el tratamiento de residuos y a reducir los costes operativos",
+          "href": "/"
+        }
+      ]
+    }
+  },
+
+  "alts": {
+    "photo": "Interior de tubería en tratamiento de residuos"
+  }
+}

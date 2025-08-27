@@ -1,0 +1,94 @@
+{
+  "hero": { "title": "Oil and Gas" },
+
+  "links": {
+    "contact": "/",
+    "inspection": "/inspection",
+    "visualInspection": "/i",
+    "cleaning": "/cleaning",
+    "coating": "/coating",
+    "wallThickness": "/inspection/wall-thickness"
+  },
+
+  "top": {
+    "p1": "The oil and gas extraction and processing industry is largely based on the transportation of raw materials through pipelines. It supplies essential raw materials for both the petrochemical industry and energy production.",
+    "p2": "Currently, it is also the subject of worldwide attention in terms of safety and environmental protection."
+  },
+
+  "pre": {
+    "title": "What Problems Customers Solve Most Often",
+    "p1": "Preventive maintenance and downtime minimisation – today’s oil and gas industry places high demands on an effective preventive maintenance system. This makes it possible to minimise the risk of accidents and prevent unplanned downtime. As in many other industries, every downtime means high economic losses.",
+    "p2": {
+      "1": "Inspection and checking of pipelines - using JettyRobot technology, it is possible to inspect pipelines and plan timely maintenance based on their actual condition and wear. With a range of up to 1,500 m, the latest JettyRobot significantly reduces the number of pipeline disconnections and improves the speed of inspection.",
+      "link1": "inspection of the piping",
+      "2": "either by",
+      "link2": "visual inspection"
+    },
+    "p3": "Transportation of technologies into the pipeline – JettyRobot can be equipped with technologies for cleaning pipelines and restoring protective coatings on site.",
+    "p4": "In the oil and gas industry, JettyRobot's main focus is on robotic work in non-piggable pipelines and where conditions are not yet in place for pig deployment (e.g. during construction). At the same time, it is very suitable for deployment in cases where there is “something” going on in the pipeline and the possible deployment of a pig is associated with the risk of it getting stuck.",
+    "contact": {
+      "1": "Are you dealing with another problem? Never mind,",
+      "link": "fill in our contact form",
+      "2": "and we will prepare a tailor-made solution to your needs."
+    }
+  },
+
+  "needs": {
+    "title": "Customer Needs From Oil and Gas",
+    "lead": "In the challenging environment of the oil and gas industry, customers especially need:",
+    "items": [
+      "Determine the condition of the piping.",
+      "Carry out an inspection before commissioning.",
+      "Clean and commission the compressor station or valve station.",
+      "Clean pipes and other non-piggable piping.",
+      "Renew the internal coating of the pipe.",
+      "Reduce downtime and minimise losses.",
+      "Treat girth welds from the inside."
+    ]
+  },
+
+  "post": {
+    "coop": {
+      "title": "How the Cooperation With JettyRobot Works",
+      "items": [
+        "We will schedule a detailed workflow with you.",
+        {
+          "1": "We provide",
+          "link1": "visual inspection of the pipe",
+          "mid": ",",
+          "link2": "measurement of the residual wall thickness of the pipe",
+          "tail": " and coating quality inspection."
+        },
+        {
+          "1": "We will propose the most effective",
+          "link": "cleaning method",
+          "rest": ", according to the project requirements. We usually choose one of the non-abrasive cleaning methods: dry ice, brushes, compressed air. If necessary, we will use: high pressure water jetting, abrasive blasting, or other methods on request."
+        },
+        "Implementation of cleaning within the time and scope agreed by the customer.",
+        {
+          "1": "When recoating: prepare the pipe surface (quality, roughness), coating application. Coating quality inspection – visual inspection,",
+          "linkCoating": "measurement of coating thickness (DFT)",
+          "2": ", holiday detection",
+          "tail": "."
+        },
+        "We provide customers with a report of the inspection, cleaning and coating."
+      ],
+      "more": {
+        "1": "Need more detailed information or require a different cleaning method?",
+        "link": "Fill in our contact form",
+        "2": "and we will prepare a tailor-made solution for your needs."
+      }
+    },
+    "where": {
+      "title": "Where Does JettyRobot Work?",
+      "lead": "Do you want to get a better idea of how JettyRobot works? Take a look at our successful implementations.",
+      "refs": [
+        { "label": "Gas Compressor Station Pipeline Cleaning for Petroleum Development in Oman", "href": "/references/pipeline-cleaning-oman" },
+        { "label": "Successful Project on a Gas Pipeline in Russia", "href": "/references/gas-pipeline-russia" },
+        { "label": "Successful Test and Cleaning in Australia with JettyRobot", "href": "/references/test-cleaning-australia" }
+      ]
+    }
+  },
+
+  "alts": { "photo": "JettyRobot working inside an oil and gas pipeline" }
+}

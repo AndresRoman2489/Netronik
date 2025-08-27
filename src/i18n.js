@@ -30,7 +30,12 @@ import industrialProdEN from "./locales/en/IndustrialProd.json";
 import industrialProdES from "./locales/es/IndustrialProd.json";
 import foodbEN from "./locales/en/foodb.json";
 import foodbES from "./locales/es/foodb.json";
-
+import wasteEN from "./locales/en/WasteT.json";
+import wasteES from "./locales/es/WasteT.json";
+import OilgasEN from "./locales/en/Oilgas.json";
+import OilgasES from "./locales/es/Oilgas.json";
+import MiningEN from "./locales/en/Mining.json";
+import MiningES from "./locales/es/Mining.json";
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -50,7 +55,10 @@ i18n
         cleaning:cleaningES,
         coating:coatingES,
         industrialProd:industrialProdES,
-        foodb:foodbES
+        foodb:foodbES,
+        wasteT:wasteES,
+        oilgas:OilgasES,
+        mining:MiningES
       },
       en: { common: en,
          industries: enIndustries,
@@ -64,14 +72,17 @@ i18n
          cleaning:cleaningEN,
          coating:coatingEN,
           industrialProd:industrialProdEN,
-          foodb:foodbEN
+          foodb:foodbEN,
+           wasteT:wasteEN,
+           oilgas:OilgasEN,
+           mining:MiningEN
 
        },
     },
     ns: ["common",'industries','services','robots','company','references','costumers','inspection',"FAQ",
   "cleaning",
   "coating",
-  "industrialProd","foodb"],
+  "industrialProd","foodb","waste","oilgas","mining"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: { order: ["querystring", "localStorage", "navigator"], caches: ["localStorage"] },

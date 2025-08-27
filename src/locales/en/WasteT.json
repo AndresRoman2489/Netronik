@@ -1,0 +1,68 @@
+{
+  "hero": { "title": "Waste Treatment" },
+
+  "links": {
+    "contact": "/"
+  },
+
+  "top": {
+    "lead": "In the waste processing halls, technologies for exhausting contaminated air are installed to reduce dust in the hall and prevent the spread of dust to the surroundings of the processing plant. Without these technologies, dust levels in the surrounding area would be very high."
+  },
+
+  "pre": {
+    "title": "What Problems Customers Solve Most Often",
+    "p1": "Regular maintenance of the technology - Although the extraction technologies are designed to handle high dust volumes, they still require regular maintenance. A reduction in their efficiency leads to an increase in dust in the hall and its surroundings and, as a consequence, dust limits set by hygiene standards are exceeded.",
+    "p2": "Cleaning of pneumatic conveying systems - a pneumatic waste conveying system can be part of the waste treatment technology. Due to the variety of waste composition, dirt can settle in the piping. Therefore, the piping needs to be cleaned regularly to establish reliable operation of the entire technology.",
+    "p3": "Cleaning of waste disposal chutes - a completely separate area in waste management are waste disposal chutes in residential buildings. The chutes require regular maintenance and cleaning to ensure hygienic conditions and to prevent the spread of odours in the residential buildings.",
+    "contact": {
+      "1": "Are you dealing with another problem? Never mind,",
+      "link": "fill in our contact form",
+      "2": "and we will prepare a tailor-made solution to your needs."
+    }
+  },
+
+  "needs": {
+    "title": "Customer Needs From the Waste Treatment Industry",
+    "items": [
+      "The production technology is not working properly because the exhaust is clogged.",
+      "The production technology is not working properly because the waste transport pipeline is clogged.",
+      "The Fire Authority requires fire safety and part of the measure is to clean the exhaust.",
+      "The Quality Department requires compliance with the hygiene standards set out in the operating conditions, both in the hall and in its surroundings.",
+      "As part of the operation, the pipes need to be disinfected. Disinfection can be provided by disinfectant or by using cleaning technology with disinfectant effects.",
+      "Production requires the application of a protective coating in the pipe.",
+      "Production requires cleaning part of the technology without shutting down the entire system or needs to reduce downtime for maintenance.",
+      "The operator needs to comply with the hygiene requirements for waste disposal chambers in a residential building."
+    ]
+  },
+
+  "post": {
+    "coop": {
+      "title": "How the Cooperation With JettyRobot Works",
+      "items": [
+        "We will provide an initial inspection of the piping either by visual inspection or other methods.",
+        "We will suggest the most effective cleaning method. We usually choose one of the non-abrasive cleaning methods: dry ice, brushes, pressurized air; other methods on request.",
+        "Implementation of cleaning within the time and scope agreed by the customer.",
+        "We provide our customers with a report of the cleaning performed."
+      ],
+      "more": {
+        "1": "Need more detailed information or require a different cleaning method?",
+        "link": "Fill in our contact form",
+        "2": "and we will prepare a tailor-made solution for your needs."
+      }
+    },
+    "where": {
+      "title": "Where Does JettyRobot Work?",
+      "lead": "Do you want to get a better idea of how JettyRobot works? Take a look at our successful implementations.",
+      "refs": [
+        {
+          "label": "Helping to comply with hygiene limits in waste treatment and reducing operating costs",
+          "href": "/"
+        }
+      ]
+    }
+  },
+
+  "alts": {
+    "photo": "Waste treatment pipeline interior"
+  }
+}

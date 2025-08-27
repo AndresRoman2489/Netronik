@@ -1,0 +1,25 @@
+/* Links turquesa en la sección */
+.ip-sec .clink{
+  color:#32C0CF;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  text-decoration-thickness:from-font;
+  border-bottom:0;
+  transition:opacity .2s ease;
+}
+.ip-sec .clink:hover{ opacity:.9; }
+
+/* Imagen única centrada (sin radius) */
+.og-photo{
+  margin: clamp(16px, 3vw, 28px) auto;
+  max-width: 760px;
+}
+.og-photo img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit: contain; /* no recorte */
+}
+
+/* Ajuste del bloque superior (párrafos intro) */
+.og-top{ margin-bottom: clamp(8px, 2vw, 12px); }

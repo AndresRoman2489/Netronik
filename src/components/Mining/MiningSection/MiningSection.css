@@ -1,0 +1,25 @@
+/* Links turquesa dentro de la sección */
+.ip-sec .clink{
+  color:#32C0CF;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  text-decoration-thickness:from-font;
+  border-bottom:0;
+  transition:opacity .2s ease;
+}
+.ip-sec .clink:hover{ opacity:.9; }
+
+/* Imagen única centrada (sin recortes ni border-radius) */
+.mi-photo{
+  margin: clamp(16px, 3vw, 28px) auto;
+  max-width: 780px;
+}
+.mi-photo img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit: contain; /* evita recortes */
+}
+
+/* Separación breve del bloque superior */
+.mi-top{ margin-bottom: clamp(8px, 2vw, 12px); }

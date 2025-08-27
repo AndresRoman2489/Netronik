@@ -1,0 +1,61 @@
+{
+  "hero": { "title": "Mining Industry" },
+
+  "links": {
+    "contact": "/",
+    "inspection": "/inspection",
+    "visualInspection": "/",
+    "cleaning": "/cleaning",
+    "dft": "/coating"
+  },
+
+  "top": {
+    "p1": "In mining, pipelines are used to transport raw materials efficiently during processing, often with a water stream.",
+    "p2": "Pipes are equipped with an internal lining to prevent abrasive wear. If the lining is damaged, it can stick and later block the pipe. Without controlling lining wear, the pipeline itself can suffer progressive damage, causing incidents and shutdowns. In this industry, shutdowns mean high economic losses."
+  },
+
+  "pre": {
+    "title": "What Problems Customers Solve Most Often",
+    "p1": "Preventive maintenance and downtime minimisation — with a properly set preventive maintenance system, unexpected downtime can be avoided. Using JettyRobot technology, you can inspect your pipelines and plan timely maintenance based on real condition and wear.",
+    "p2": {
+      "1": "Pipe inspection — with JettyRobot technology it is possible to inspect pipelines and plan timely maintenance,",
+      "link1": "inspection of the piping",
+      "2": " and other related checks."
+    },
+    "p3": "Transport of technology into the pipe — JettyRobot can be equipped to restore damaged lining on site.",
+    "contact": {
+      "1": "Are you dealing with another problem? Never mind,",
+      "link": "fill in our contact form",
+      "2": "and we will prepare a tailor-made solution."
+    }
+  },
+
+  "needs": {
+    "title": "Customer Needs From the Mining Industry",
+    "items": [
+      "Determine the real condition of the internal lining.",
+      "Restore the lining inside the pipe."
+    ]
+  },
+
+  "post": {
+    "coop": {
+      "title": "How the Cooperation With JettyRobot Works",
+      "items": [
+        "We will schedule a detailed workflow with you.",
+        { "1": "The first step before ", "link": "inspection", "2": " is to clean the pipelines." },
+        { "1": "For cleaning we usually use ", "link": "high-pressure water jetting", "2": "." },
+        { "1": "We inspect the pipeline using mainly ", "link1": "visual inspection", "2": " and measurements such as ", "link2": "DFT (residual coating thickness) measurement", "3": ", plus other methods on request." },
+        "At the end, the customer receives an inspection report.",
+        "Based on the results of the inspection, it is possible to plan the repair of the damaged areas. The following methods are usually used to remove the damaged lining and prepare the surface for the new lining: high-pressure water jetting, abrasive blasting, other methods on request."
+      ],
+      "more": {
+        "1": "Need more details or a different cleaning method?",
+        "link": "Fill in our contact form",
+        "2": "and we will prepare a tailor-made solution for your needs."
+      }
+    }
+  },
+
+  "alts": { "photo": "Inside of a mining pipeline" }
+}
