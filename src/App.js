@@ -23,6 +23,7 @@ import FoodB from "./pages/FoodBeverage/FoodB";
 import Wastetreatment from "./pages/WasteTreatment/wastetreatment";
 import Oilgas from "./pages/Oil&gas/Oil&gas";
 import MiningIndustry from "./pages/Mining/MiningIndustry";
+import Power from "./pages/Power/Power";
 // Ejemplos:
 
 function AppShell() {
@@ -47,6 +48,7 @@ function AppShell() {
         <Route path="/wasteT" element={<Wastetreatment/>}/>
        <Route path="/oilgas" element={<Oilgas/>}/>
        <Route path="/mining" element={<MiningIndustry/>}/>
+       <Route path="/Power" element={<Power/>}/>
         {/* ...otras rutas */}
       </Route>
     </Routes>

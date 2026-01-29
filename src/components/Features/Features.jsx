@@ -42,7 +42,7 @@ const linksById = {
   waste:     '/wasteT',
   oilGas:    '/oilgas',
   mining:    '/mining',
-  power:     '/',
+  power:     '/Power',
   water:     '/',
   chemical:  '/',
   pneumatic: '/',

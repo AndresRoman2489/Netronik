@@ -36,6 +36,8 @@ import OilgasEN from "./locales/en/Oilgas.json";
 import OilgasES from "./locales/es/Oilgas.json";
 import MiningEN from "./locales/en/Mining.json";
 import MiningES from "./locales/es/Mining.json";
+import PowerEN from "./locales/en/Power.json";
+import PowerES from "./locales/es/Power.json";
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -58,7 +60,8 @@ i18n
         foodb:foodbES,
         wasteT:wasteES,
         oilgas:OilgasES,
-        mining:MiningES
+        mining:MiningES,
+        power: PowerES
       },
       en: { common: en,
          industries: enIndustries,
@@ -75,14 +78,15 @@ i18n
           foodb:foodbEN,
            wasteT:wasteEN,
            oilgas:OilgasEN,
-           mining:MiningEN
+           mining:MiningEN,
+           power:PowerEN
 
        },
     },
     ns: ["common",'industries','services','robots','company','references','costumers','inspection',"FAQ",
   "cleaning",
   "coating",
-  "industrialProd","foodb","waste","oilgas","mining"],
+  "industrialProd","foodb","waste","oilgas","mining","power"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: { order: ["querystring", "localStorage", "navigator"], caches: ["localStorage"] },
